@@ -8,8 +8,17 @@ a{
     text-decoration: none;
 }
 
+//RESPONSIVE CLASSES
+
+.mobile{
+    display: none;
+}
+
 @media(max-width:768px){
     .desktop{
-        display: none;
+        display: none!important;
+    }
+    .mobile{
+        display: flex;
     }
 }

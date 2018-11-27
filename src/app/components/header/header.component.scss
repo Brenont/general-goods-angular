@@ -41,9 +41,17 @@ header {
         justify-content: center;
         height: 100%;
         padding: 0px 28px;
+        font-weight: 600;
+        color: #16104d;
+
+        &:hover {
+          transition-duration: 0.6s;
+          background-color: #2b2089;
+          color: #fff;
+        }
 
         &:nth-child(3) {
-          width: 110px;
+          width: 120px;
         }
       }
     }

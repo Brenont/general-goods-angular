@@ -1,14 +1,27 @@
+@import '../../../styles.scss';
+
+*:focus {
+  outline: none;
+}
+
+.active {
+  background-color: #2b2089;
+  color: #fff;
+}
+
 header {
   width: 100%;
   background-color: #f8f9fa;
-  display: grid;
-  grid-template-columns: 60% 40%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px -1px;
 
   .container-logo {
     padding-left: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 
     .logo {
       margin-right: 5px;
@@ -40,7 +53,7 @@ header {
         align-items: center;
         justify-content: center;
         height: 100%;
-        padding: 0px 28px;
+        padding: 0px 20px;
         font-weight: 600;
         color: #16104d;
 
@@ -50,8 +63,33 @@ header {
           color: #fff;
         }
 
-        &:nth-child(3) {
-          width: 120px;
+        // &:nth-child(3) {
+        //   width: 120px;
+        // }
+      }
+    }
+
+    .span-toggle {
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: .25rem;
+      margin-right: 10px;
+
+      .icon-container {
+        padding: 10px 15px;
+        border: 1px rgba(0, 0, 0, .1) solid;
+        border-radius: .25rem;
+
+        .side-icon {
+          width: 23px;
+          height: 2px;
+          border-radius: 5px;
+          background-color: rgb(117, 117, 117);
+
+          &:nth-child(2) {
+            margin: 6px 0px;
+          }
         }
       }
     }
@@ -74,6 +112,11 @@ header {
         width: 127px;
         height: 60px;
       }
+
     }
+
+    // .container-link{
+    //   display: none;
+    // }
   }
 }

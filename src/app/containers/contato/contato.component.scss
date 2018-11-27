@@ -1,0 +1,164 @@
+@import '../../theme/colors.scss';
+
+#contato-body {
+    width: 100%;
+    background-image: url("../../../assets/img/backcontato3.jpg");
+    background-repeat: no-repeat;
+    background-color: #16114d;
+}
+
+#conteudo-contato {
+
+    h2,
+    #email,
+    #telefone,
+    #input-nome,
+    #input-telefone,
+    #input-email,
+    #input-mensagem,
+    #botao-form {
+        font-family: titulos;
+    }
+
+    .contato {
+        display: -webkit-flex;
+        display: -webkit-box;
+        display: -moz-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 75px 0px 50px 0px;
+    }
+
+    .formulario {
+        color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        padding: 0px 70px;
+    }
+
+    .infrm {
+        color: $font-white;
+        text-align: center;
+        padding: 0px 70px;
+    }
+
+    .infrm p {
+        font-size: 23px;
+    }
+
+    ::-webkit-input-placeholder,
+    :-moz-placeholder,
+    ::-moz-placeholder,
+    :-ms-input-placeholder {
+        color: $font-white;
+    }
+
+    .titulo-formulario {
+        color: $font-white;
+        text-align: center;
+    }
+
+    .inputs-formulario {
+        display: flex;
+        padding: 10px 0px 10px 5px;
+        margin: 21px 0px;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .textarea-formulario {
+        display: flex;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .input {
+        color: $font-white;
+        border: 2px solid $font-white;
+    }
+
+    #input-mensagem {
+        padding-bottom: 70px;
+    }
+
+    #botao-form {
+        background-color: transparent;
+        color: $font-white;
+        border-radius: 5px;
+        border-color: #da251c;
+        margin: auto;
+        padding: 10px 16px;
+        margin-top: 15px;
+        display: block;
+    }
+
+    #sct-map {
+        padding: 40px 50px;
+    }
+
+    #map {
+        width: 100%;
+        height: 300px;
+        box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px 3px;
+    }
+
+    .telefone {
+        color: $font-white;
+        text-decoration: none;
+    }
+
+    .telefone:hover {
+        color: $font-white;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 960px) {
+        .infrm p {
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contato {
+            justify-content: center;
+            display: block;
+            padding: 75px 150px 70px 150px;
+        }
+
+        .infrm {
+            padding: 50px 0px 0px 0px;
+        }
+
+        .formulario {
+            padding: 0px;
+            justify-content: center;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .infrm p {
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contato {
+            justify-content: center;
+            display: block;
+            padding: 75px 20px 50px 20px;
+        }
+
+        .infrm {
+            padding: 50px 0px 0px 0px;
+        }
+
+        .formulario {
+            padding: 0px;
+            justify-content: center;
+            display: block;
+        }
+    }
+}

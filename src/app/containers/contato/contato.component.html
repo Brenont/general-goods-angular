@@ -1,23 +1,55 @@
-
 <app-header></app-header>
 
-  
+<section id="contato-body">
+<section id="conteudo-contato">
 
-<script>
-  function initMap() {
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <!-- PAGINA CONTATO -->
+
+  <section class="contato">
+    <div class="formulario">
+      <h2 class="titulo-formulario">{{ lang.faleConosco }}</h2>
+      <form action="../sendemail/enviaremail.php" method="POST">
+        <input type="text" class="inputs-formulario input" id="input-nome" name="nome" placeholder="NOME">
+        <input type="text" class="inputs-formulario input" id="input-telefone" name="telefone" placeholder="TELEFONE">
+        <input type="email" class="inputs-formulario input" id="input-email" name="email" placeholder="EMAIL">
+        <textarea type="text" class="inputs-formulario input" id="input-mensagem" name="mensagem" placeholder="MENSAGEM"></textarea>
+        <input type="submit" class="button-formulario" id="botao-form" value="ENVIAR">
+      </form>
+    </div>
+    <div class="infrm">
+      <h2 class="ttl-email">{{ lang.emailTitle }}</h2>
+      <p id="email">{{ lang.email }}</p>
+      <h2 class="ttl-telefone">{{ lang.telTitle }}</h2>
+      <p id="telefone">{{ lang.tel }}</p>
+    </div>
+  </section>
+
+  <section id="sct-map">
+    <div id="map"></div>
+  </section>
+
+  <script>
+    function initMap() {
       var uluru = {
-          lat: -23.0028841,
-          lng: -43.3384684
+        lat: -23.0028841,
+        lng: -43.3384684
       };
       var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: uluru
+        zoom: 13,
+        center: uluru
       });
       var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
+        position: uluru,
+        map: map
       });
-  }
+    }
   </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA&callback=initMap">
-</script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA&callback=initMap">
+  </script>
+
+</section>

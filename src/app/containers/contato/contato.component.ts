@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LANG } from '../../theme/pt';
 
 @Component({
   selector: 'app-contato',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contato.component.scss']
 })
 export class ContatoComponent implements OnInit {
+
+  public lang = LANG;
 
   constructor() { }
 

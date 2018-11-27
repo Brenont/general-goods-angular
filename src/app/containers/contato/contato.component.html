@@ -1,6 +1,23 @@
-<p>
-  contato works!
-</p>
-
 
 <app-header></app-header>
+
+  
+
+<script>
+  function initMap() {
+      var uluru = {
+          lat: -23.0028841,
+          lng: -43.3384684
+      };
+      var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: uluru
+      });
+      var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+      });
+  }
+  </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA&callback=initMap">
+</script>

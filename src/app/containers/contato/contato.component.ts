@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LANG } from '../../theme/pt';
+import { LANG } from '../../../theme/pt';
 
 @Component({
   selector: 'app-contato',

@@ -8,11 +8,34 @@ import { IfStmt } from '@angular/compiler';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() active :string;
+  @Input() active: string;
+
+  public activeKey = this.active = undefined;
+
+  public homeActive: boolean = false;
+  public productActive: boolean = false;
+  public companyActive: boolean = false;
+  public contactActive: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.active);
+    switch (this.active) {
+      case 'home':
+        this.homeActive = true;
+        break;
+      case 'produtos':
+        this.productActive = true;
+        break;
+      case 'quem-somos':
+        this.companyActive = true;
+        break;
+      case 'contato':
+        this.contactActive = true;
+        break;
+      default:
+        break;
+    }
   }
-
 }

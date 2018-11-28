@@ -6,10 +6,10 @@
 
   <div class="container-link">
     <ul class="desktop">
-      <li routerLink=''>HOME</li>
-      <li routerLink='/produtos'>PRODUTOS</li>
-      <li routerLink='/quem-somos'>QUEM SOMOS</li>
-      <li routerLink='/contato'>CONTATO</li>
+      <li routerLink='' [ngClass]="{'active': homeActive}">HOME</li>
+      <li routerLink='/produtos' [ngClass]="{'active': productActive}">PRODUTOS</li>
+      <li routerLink='/quem-somos' [ngClass]="{'active': companyActive}">QUEM SOMOS</li>
+      <li routerLink='/contato' [ngClass]="{'active': contactActive}">CONTATO</li>
     </ul>
     <div class="mobile span-toggle">
       <section class="icon-container">

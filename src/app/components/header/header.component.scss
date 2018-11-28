@@ -6,15 +6,19 @@
 
 .active {
   background-color: #2b2089;
-  color: #fff!important;
+  color: #fff !important;
 }
 
 header {
-  width: 100%;
-  background-color: #f8f9fa;
-  display: flex;
-  justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px -1px;
+  background-color: #f8f9fa;
+  width: 100%¨;
+
+  .container-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 
   .container-logo {
     padding-left: 20px;
@@ -58,8 +62,6 @@ header {
         color: #16104d;
 
         &:hover {
-          transition-duration: 0.6s;
-          background-color: #2b2089;
           color: #fff;
         }
 
@@ -93,6 +95,26 @@ header {
         }
       }
     }
+  }
+
+  .nav-mobile {
+    display: flex;
+    transition: 0.4s;
+
+    ul {
+      width: 100%;
+
+      li {
+        padding: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  li:hover {
+    transition-duration: 0.6s;
+    background-color: #2b2089;
+    color: #fff;
   }
 }
 

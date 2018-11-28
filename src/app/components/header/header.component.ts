@@ -10,16 +10,17 @@ export class HeaderComponent implements OnInit {
 
   @Input() active: string;
 
-  public activeKey = this.active = undefined;
-
   public homeActive: boolean = false;
   public productActive: boolean = false;
   public companyActive: boolean = false;
   public contactActive: boolean = false;
 
+  public toogle = false;
+
   constructor() { }
 
   ngOnInit() {
+
     console.log(this.active);
     switch (this.active) {
       case 'home':
@@ -38,4 +39,10 @@ export class HeaderComponent implements OnInit {
         break;
     }
   }
+
+  toogleSideMenu() {
+    this.toogle = !this.toogle;
+  }
+
 }
+

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IfStmt } from '@angular/compiler';
+import { LANG } from '../../../theme/pt'
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,8 @@ import { IfStmt } from '@angular/compiler';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  public lang = LANG;
 
   @Input() active: string;
 

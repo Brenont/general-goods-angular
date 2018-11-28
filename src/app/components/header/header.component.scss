@@ -111,11 +111,17 @@ header {
     }
   }
 
+  li {
+    text-transform: uppercase;
+  }
+
   li:hover {
     transition-duration: 0.6s;
     background-color: #2b2089;
     color: #fff;
   }
+
+
 }
 
 @media(max-width:768px) {

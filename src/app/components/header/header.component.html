@@ -7,10 +7,10 @@
 
     <div class="container-link">
       <ul class="desktop">
-        <li routerLink='' [ngClass]="{'active': homeActive}">HOME</li>
-        <li routerLink='/produtos' [ngClass]="{'active': productActive}">PRODUTOS</li>
-        <li routerLink='/quem-somos' [ngClass]="{'active': companyActive}">QUEM SOMOS</li>
-        <li routerLink='/contato' [ngClass]="{'active': contactActive}">CONTATO</li>
+        <li routerLink='' [ngClass]="{'active': homeActive}">{{lang.homeTitle}}</li>
+        <li routerLink='/produtos' [ngClass]="{'active': productActive}">{{lang.productsTitle}}</li>
+        <li routerLink='/quem-somos' [ngClass]="{'active': companyActive}">{{lang.companyTitle}}</li>
+        <li routerLink='/contato' [ngClass]="{'active': contactActive}">{{lang.contactTitle}}</li>
       </ul>
       <div class="mobile span-toggle" (click)="toogleSideMenu()">
         <section class="icon-container">
@@ -24,10 +24,10 @@
 
   <nav class="nav-mobile hide" *ngIf="toogle">
       <ul class="menu-list">
-          <li class="menu-item" routerLink='' [ngClass]="{'active': homeActive}">HOME</li>
-          <li class="menuItem" routerLink='/produtos' [ngClass]="{'active': productActive}">PRODUTOS</li>
-          <li class="menuItem" routerLink='/quem-somos' [ngClass]="{'active': companyActive}">QUEM SOMOS</li>
-          <li class="menuItem" routerLink='/contato' [ngClass]="{'active': contactActive}">CONTATO</li>
+          <li class="menu-item" routerLink='' [ngClass]="{'active': homeActive}">{{lang.homeTitle}}</li>
+          <li class="menuItem" routerLink='/produtos' [ngClass]="{'active': productActive}">{{lang.productsTitle}}</li>
+          <li class="menuItem" routerLink='/quem-somos' [ngClass]="{'active': companyActive}">{{lang.companyTitle}}</li>
+          <li class="menuItem" routerLink='/contato' [ngClass]="{'active': contactActive}">{{lang.contactTitle}}</li>
       </ul>
   </nav>
 

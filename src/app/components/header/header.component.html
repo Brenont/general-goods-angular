@@ -22,12 +22,12 @@
     </div>
   </section>
 
-  <nav class="nav-mobile hide" *ngIf="toogle">
+  <nav class="nav-mobile" [ngClass]="{'showMenu': toogleMenu}">
       <ul class="menu-list">
-          <li class="menu-item" routerLink='' [ngClass]="{'active': homeActive}">{{lang.homeTitle}}</li>
-          <li class="menuItem" routerLink='/produtos' [ngClass]="{'active': productActive}">{{lang.productsTitle}}</li>
-          <li class="menuItem" routerLink='/quem-somos' [ngClass]="{'active': companyActive}">{{lang.companyTitle}}</li>
-          <li class="menuItem" routerLink='/contato' [ngClass]="{'active': contactActive}">{{lang.contactTitle}}</li>
+          <li class="menu-item" routerLink='' [ngClass]="{'showLi': toogleMenu, 'active': homeActive}"> {{lang.homeTitle}}</li>
+          <li class="menuItem" routerLink='/produtos' [ngClass]="{'active': productActive, 'showLi': toogleMenu}">{{lang.productsTitle}}</li>
+          <li class="menuItem" routerLink='/quem-somos' [ngClass]="{'active': companyActive, 'showLi': toogleMenu}">{{lang.companyTitle}}</li>
+          <li class="menuItem" routerLink='/contato' [ngClass]="{'active': contactActive, 'showLi': toogleMenu}">{{lang.contactTitle}}</li>
       </ul>
   </nav>
 

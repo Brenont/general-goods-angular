@@ -30,26 +30,9 @@
   </section>
 
   <section id="sct-map">
-    <div id="map"></div>
-  </section>
-
-  <script>
-    function initMap() {
-      var uluru = {
-        lat: -23.0028841,
-        lng: -43.3384684
-      };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: uluru
-      });
-      var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-      });
-    }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA&callback=initMap">
-  </script>
-
-</section>
+    <div id="map">
+        <agm-map [latitude]="-23.0028841" [longitude]="-43.3384684">
+            <agm-marker [latitude]="-23.0028841" [longitude]="-43.3384684"></agm-marker>
+          </agm-map>
+    </div>
+  

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LANG } from '../../../theme/pt';
 
+
 @Component({
   selector: 'app-contato',
   templateUrl: './contato.component.html',
@@ -14,5 +15,6 @@ export class ContatoComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
 }

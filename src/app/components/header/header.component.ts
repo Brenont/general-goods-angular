@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   public companyActive: boolean = false;
   public contactActive: boolean = false;
 
-  public toogle = false;
+  public toogleMenu = false;
 
   constructor() { }
 
@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
   }
 
   toogleSideMenu() {
-    this.toogle = !this.toogle;
+    this.toogleMenu = !this.toogleMenu;
   }
 
 }

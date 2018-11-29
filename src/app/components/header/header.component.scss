@@ -98,8 +98,9 @@ header {
   }
 
   .nav-mobile {
-    display: flex;
+    height: 0;
     transition: 0.4s;
+    z-index: 5;
 
     ul {
       width: 100%;
@@ -113,6 +114,9 @@ header {
 
   li {
     text-transform: uppercase;
+    transition: 0.2s;
+    display: none;
+    opacity: 0;
   }
 
   li:hover {
@@ -121,7 +125,27 @@ header {
     color: #fff;
   }
 
+  .showMenu {
+    height: 248px;
+  }
 
+  @keyframes animationLiShow {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  .showLi {
+    animation: animationLiShow 0.6s linear;
+    display: block;
+    opacity: 1;
+  }
 }
 
 @media(max-width:768px) {

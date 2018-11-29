@@ -108,15 +108,21 @@ header {
       li {
         padding: 20px;
         cursor: pointer;
+        transition: 0.2s;
+        display: none;
+        opacity: 0;
+      }
+
+      .showLi {
+        animation: animationLiShow 0.6s ease-in-out;
+        display: block;
+        opacity: 1;
       }
     }
   }
 
   li {
     text-transform: uppercase;
-    transition: 0.2s;
-    display: none;
-    opacity: 0;
   }
 
   li:hover {
@@ -141,11 +147,6 @@ header {
     }
   }
 
-  .showLi {
-    animation: animationLiShow 0.6s linear;
-    display: block;
-    opacity: 1;
-  }
 }
 
 @media(max-width:768px) {

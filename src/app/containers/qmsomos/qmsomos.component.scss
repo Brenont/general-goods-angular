@@ -1,0 +1,266 @@
+@import '../../../theme/colors.scss';
+
+#qmsomosexc {
+    h1 {
+        font-family: general;
+    }
+    
+    h1 {
+        color: #fff;
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px $tertiary-color;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    
+    #tituloBack {
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color;
+        height: 200px;
+    }
+    
+    #txtqmsomos {
+        width: 60%;
+        text-align: justify;
+        text-justify: inter-word;
+        padding: 50px;
+    }
+    
+    #qlqrcoisa {
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+    }
+    
+    .p1 {
+        font-family: qmsomos;
+        font-size: 18px;
+    }
+    
+    .p2 {
+        font-family: qmsomos;
+        font-size: 18px;
+    }
+    
+    .subtitulo {
+        font-family: qmsomos;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #000;
+    }
+    
+    .icone1 {
+        width: 200px;
+    }
+    
+    #pessoasLampada-content {
+        width: 40%;
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #pessoasLampada {
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #lampada {
+        width: 135px;
+        margin-left: -17px;
+        margin-bottom: -20px;
+    }
+    
+    #qlqrcoisa2 {
+        padding-bottom: 45px;
+    }
+    
+    .subtitulo2 {
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        padding: 15px;
+    }
+    
+    #txtqmsomos2 {
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+        justify-content: center;
+        font-family: qmsomos;
+    }
+    
+    #listas {
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 45px;
+        font-size: 22px;
+        font-family: qmsomos;
+    }
+    
+    .clients {
+        background-color: rgba(0, 0, 0, 0.1);
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 20px 30px 20px;
+        padding: 10px;
+    }
+    
+    .div-clients {
+        width: 100%;
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .clients img {
+        margin: 0px 40px;
+    }
+    
+    
+    @media screen and (max-width: 768px) {
+        .titulo {
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+        #qlqrcoisa {
+            display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+            display: flex;
+            flex-direction: column;
+        }
+        #txtqmsomos {
+            width: 100% !important;
+            padding: 25px !important;
+        }
+        #pessoasLampada {
+            margin: auto;
+            width: 0%;
+        }
+        #pessoas.icone1{
+            width: 440px;
+            height: 200px;
+        }
+        #lampada.icone1{
+            width: 376px;
+            height: 135px;
+        }
+    }
+    @media screen and (max-width:1024px){
+        .div-clients{
+            width: 100%;
+            display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+            display: flex;
+            flex-direction:column; 
+        }
+    }
+    @media screen and (max-width:425px) {
+        #pessoas.icone1{
+            width: 261px;
+            height: 200px;
+        }
+        #lampada.icone1{
+            width: 197px;
+            height: 135px;
+        }
+        #listas{
+            display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+        }
+        #lista1{
+            width: 50%;
+        }
+        #lista2{
+            width: 50%;
+        }
+        #txtqmsomos2{
+            margin-top: 39px;
+        }
+        .div-clients img{
+            margin: 28px 0px;
+        }
+    }
+    @media screen and (max-width:375px) {
+        #pessoas.icone1{
+            width: 215px;
+            height: 200px;
+        }
+        #lampada.icone1{
+            width: 154px;
+            height: 135px;
+        }
+    }
+    @media screen and (max-width:320px) {
+        #pessoas.icone1{
+            width: 187px;
+            height: 200px;
+        }
+        #lampada.icone1{
+            width: 134px;
+            height: 135px;
+        }
+        .titulo{
+            font-size: 35px;
+        }
+    }
+    }

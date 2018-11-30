@@ -1,0 +1,56 @@
+@font-face {
+    font-family: comfortaa;
+    src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    border: 1px solid;
+    width: 153px;
+    margin-bottom: 15px;
+}
+
+.titlecard {
+    margin-bottom: 15px;
+    font-family: comfortaa;
+}
+
+.txtcard {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+
+.buttoncard {
+    background: transparent;
+    border: #5368c5 1px solid;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.buttoncard:hover {
+    background-color: #5368c5;
+    color: #fff;
+}
+
+@media (max-width: 768px){
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .circle {
+        margin-top: 30px;
+    }
+}

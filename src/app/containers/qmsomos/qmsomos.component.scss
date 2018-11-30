@@ -1,11 +1,24 @@
 @import '../../../theme/colors.scss';
 
+@font-face {
+    font-family: comfortaa;
+    src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+}
+
+@font-face {
+    font-family: orator;
+    src: url(../../../assets/font/ORATORSTD.OTF);
+}
+
+@font-face {
+    font-family: tt0;
+    src: url(../../../assets/font/TT0288M_.TTF);
+}
+
 #qmsomosexc {
+
     h1 {
-        font-family: general;
-    }
-    
-    h1 {
+        font-family: orator;
         color: #fff;
         display:-webkit-flex;
         display:-webkit-box;
@@ -52,12 +65,12 @@
     }
     
     .p1 {
-        font-family: qmsomos;
+        font-family: tt0;
         font-size: 18px;
     }
     
     .p2 {
-        font-family: qmsomos;
+        font-family: tt0;
         font-size: 18px;
     }
     
@@ -107,6 +120,11 @@
         border-bottom: 1px solid;
         border-top: 1px solid;
         padding: 15px;
+        font-family: tt0;
+    }
+
+    .subtitulo {
+        font-family: tt0;
     }
     
     #txtqmsomos2 {
@@ -130,7 +148,7 @@
         justify-content: space-around;
         padding-top: 45px;
         font-size: 22px;
-        font-family: qmsomos;
+        font-family: tt0;
     }
     
     .clients {
@@ -168,18 +186,19 @@
         .titulo {
             padding-left: 6px;
             padding-right: 6px;
+            font-size: 42px;
         }
         #qlqrcoisa {
             display:-webkit-flex;
-        display:-webkit-box;
-        display:-moz-flex;
-        display:-moz-box;
-        display:-ms-flexbox;
+            display:-webkit-box;
+            display:-moz-flex;
+            display:-moz-box;
+            display:-ms-flexbox;
             display: flex;
             flex-direction: column;
         }
         #txtqmsomos {
-            width: 100% !important;
+            width: 83% !important;
             padding: 25px !important;
         }
         #pessoasLampada {
@@ -194,6 +213,16 @@
             width: 376px;
             height: 135px;
         }
+        .p1, .p2{
+            font-size: 17px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        }
+    }
+    @media screen and (max-width:1440px) {
+        .titulo{
+            font-size:50px;
+        }
     }
     @media screen and (max-width:1024px){
         .div-clients{
@@ -205,6 +234,9 @@
         display:-ms-flexbox;
             display: flex;
             flex-direction:column; 
+        }
+        .titulo{
+            font-size: 45px;
         }
     }
     @media screen and (max-width:425px) {
@@ -227,7 +259,7 @@
             justify-content: center;
             align-items: center; 
         }
-        #lista1{
+        #lista1, #lista2{
             width: 50%;
         }
         #lista2{
@@ -239,6 +271,9 @@
         .div-clients img{
             margin: 28px 0px;
         }
+        .titulo{
+            font-size: 30px;
+        }
     }
     @media screen and (max-width:375px) {
         #pessoas.icone1{
@@ -248,6 +283,9 @@
         #lampada.icone1{
             width: 154px;
             height: 135px;
+        }
+        .titulo{
+            font-size: 30px;
         }
     }
     @media screen and (max-width:320px) {
@@ -260,7 +298,9 @@
             height: 135px;
         }
         .titulo{
-            font-size: 35px;
+            font-size: 30px;
         }
+
     }
-    }
+
+}

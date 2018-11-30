@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutosComponent implements OnInit {
 
-  constructor() { }
+  public products = [];
+
+  constructor() { 
+    this.products = [
+      {
+        name: "Caixa de Isopor",
+        description: "Caixa apropriada para transportar produtos perecíveis à longa distância.",
+        features : [ "Disponibilizamos caixa com e sem núcleo.",
+        "Fabricamos em qualquer tamanho, formato, densidade e estanqueidade."]
+      },
+      
+      {
+        name: "CAIXA DE ISOPOR COM NÚCLEO",
+      }
+    ]
+  }
 
   ngOnInit() {
   }

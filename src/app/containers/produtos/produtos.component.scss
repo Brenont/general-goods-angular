@@ -1,17 +1,27 @@
-@import '../../../theme/colors.scss';
+@import '../../../theme/_colors.scss';
+
+@font-face {
+    font-family: comfortaa;
+    src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+}
+
+@font-face {
+    font-family: tt0;
+    src: url(../../../assets/font/TT0288M_.TTF);
+}
 
 #produtosexc {
     h2{
-        font-family: titlep;
+        font-family: comfortaa;
         color: $secondary-color;
         text-shadow: black 1.1px 1.1px 1px;
     }
      h5{
-        font-family: titlep;
+        font-family: tt0;
         font-size: 25.2px;
     }
     .p-produtos{
-        font-family: titlep;
+        font-family: comfortaa;
         font-size: 22px;
     }
     
@@ -27,7 +37,7 @@
     }
     
     .ttl-pag{
-        font-family: menu;
+        font-family: comfortaa;
         width: 100%;
         height: 120px;
         font-size: 53px;
@@ -58,32 +68,32 @@
     .h2-ttl{
         padding-left: 15%;
         color: #fff;
-        font-family: menu;
+        font-family: comfortaa;
         padding-top: 11px;
     }
     
     h2 {
-        font-family: menu;
+        font-family: comfortaa;
         font-size: 27px;
     }
     .cx2 h4{
-        font-family: titlep;
+        font-family: tt0;
         padding-bottom: 10px;
         margin-top: 15px;
     }
     
     .cx2 h2{
-        font-family: titlep;
+        font-family: comfortaa;
     }
     
     h4 {
-        font-family: titlep;
+        font-family: comfortaa;
         font-size: 27px; 
     }
     
     .cx2 li {
         font-size: 22px;
-        font-family: titlep;
+        font-family: tt0;
     }
     
     body {

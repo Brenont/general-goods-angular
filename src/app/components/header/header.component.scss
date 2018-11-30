@@ -1,5 +1,10 @@
 @import '../../../styles.scss';
 
+@font-face {
+  font-family: comfortaa;
+  src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+}
+
 *:focus {
   outline: none;
 }
@@ -13,6 +18,8 @@ header {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px -1px;
   background-color: #f8f9fa;
   width: 100%¨;
+  font-family: comfortaa;
+
 
   .container-header {
     width: 100%;

@@ -1,0 +1,184 @@
+@font-face {
+    font-family: comfortaa;
+    src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    border: 1px solid;
+    width: 153px;
+    margin-bottom: 15px;
+}
+
+.titlecard {
+    margin-bottom: 15px;
+    font-family: comfortaa;
+}
+
+.txtcard {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+
+.buttoncard {
+    background: transparent;
+    border: #5368c5 1px solid;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.buttoncard:hover {
+    background-color: #5368c5;
+    color: #fff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+
+
+label {
+    background: #444;
+	color: #fff;
+	transition: transform 400ms ease-out;
+	display: inline-block;
+  min-height: 100%;
+	width: 100vw;
+	height: 76vh;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	line-height: 100vh;
+}
+
+form {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+    white-space: nowrap;
+    margin-bottom: 60px;
+}
+input {
+	position: absolute;
+}
+
+input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+input:nth-of-type(2):checked ~ label:nth-of-type(2),
+input:nth-of-type(3):checked ~ label:nth-of-type(3),
+input:nth-of-type(4):checked ~ label:nth-of-type(4){
+   z-index: 0;
+}
+
+input:nth-of-type(1):checked ~ label {
+	transform: translate3d(0, 0, 0);
+}
+
+input:nth-of-type(2):checked ~ label {
+	transform: translate3d(-100%, 0, 0);
+}
+
+input:nth-of-type(3):checked ~ label {
+	transform: translate3d(-200%, 0, 0);
+}
+
+input:nth-of-type(4):checked ~ label {
+	transform: translate3d(-300%, 0, 0);
+}
+
+label {
+    background-image: url(../../../assets/img/eco.jpg);
+	background-size: cover;
+	font-size: 3rem;
+}
+
+label[for="diamonds"],
+label[for="hearts"] {
+    background-image: url(../../../assets/img/isopor.jpg);
+}
+
+label:before,
+label:after {
+	color: white;
+	display: block;
+	background: rgba(255,255,255,0.2);
+	position: absolute;
+	padding: 1rem;
+	font-size: 3rem;
+	height: 10rem;
+	vertical-align: middle;
+	line-height: 10rem;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	cursor: pointer;
+}
+
+label:before {
+	content: "\276D";
+	right: 100%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+label:after {
+	content: "\276C";
+	left: 100%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+
+
+@media (max-width: 1024px){
+    label {
+        background-image: url(../../../assets/img/eco-ipad.jpg);
+    }
+    label[for="diamonds"],
+    label[for="hearts"] {
+    background-image: url(../../../assets/img/isopor-ipad.jpg);
+    }
+}
+
+@media (max-width: 768px){
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .circle {
+        margin-top: 30px;
+    }
+
+    label {
+        background-image: url(../../../assets/img/eco-mob.jpg);
+    }
+
+    label[for="diamonds"],
+    label[for="hearts"] {
+    background-image: url(../../../assets/img/isopor-mob.jpg);
+    }
+    label:before,
+    label:after{
+    padding: 0rem;
+    font-size: 3rem;
+    height: 7rem;
+    line-height: 7rem;
+    }
+}

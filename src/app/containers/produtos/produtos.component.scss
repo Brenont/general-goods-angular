@@ -1,4 +1,14 @@
-@import '../../../theme/colors.scss';
+@import '../../../theme/_colors.scss';
+
+@font-face {
+    font-family: comfortaa;
+    src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+}
+
+@font-face {
+    font-family: tt0;
+    src: url(../../../assets/font/TT0288M_.TTF);
+}
 
 #produtosexc {
   h2{

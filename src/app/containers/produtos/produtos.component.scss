@@ -1,4 +1,5 @@
 @import '../../../theme/colors-two.scss';
+@import '../../../styles.scss';
 
 @font-face {
     font-family: comfortaa;
@@ -10,98 +11,73 @@
     src: url(../../../assets/font/TT0288M_.TTF);
 }
 
-#produtosexc {
-  h2{
+.container-produtos {
+
+  .div-ttl {
+    padding: 15px 0px 40px 0px;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+
+    .ttl-pag {
+      font-family: 'Open Sans';
+      // font-family: menu;
+      width: 100%;
+      height: 120px;
+      font-size: 53px;
+      margin-bottom: 0;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary-color;
+      color: #fff;
+      box-shadow: #000 0px 0px 14px -2px;
+      /*border-bottom: 1px solid #000;*/
+    }
+  }
+
+  h2 {
     font-family: titlep;
     color: $secondary-color;
     text-shadow: black 1.1px 1.1px 1px;
   }
-  h5{
+
+  h5 {
     font-family: titlep;
     font-size: 25.2px;
   }
-  .p-produtos{
-    font-family: titlep;
-    font-size: 22px;
-  }
 
-  .div-ttl{
-    padding: 15px 0px 40px 0px;
-    display:-webkit-flex;
-    display:-webkit-box;
-    display:-moz-flex;
-    display:-moz-box;
-    display:-ms-flexbox;
-    display: flex;
-    justify-content: center;
-  }
-
-  .ttl-pag{
-    font-family: menu;
-    width: 100%;
-    height: 120px;
-    font-size: 53px;
-    margin-bottom: 0;
-    display:-webkit-flex;
-    display:-webkit-box;
-    display:-moz-flex;
-    display:-moz-box;
-    display:-ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $primary-color;
-    color: #fff;
-    box-shadow: #000 0px 0px 14px -2px;
-    /*border-bottom: 1px solid #000;*/
-  }
-
-  .ttl-pdt{
-    width:40%;
+  .ttl-pdt {
+    width: 40%;
     padding: 15px 0px;
     border-radius: 10px;
     margin-left: -10px;
     background-color: $primary-color;
     box-shadow: #000 0px 0px 14px -2px;
-  }
 
-  .h2-ttl{
-    padding-left: 15%;
-    color: #fff;
-    font-family: menu;
-    padding-top: 11px;
-  }
-
-  h2 {
-    font-family: menu;
-    font-size: 27px;
-  }
-  .cx2 h4{
-    font-family: titlep;
-    padding-bottom: 10px;
-    margin-top: 15px;
-  }
-
-  .cx2 h2{
-    font-family: titlep;
-  }
-
-  h4 {
-    font-family: titlep;
-    font-size: 27px;
-  }
-
-  .cx2 li {
-    font-size: 22px;
-    font-family: titlep;
+    .h2-ttl {
+      padding-left: 15%;
+      color: #fff;
+      font-family: menu;
+      padding-top: 11px;
+    }
   }
 
   .produto {
-    display:-webkit-flex;
-    display:-webkit-box;
-    display:-moz-flex;
-    display:-moz-box;
-    display:-ms-flexbox;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,86 +85,123 @@
     padding: 90px 0px;
     border-top: 4px double $primary-color;
     margin-top: -25px;
-    margin-bottom: -53px
+    margin-bottom: -53px;
+
+    img {
+      padding: 5px;
+      border: 4px double $primary-color;
+      box-shadow: #000 0px 0px 14px -2px;
+    }
+
+    .cx1 {
+      padding-right: 55px;
+    }
+
+    .cx2 {
+      width: 60%;
+      padding-left: 60px;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-family: titlep;
+        padding-bottom: 10px;
+        margin-top: 15px;
+      }
+
+      .p-produtos {
+        font-family: titlep;
+        font-size: 22px;
+      }
+
+      li {
+        font-size: 22px;
+        font-family: titlep;
+      }
+    }
   }
 
-  .produto img {
-    padding: 5px;
-    border: 4px double $primary-color;
-    box-shadow: #000 0px 0px 14px -2px;
-  }
-
-  .produto .cx1 {
-    padding-right: 55px;
-  }
-
-  .produto .cx2 {
-    width: 60%;
-    padding-left: 60px;
-    display:-webkit-flex;
-    display:-webkit-box;
-    display:-moz-flex;
-    display:-moz-box;
-    display:-ms-flexbox;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #cx-termica{
+  #cx-termica {
     padding: 35px;
   }
 
-  #isopor, #caixanucleo{
+  #isopor,
+  #caixanucleo {
     padding: 21px;
   }
 
-  #gelo{
+  #gelo {
     padding: 0px 77px;
   }
-  @media screen and (max-width:768px) {
-    #produtosexc {
-      
-      .h2-ttl {
-        padding-left: 14%;
-        color: #fff;
-        padding-bottom: 0px;
-        padding-top: 10px;
-      }
+}
 
-      h2 {
-        font-family: menu;
-        font-size: 28px;
+
+// unfortunely(or not) I never'll can undestand this stuffs...
+// h2 {
+//   font-family: menu;
+//   font-size: 27px;
+// }
+// h4 {
+//   font-family: titlep;
+//   font-size: 27px;
+// }
+
+  @media screen and (max-width:768px) {
+    .container-produtos {
+      .div-ttl {
+        .ttl-pag {
+          font-size: 30px !important;
+          height: 90px;
+        }
       }
 
       .ttl-pdt {
         width: 88%;
         padding: 16px 0px;
         margin-left: -20px;
+
+        .h2-ttl {
+          padding-left: 14%;
+          color: #fff;
+          padding-bottom: 0px;
+          padding-top: 10px;
+        }
       }
 
-      .produto .cx1 {
-        padding-right: 0;
+      .produto {
+        flex-direction: column !important;
+        align-items: center;
+
+        .cx1 {
+          padding-right: 0;
+        }
+
+        .cx2 {
+          // width: 100%;
+          width: 70%;
+          padding: 33px;
+
+        }
       }
 
-      .produto .cx2 {
-        width: 100%;
-        padding: 33px;
-
+      h2 {
+        font-family: menu;
+        font-size: 28px;
       }
     }
-.produto {
-        flex-direction: column!important;
-        align-items: center;
-      }
-
   }
 
-  @media screen and (max-width:480px) {
-    #produtosexc {
+  @media (max-width:480px) {
+    .container-produtos {
       .div-ttl {
         .ttl-pag {
+          font-size: 30px !important;
           height: 90px;
-          font-size: 30px;
         }
       }
 
@@ -198,35 +211,32 @@
         }
       }
 
-      .cx2 {
-        h4 {
-          font-size: 20px;
-        }
-
-        h2 {
-          font-size: 20px;
-          text-shadow: black 0px 0.4px;
-        }
-
-        li {
-          font-size: 18px;
-        }
-
-        h5 {
-          font-size: 20px;
-        }
-        .p-produtos{
-        font-size: 17px;
-      }
-      }
-
       .produto {
         padding: 70px 0px 44px 0px;
+
+        .cx2 {
+          h4 {
+            font-size: 20px;
+          }
+
+          h2 {
+            font-size: 20px;
+            text-shadow: black 0px 0.4px;
+          }
+
+          li {
+            font-size: 18px;
+          }
+
+          h5 {
+            font-size: 20px;
+          }
+
+          .p-produtos {
+            font-size: 17px;
+          }
+        }
       }
 
-
-
-      
     }
   }
-}

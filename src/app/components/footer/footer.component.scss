@@ -1,0 +1,133 @@
+.footer1 {
+    background-color: rgba(255, 255, 255, 1);
+    color: #16104d;
+    padding: 10px 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px 5px;
+}
+
+.sct-footer {
+    display: flex;
+    align-items: center;
+}
+
+.footer1 div {
+    width: 100%;
+}
+
+.link-footer {
+    display: flex;
+}
+
+.ul-footer {
+    padding-left: 30px;
+    margin: 0;
+}
+
+.ul-footer li {
+    list-style-type: none;
+}
+
+.footerlink-a {
+    color: black;
+    font-weight: 450px;
+}
+
+.footerlink-a:hover {
+    color: #007bff;
+    text-decoration: none;
+    transition: 0.45s;
+}
+
+.number1{
+    color: black;
+    text-decoration: none;
+}
+.number:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.info-footer1 {
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.info-footer2 {
+    color: black;
+    /*margin-left: 188px;*/
+    width: 100%;
+}
+
+.logo-footer {
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-info {
+    margin: 0px 4px 0px 4px;
+}
+
+.pfooter {
+    margin-bottom: 10px;
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display: flex;
+}
+.developby {
+    background-color: #000;
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+}
+
+.div-developby {
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-devs {
+    padding-top: 0px;
+}
+@media (max-width:900px){
+    .sct-footer{
+        display: block;
+    }
+    .footer1 div{
+        padding: 12px 0px;
+        justify-content: center;
+    }
+    .info-footer2 {
+        margin-left: 0;
+        display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

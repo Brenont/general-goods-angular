@@ -3,15 +3,46 @@
 
 <!-- CARROSSEL -->
 
-<form>
-
-  <input type="radio" name="fancy" autofocus value="clubs" id="clubs" />
-  <input type="radio" name="fancy" value="hearts" id="hearts" />
-  <input type="radio" name="fancy" value="spades" id="spades" />
-  <input type="radio" name="fancy" value="diamonds" id="diamonds" />			
-  <label for="clubs"></label><label for="hearts"></label><label for="spades"></label><label for="diamonds"></label>
-</form>
-
+<ngx-hm-carousel
+  [(ngModel)]="index"
+  (ngModelChange)="indexChanged($event)"
+  [autoplay-speed]="3000"
+  [autoplay]="true"
+  [infinite]="infinite"
+  [between-delay]="2000"
+  class="carousel c-accent">
+ 
+  <section ngx-hm-carousel-container class="content">
+    <article class="item cursor-pointer"
+      ngx-hm-carousel-item
+      *ngFor="let avatar of avatars">
+      <div class="img"
+        [style.backgroundImage]="'url('+avatar.url+')'">
+      </div>
+    </article>
+  </section>
+ 
+  <ng-template #carouselPrev>
+    <div class="click-area">
+      <i class="material-icons">&lt;</i>
+    </div>
+  </ng-template>
+  <ng-template #carouselNext>
+    <div class="click-area">
+      <i class="material-icons">&gt;</i>
+    </div>
+  </ng-template>
+ 
+  <ng-template #carouselDot let-model>
+    <div class="ball bg-accent"
+      [class.visible]="model.index === model.currentIndex"></div>
+  </ng-template>
+ 
+  <ng-template #carouselProgress let-progress>
+    <div class="progress"></div>
+  </ng-template>
+ 
+</ngx-hm-carousel>
 
 <!-- CARDES -->
 

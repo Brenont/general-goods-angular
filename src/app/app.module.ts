@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,10 @@ import { ContatoComponent } from './containers/contato/contato.component';
 import { QmsomosComponent } from './containers/qmsomos/qmsomos.component';
 import { ProdutosComponent } from './containers/produtos/produtos.component';
 import { AgmCoreModule } from '@agm/core';
+import { environment } from '../environments/environment';
+import { NgxHmCarouselModule } from 'ngx-hm-carousel';
+
+import 'hammerjs';
 
 
 @NgModule({
@@ -29,6 +34,7 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    NgxHmCarouselModule,
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA'

@@ -6,6 +6,7 @@
 .cards {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 7%;
 }
 
 .circle {
@@ -60,6 +61,8 @@ body {
   }
    
   .carousel {
+
+    margin-bottom: 7%;
     .content {
       display: flex;
    
@@ -73,7 +76,7 @@ body {
           background-size: cover;
           background-position: center;
           height: 0;
-          padding-bottom: 50%;
+          padding-bottom: 38%;
         }
       }
     }
@@ -88,7 +91,7 @@ body {
         background-size: cover;
         background-position: center;
         height: 0;
-        padding-bottom: 50%;
+        padding-bottom: 38%;
       }
     }
    
@@ -111,7 +114,7 @@ body {
       left: 0;
       width: 0;
       height: 5px;
-      background: #ff5252;
+      background: #16114d;
     }
    
     .click-area {
@@ -120,20 +123,14 @@ body {
    
       i {
         font-size: 3em;
+        
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 28%;        
+      }
       }
     }
-  }
-
-
-@media (max-width: 1024px){
-    label {
-        background-image: url(../../../assets/img/eco-ipad.jpg);
-    }
-    label[for="diamonds"],
-    label[for="hearts"] {
-    background-image: url(../../../assets/img/isopor-ipad.jpg);
-    }
-}
+  
 
 @media (max-width: 768px){
     .cards {
@@ -144,19 +141,4 @@ body {
         margin-top: 30px;
     }
 
-    label {
-        background-image: url(../../../assets/img/eco-mob.jpg);
-    }
-
-    label[for="diamonds"],
-    label[for="hearts"] {
-    background-image: url(../../../assets/img/isopor-mob.jpg);
-    }
-    label:before,
-    label:after{
-    padding: 0rem;
-    font-size: 3rem;
-    height: 7rem;
-    line-height: 7rem;
-    }
 }

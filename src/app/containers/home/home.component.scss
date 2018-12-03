@@ -1,90 +1,108 @@
 @font-face {
-    font-family: comfortaa;
-    src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+  font-family: comfortaa;
+  src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
 }
 
 .cards {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 7%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 7%;
 }
 
 .circle {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 320px;
 }
 
 .img-circle {
-    border-radius: 50%;
-    border: 1px solid;
-    width: 153px;
-    margin-bottom: 15px;
+  border-radius: 50%;
+  border: 1px solid;
+  width: 153px;
+  margin-bottom: 15px;
 }
 
 .titlecard {
-    margin-bottom: 15px;
-    font-family: comfortaa;
+  margin-bottom: 15px;
+  font-family: comfortaa;
 }
 
 .txtcard {
-    text-align: center;
-    margin-bottom: 15px;
-    font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: sans-serif;
 }
 
 .buttoncard {
-    background: transparent;
-    border: #5368c5 1px solid;
-    padding: 10px 10px;
-    border-radius: 5px;
+  background: transparent;
+  border: #5368c5 1px solid;
+  padding: 10px 10px;
+  border-radius: 5px;
 }
 
 .buttoncard:hover {
-    background-color: #5368c5;
-    color: #fff;
+  background-color: #5368c5;
+  color: #fff;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: sans-serif;
-	overflow: hidden;
+  font-family: sans-serif;
+  overflow: hidden;
 }
 
 
 .transition {
-    transition: all .4s ease-in-out;
-  }
-   
-  .carousel {
+  transition: all .4s ease-in-out;
+}
 
-    margin-bottom: 7%;
-    .content {
-      display: flex;
-   
-      .item {
-        width: 100%;
-        display: block;
-   
-        .img {
-          width: 100%;
-          display: block;
-          background-size: cover;
-          background-position: center;
-          height: 0;
-          padding-bottom: 38%;
-        }
-      }
-    }
-   
+.carousel {
+
+  margin-bottom: 7%;
+
+  .txtcarousel {
+    font-family: comfortaa;
+    text-align-last: end;
+    margin-top: -10%;
+    position: absolute;
+    right: 58%;
+    top: 70%;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.53);
+  }
+
+  .txtcarousel h1 {
+    color: #083e21;
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+
+  .txtcarousel h2 {
+    padding-bottom: 10px;
+  }
+
+  .txtcarousel2 {
+    font-family: comfortaa;
+    text-align-last: left;
+    margin-top: -10%;
+    position: absolute;
+    top: 85%;
+    left: 58%;
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.53);
+  }
+
+  .content {
+    display: flex;
+
     .item {
       width: 100%;
       display: block;
-   
+
       .img {
         width: 100%;
         display: block;
@@ -94,51 +112,75 @@ body {
         padding-bottom: 38%;
       }
     }
-   
-    .ball {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: black;
-      border: 2px solid;
-      opacity: 0.5;
-   
-      &.visible {
-        opacity: 1;
-      }
-    }
-   
-    .progress {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 5px;
-      background: #16114d;
-    }
-   
-    .click-area {
-      width: 50px;
-      text-align: center;
-   
-      i {
-        font-size: 3em;
-        
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.1);
-            border-radius: 28%;        
-      }
-      }
-    }
-  
+  }
 
-@media (max-width: 768px){
-    .cards {
-        flex-direction: column;
-        align-items: center;
+  .item {
+    width: 100%;
+    display: block;
+
+    .img {
+      width: 100%;
+      display: block;
+      background-size: cover;
+      background-position: center;
+      height: 0;
+      padding-bottom: 38%;
     }
-    .circle {
-        margin-top: 30px;
+  }
+
+  .bg-accent {
+    margin-bottom: 50px;
+  }
+
+  .ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+    border: 2px solid;
+    opacity: 0.5;
+
+    &.visible {
+      opacity: 1;
     }
+  }
+
+  .progress {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: #16114d;
+  }
+
+  .click-area {
+    width: 50px;
+    text-align: center;
+
+    i {
+      font-size: 3em;
+
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 28%;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle {
+    margin-top: 30px;
+  }
+
+  .carousel {
+    height: 512px;
+  }
 
 }

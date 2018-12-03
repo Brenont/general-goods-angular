@@ -3,25 +3,40 @@
 
 <!-- CARROSSEL -->
 
-<ngx-hm-carousel
-  [(ngModel)]="index"
-  (ngModelChange)="indexChanged($event)"
-  [autoplay-speed]="3000"
-  [autoplay]="true"
-  [infinite]="infinite"
-  [between-delay]="2000"
-  class="carousel c-accent">
- 
+<ngx-hm-carousel [(ngModel)]="index" (ngModelChange)="indexChanged($event)" [autoplay-speed]="3000" [autoplay]="true"
+  [infinite]="" [between-delay]="2000" class="carousel c-accent">
+
   <section ngx-hm-carousel-container class="content">
-    <article class="item cursor-pointer"
-      ngx-hm-carousel-item
-      *ngFor="let avatar of avatars">
-      <div class="img"
-        [style.backgroundImage]="'url(../../../assets/img/eco1.jpg)'">
+    <article class="item cursor-pointer" ngx-hm-carousel-item>
+      <div class="img">
+        <img class="first" src="../../../assets/img/eco1.jpg" alt="">
       </div>
+      <div class="txtcarousel">
+        <h2>SEMEAR IDEIAS</h2>
+        <h1>ECOLÓGICAS</h1>
+        <h2>E PLANTAR</h2>
+        <h1>SUSTENTABILIDADE</h1>
+        <h2>É TER A GARANTIA DE COLHERMOS UM</h2>
+        <h1>FUTURO</h1>
+        <h2>FÉRTIL E DESCENTE.</h2> <br>
+        <h4>-Silvado Filho</h4>
+      </div>
+
+    </article>
+    <article class="item cursor-pointer" ngx-hm-carousel-item>
+      <div class="img">
+        <img src="../../../assets/img/isopor1.jpg" alt="">
+      </div>
+      <div class="txtcarousel2">
+          <h1>POLISTIRENO</h1> <br>
+          <h1>BAIXO CUSTO</h1>
+          <h1>RECICLÁVEL</h1>
+          <h1>MODERNO</h1>
+        </div>
+
     </article>
   </section>
- 
+
   <ng-template #carouselPrev>
     <div class="click-area">
       <i class="material-icons">&lt;</i>
@@ -32,16 +47,15 @@
       <i class="material-icons">&gt;</i>
     </div>
   </ng-template>
- 
+
   <ng-template #carouselDot let-model>
-    <div class="ball bg-accent"
-      [class.visible]="model.index === model.currentIndex"></div>
+    <div class="ball bg-accent" [class.visible]="model.index === model.currentIndex"></div>
   </ng-template>
- 
+
   <ng-template #carouselProgress let-progress>
     <div class="progress"></div>
   </ng-template>
- 
+
 </ngx-hm-carousel>
 
 <!-- CARDES -->

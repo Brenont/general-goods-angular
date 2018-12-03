@@ -26,6 +26,9 @@ export const LANG = {
     parcerias5 : "Laboratório Farmacêutico da Marinha do Brasil",
     parcerias6 : "Laboratório Farmacêutico da Aeronáutica",
 
+    //FOOTER
+    Address : "R. Dalcídio Jurandir, 255 - Sala 309 - Barra da Tijuca, RJ",
+    
 
   
     

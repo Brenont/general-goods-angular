@@ -26,8 +26,29 @@ export const LANG = {
     parcerias5 : "Laboratório Farmacêutico da Marinha do Brasil",
     parcerias6 : "Laboratório Farmacêutico da Aeronáutica",
 
-
-  
+    //FOOTER
+    Address : "R. Dalcídio Jurandir, 255 - Sala 309 - Barra da Tijuca, RJ",
     
+    //HOME
+    txtcarousel1 : "SEMEAR IDEIAS",
+    txtcarousel2 : "ECOLÓGICAS",   
+    txtcarousel3 : "E PLANTAR",
+    txtcarousel4 : "SUSTENTABILIDADE",
+    txtcarousel5 : "É TER A GARANTIA DE COLHERMOS UM",
+    txtcarousel6 : "FUTURO",
+    txtcarousel7 : "FÉRTIL E DESCENTE.",
+    txtcarousel8 : "-Silvado Filho",
+    slogan1 : "POLISTIRENO",
+    slogan2 : "BAIXO CUSTO",
+    slogan3 : "RECICLÁVEL",
+    slogan4 : "MODERNO",  
+    titlecard : "Nossos produtos",
+    txtcard : "Ciente de que a competitividade está vinculada à competência, a General Goods conta com produtos de qualidade e aplicativos diversificados que associam design, funcionalidade e garantia de satisfação.",
+    buttoncard : "Veja mais >>",
+    titlecard2 : "Sobre nós",
+    txtcard2 : "Criada em 1993, a General Goods é uma empresa focada em atender a demanda das empresas por produto de qualidade, voltados para o auxílio na logística e transporte",
+    titlecard3 : "fale conosco",
+    txtcard3 : "Entre em contato conosco pelo nosso formulário, email ou telefone e tire suas dúvidas ou faça seu orçamento.",
+
     
 }

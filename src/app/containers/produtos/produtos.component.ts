@@ -47,7 +47,7 @@ export class ProdutosComponent implements OnInit {
           "Travas de borracha.*",
           "Rodizios com travas e rodas de borracha antiderrapantes.*",
         ],
-        extra: [
+        extras: [
           "*Itens opcionais, personalizadas de acordo com necessidade do cliente.",
         ]
       },

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LANG } from '../../../theme/pt';
 
 @Component({
   selector: 'app-qmsomos',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QmsomosComponent implements OnInit {
 
+  public lang = LANG;
+  
   constructor() { }
 
   ngOnInit() {

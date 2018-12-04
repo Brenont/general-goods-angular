@@ -1,4 +1,5 @@
 @import '../../../styles.scss';
+@import '../../../theme/colors.scss';
 
 @font-face {
   font-family: comfortaa;
@@ -12,6 +13,49 @@
 .active {
   background-color: #2b2089;
   color: #fff !important;
+}
+
+@media(min-width:769px) {
+  header {
+    height: 78px;
+
+    .buy-container {
+      position: fixed;
+      top: 78px;
+      right: 5px;
+      width: 93px;
+      background-color: #a9160e;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 0px;
+      border-collapse: collapse;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      color: $primary-color;
+
+      img{
+        height: auto;
+        cursor: pointer;
+      }
+
+      .buy-icon{
+        width: 35px;
+      }
+      
+      .user-icon{
+        width: 30px;
+        margin-left: 5px;
+      }
+
+      .divisor{
+        padding: 0px 6px;
+        font-size: 30px;
+      }
+
+    }
+  }
 }
 
 header {
@@ -178,5 +222,8 @@ header {
     // .container-link{
     //   display: none;
     // }
+    .buy-container {
+      display: none;
+    }
   }
 }

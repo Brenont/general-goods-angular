@@ -8,9 +8,9 @@
     <div class="container-link">
       <ul class="desktop">
         <li routerLink='' [ngClass]="{'active': homeActive}">{{lang.homeTitle}}</li>
-        <li routerLink='/produtos' [ngClass]="{'active': productActive}">{{lang.productsTitle}}</li>
         <li routerLink='/quem-somos' [ngClass]="{'active': companyActive}">{{lang.companyTitle}}</li>
         <li routerLink='/contato' [ngClass]="{'active': contactActive}">{{lang.contactTitle}}</li>
+        <li routerLink='/produtos' [ngClass]="{'active': productActive}">{{lang.productsTitle}}</li>
       </ul>
       <div class="mobile span-toggle" (click)="toogleSideMenu()">
         <section class="icon-container">
@@ -25,10 +25,15 @@
   <nav class="nav-mobile" [ngClass]="{'showMenu': toogleMenu}">
       <ul class="menu-list">
           <li class="menu-item" routerLink='' [ngClass]="{'showLi': toogleMenu, 'active': homeActive}"> {{lang.homeTitle}}</li>
-          <li class="menuItem" routerLink='/produtos' [ngClass]="{'active': productActive, 'showLi': toogleMenu}">{{lang.productsTitle}}</li>
           <li class="menuItem" routerLink='/quem-somos' [ngClass]="{'active': companyActive, 'showLi': toogleMenu}">{{lang.companyTitle}}</li>
           <li class="menuItem" routerLink='/contato' [ngClass]="{'active': contactActive, 'showLi': toogleMenu}">{{lang.contactTitle}}</li>
+          <li class="menuItem" routerLink='/produtos' [ngClass]="{'active': productActive, 'showLi': toogleMenu}">{{lang.productsTitle}}</li>
       </ul>
   </nav>
 
+  <div class="buy-container">
+    <img class="buy-icon" src="../../../assets/img/buy.png" alt="">
+    <div class="divisor">|</div>
+    <img class="user-icon" src="../../../assets/img/user.png" alt="">
+  </div>
 </header>

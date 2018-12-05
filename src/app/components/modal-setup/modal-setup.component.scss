@@ -1,0 +1,22 @@
+.container-modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.685);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container-child {
+    background-color: rgb(245, 245, 245);
+    min-height: 150px;
+    min-width: 150px;
+    border-radius: 2px;
+    box-shadow: #313030 2px 1px 8px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 25px;
+  }
+
+}

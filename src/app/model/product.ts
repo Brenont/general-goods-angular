@@ -1,7 +1,8 @@
 export class Produtos {
     name: string;
-    description: string[];
+    descriptions: string[];
     features: string[];
     sizes: number[];
     extras: string[];
-}[];
+    img: string;
+};

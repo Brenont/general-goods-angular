@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'theme/fonts.scss';
+@import 'theme/colors.scss';
 
 *{
     margin: 0;
@@ -12,6 +13,17 @@
 a{
     text-decoration: none;
 }
+
+body::-webkit-scrollbar {
+    background-color: #f5eeee;
+    width: 4px;
+    height: 0px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 10px;
+  }
 
 //RESPONSIVE CLASSES
 

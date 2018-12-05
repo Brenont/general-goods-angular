@@ -1,103 +1,145 @@
 <app-header active="produtos"></app-header>
 
 <section class="container-produtos">
-    <div class="div-ttl">
-        <h1 class="ttl-pag">PRODUTOS</h1>
-    </div>
+  <div class="div-ttl">
+    <h1 class="ttl-pag">PRODUTOS</h1>
+  </div>
+  <div class="container-produto" *ngFor="let product of productsList; let i=index">
     <div class="ttl-pdt">
-        <h2 class="h2-ttl">CAIXA DE ISOPOR</h2>
-    </div>
-    <section class="produto tipo2">
-        <div class="cx uretânica1">
-            <img id="isopor" src="../../../assets/img/caixa.png" width="300px" height="280px" alt="foto do produto" id="isopor">
-            <br>
-        </div>
-        <div class="cx2">
-            <h4>Caixa apropriada para transportar produtos perecíveis à longa distância.</h4>
-                <h2>Características:</h2>
-                <li>Disponibilizamos caixa com e sem núcleo.</li>
-                <li>Fabricamos em qualquer tamanho, formato, densidade e estanqueidade.</li>
-        </div>
-    </section>
-    <div class="ttl-pdt">
-        <h2 class="h2-ttl">CAIXA DE ISOPOR COM NÚCLEO</h2>
-    </div>
-    <section class="produto tipo1">
-        <div class="cx1">
-            <img id="caixanucleo" src="../../../assets/img/caixanucleo.png" width="300px" height="280px" alt="foto do produto" id="nucleo">
-            <br>
-        </div>
-        <div class="cx2">
-            <h4>Caixa apropriada para transportar produtos perecíveis à longa distância.
-            <h5> O núcleo é utilizado para separar o material transportado do gelo reciclável, evitando o congelamento do
-                material e aumentando o controle da temperatura interna.</h5>
-            </h4>
-            <br>
-                <h2>Tamanhos:</h2>
-                <li>12 litros.</li>
-                <li>37 litros.</li>
-                <li>50 litros.</li>
-                <li>103 litros.</li>
-                <li>130 litros.</li>
-        </div>
-    </section>
-    <div class="ttl-pdt">
-            <h2 class="h2-ttl">CAIXA TÉRMICA</h2>
-        </div>
-        <section class="produto tipo1">
-            <div class="cx1">
-                <img id="cx-termica" src="../../../assets/img/caixatermica.png" width="300px" height="288px" alt="foto do produto">
-                <br>
-            </div>
-            <div class="cx2">
-                <div id="aga4">
-                    <h4>Caixa apropriada para transportar produtos perecíveis à longa distância.</h4>
-                </div>
-                    <h2>Características:</h2>
-                    <li>Feito em polietileno, resistente aos raios UV.</li>
-                    <li>Solado com poliuretano para conservar temperatura por mais tempo.</li>
-                    <li>Material robusto, resistente à impactos.</li>
-                    <li>Travas de aço inox.*</li>
-                    <li>Pedais de borracha antiderrapante.*</li>
-                    <li>Dreno.*</li>
-                    <li>Travas de borracha.*</li>
-                    <li>Rodizios com travas e rodas de borracha antiderrapantes.*</li>
-                    <br>
-                    <p class="p-produtos">*Itens opcionais, personalizadas de acordo com necessidade do cliente.</p>
-            </div>
-        </section>
-    <div class="ttl-pdt">
-        <h2 class="h2-ttl">PALETES</h2>
+      <h2 class="h2-ttl">{{product.name}}</h2>
     </div>
     <section class="produto tipo2">
-        <div class="cx1">
-            <img class="palete" src="../../../assets/img/palete.png" width="300px" height="280px" alt="foto do produto" id="nucleo">
-            <br>
-        </div>
-        <div class="cx2">
-            <h4>Viabiliza a otimização de transporte e armazenagem de diversos produtos. </h4>
-            
-                <h2>Características:</h2>
-                <li>Palete rotomoldado.</li>
-                <li>Feito em polietileno em várias medidas e formatos.</li>
-                <li>Possibilidade de reforço interno em aço ou poliuretano.</li>
-                <li> Disponível em diversas cores.</li>
-        </div>
-    </section>
-    <div class="ttl-pdt">
-        <h2 class="h2-ttl">GELO RECICLÁVEL</h2>
-    </div>
-    <section class="produto tipo1">
-        <div class="cx1">
-            <img id="gelo" src="../../../assets/img/gelo.png" width="300px" height="280px" alt="foto do produto" id="nucleo">
-            <br>
-        </div>
-        <div class="cx2">
-            <h4>Gelo reciclável a base de celulose vegetal armazenado em recipiente plástico rígido, ideal para transportar produtos pereciveis longa distância que precisam de resfriamento constante.</h4>
-                <h2>Características:</h2>
-                <li>Fabricamos em qualquer tamanho e formato.</li>
-        </div>
-    </section>
+      <div class="cx">
+        <img id="isopor" src="{{product.img}}" width="300px" height="280px" alt="foto do produto" id="isopor">
+        <br>
+      </div>
+      <div class="cx2">
 
+        <div *ngFor="let description of product.descriptions">
+          <h4 *ngIf="description">{{description}}</h4>
+        </div>
+
+        <h2 *ngIf="product.features">Características:</h2>
+        <div *ngFor="let feature of product.features">
+          <li *ngIf="feature">{{feature}}</li>
+        </div>
+
+        <h2 *ngIf="product.sizes">Tamanhos:</h2>
+        <div *ngFor="let size of product.sizes">
+          <li *ngIf="size">{{size}} litros.</li>
+        </div>
+        <br>
+
+        <div *ngFor="let extra of product.extras">
+          <p *ngIf="extra" class="p-produtos">{{extra}}</p>
+        </div>
+
+      </div>
+    </section>
+  </div>
 </section>
-<app-footer active='footer'></app-footer> 
+
+<!-- 
+<section class="container-produtos">
+  <div class="div-ttl">
+    <h1 class="ttl-pag">PRODUTOS</h1>
+  </div>
+  <div class="ttl-pdt">
+    <h2 class="h2-ttl">CAIXA DE ISOPOR</h2>
+  </div>
+  <section class="produto tipo2">
+    <div class="cx uretânica1">
+      <img id="isopor" src="../../../assets/img/caixa.png" width="300px" height="280px" alt="foto do produto" id="isopor">
+      <br>
+    </div>
+    <div class="cx2">
+      <h4>Caixa apropriada para transportar produtos perecíveis à longa distância.</h4>
+      <h2>Características:</h2>
+      <li>Disponibilizamos caixa com e sem núcleo.</li>
+      <li>Fabricamos em qualquer tamanho, formato, densidade e estanqueidade.</li>
+    </div>
+  </section>
+  <div class="ttl-pdt">
+    <h2 class="h2-ttl">CAIXA DE ISOPOR COM NÚCLEO</h2>
+  </div>
+  <section class="produto tipo1">
+    <div class="cx1">
+      <img id="caixanucleo" src="../../../assets/img/caixanucleo.png" width="300px" height="280px" alt="foto do produto"
+        id="nucleo">
+      <br>
+    </div>
+    <div class="cx2">
+      <h4>Caixa apropriada para transportar produtos perecíveis à longa distância.
+        <h5> O núcleo é utilizado para separar o material transportado do gelo reciclável, evitando o congelamento do
+          material e aumentando o controle da temperatura interna.</h5>
+      </h4>
+      <br>
+      <h2>Tamanhos:</h2>
+      <li>12 litros.</li>
+      <li>37 litros.</li>
+      <li>50 litros.</li>
+      <li>103 litros.</li>
+      <li>130 litros.</li>
+    </div>
+  </section>
+  <div class="ttl-pdt">
+    <h2 class="h2-ttl">CAIXA TÉRMICA</h2>
+  </div>
+  <section class="produto tipo1">
+    <div class="cx1">
+      <img id="cx-termica" src="../../../assets/img/caixatermica.png" width="300px" height="288px" alt="foto do produto">
+      <br>
+    </div>
+    <div class="cx2">
+      <div id="aga4">
+        <h4>Caixa apropriada para transportar produtos perecíveis à longa distância.</h4>
+      </div>
+      <h2>Características:</h2>
+      <li>Feito em polietileno, resistente aos raios UV.</li>
+      <li>Solado com poliuretano para conservar temperatura por mais tempo.</li>
+      <li>Material robusto, resistente à impactos.</li>
+      <li>Travas de aço inox.*</li>
+      <li>Pedais de borracha antiderrapante.*</li>
+      <li>Dreno.*</li>
+      <li>Travas de borracha.*</li>
+      <li>Rodizios com travas e rodas de borracha antiderrapantes.*</li>
+      <br>
+      <p class="p-produtos">*Itens opcionais, personalizadas de acordo com necessidade do cliente.</p>
+    </div>
+  </section>
+  <div class="ttl-pdt">
+    <h2 class="h2-ttl">PALETES</h2>
+  </div>
+  <section class="produto tipo2">
+    <div class="cx1">
+      <img class="palete" src="../../../assets/img/palete.png" width="300px" height="280px" alt="foto do produto" id="nucleo">
+      <br>
+    </div>
+    <div class="cx2">
+      <h4>Viabiliza a otimização de transporte e armazenagem de diversos produtos. </h4>
+
+      <h2>Características:</h2>
+      <li>Palete rotomoldado.</li>
+      <li>Feito em polietileno em várias medidas e formatos.</li>
+      <li>Possibilidade de reforço interno em aço ou poliuretano.</li>
+      <li> Disponível em diversas cores.</li>
+    </div>
+  </section>
+  <div class="ttl-pdt">
+    <h2 class="h2-ttl">GELO RECICLÁVEL</h2>
+  </div>
+  <section class="produto tipo1">
+    <div class="cx1">
+      <img id="gelo" src="../../../assets/img/gelo.png" width="300px" height="280px" alt="foto do produto" id="nucleo">
+      <br>
+    </div>
+    <div class="cx2">
+      <h4>Gelo reciclável a base de celulose vegetal armazenado em recipiente plástico rígido, ideal para transportar
+        produtos pereciveis longa distância que precisam de resfriamento constante.</h4>
+      <h2>Características:</h2>
+      <li>Fabricamos em qualquer tamanho e formato.</li>
+    </div>
+  </section>
+
+</section> -->
+<app-footer active='footer'></app-footer>

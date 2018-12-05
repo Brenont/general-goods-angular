@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Produtos } from 'src/app/model/product';
 
 @Component({
   selector: 'app-produtos',
@@ -7,34 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutosComponent implements OnInit {
 
-  public productsList = [];
+  public productsList: Array<Produtos>;
 
   constructor() {
     this.productsList = [
       {
         name: "Caixa de Isopor",
-        description: [
-          "Caixa apropriada para transportar produtos perecíveis à longa distância.",
-        ],
+        descriptions: ["Caixa apropriada para transportar produtos perecíveis à longa distância.",],
         features: [
           "Disponibilizamos caixa com e sem núcleo.",
           "Fabricamos em qualquer tamanho, formato, densidade e estanqueidade.",
         ],
+        sizes: null,
+        extras: null,
+        img: "../../../assets/img/caixa.png",
       },
 
       {
         name: "Caixa de Isopor com Núcleo",
-        description: [
-          "Caixa apropriada para transportar produtos perecíveis à longa distância.",
-
-          "O núcleo é utilizado para separar o material transportado do gelo reciclável, evitando o congelamento do material e aumentando o controle da temperatura interna.",
-        ],
-        sizes: [12, 37, 50, 103, 130]
+        descriptions: ["Caixa apropriada para transportar produtos perecíveis à longa distância." , "O núcleo é utilizado para separar o material transportado do gelo reciclável, evitando o congelamento do material e aumentando o controle da temperatura interna.",],
+        features: null,
+        sizes: [12, 37, 50, 103, 130],
+        extras: null,
+        img: "../../../assets/img/caixanucleo.png",
       },
 
       {
         name: "Caixa Térmica",
-        description: [
+        descriptions: [
           "Caixa apropriada para transportar produtos perecíveis à longa distância.",
         ],
         features: [
@@ -47,14 +48,16 @@ export class ProdutosComponent implements OnInit {
           "Travas de borracha.*",
           "Rodizios com travas e rodas de borracha antiderrapantes.*",
         ],
+        sizes: null,
         extras: [
           "*Itens opcionais, personalizadas de acordo com necessidade do cliente.",
-        ]
+        ],
+        img: "../../../assets/img/caixatermica.png",
       },
 
       {
         name: "Paletes",
-        description: ["Viabiliza a otimização de transporte e armazenagem de diversos produtos.",
+        descriptions: ["Viabiliza a otimização de transporte e armazenagem de diversos produtos.",
         ],
         features: [
           "Palete rotomoldado.",
@@ -62,16 +65,23 @@ export class ProdutosComponent implements OnInit {
           "Possibilidade de reforço interno em aço ou poliuretano.",
           "Disponível em diversas cores.",
         ],
+        sizes: null,
+        extras: null,
+        img: "../../../assets/img/palete.png",
+
       },
 
       {
         name: "Gelo Reciclável",
-        description: [
+        descriptions: [
           "Gelo reciclável a base de celulose vegetal armazenado em recipiente plástico rígido, ideal para transportar produtos pereciveis longa distância que precisam de resfriamento constante.",
         ],
         features: [
           "Fabricamos em qualquer tamanho e formato.",
         ],
+        sizes: null,
+        extras: null,
+        img: "../../../assets/img/gelo.png",
       }
     ]
   }

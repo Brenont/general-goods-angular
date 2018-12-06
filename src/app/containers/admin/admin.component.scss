@@ -1,0 +1,67 @@
+.body {
+  display: flex;
+  height: 100vh;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #023769;
+  width: 25%;
+  height: 100vh;
+}
+
+.line {
+  height: 2px;
+  background-color: white;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 23px;
+  color: white;
+  text-align: center;
+}
+
+.Sub-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 25px;
+  color: white;
+}
+
+.container-list {
+  display: flex;
+  width: 75%;
+}
+
+.button {
+  display: flex;
+  width: 25%;
+  height: 140px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.btao {
+  width: 130px;
+  height: 45px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #26a706;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+.btao:focus {
+  outline: none;
+}
+
+.container{
+    
+}

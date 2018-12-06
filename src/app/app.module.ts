@@ -20,6 +20,7 @@ import { NgxHmCarouselModule } from 'ngx-hm-carousel';
 import 'hammerjs';
 import { ModalSetupComponent } from './components/modal-setup/modal-setup.component';
 import { ProductModalComponent } from './components/product-modal/product-modal.component';
+import { AdminComponent } from './containers/admin/admin.component';
 
 
 @NgModule({
@@ -33,6 +34,8 @@ import { ProductModalComponent } from './components/product-modal/product-modal.
     ProdutosComponent,
     ModalSetupComponent,
     ProductModalComponent
+    ModalSetupComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

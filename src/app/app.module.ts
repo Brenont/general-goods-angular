@@ -19,6 +19,7 @@ import { NgxHmCarouselModule } from 'ngx-hm-carousel';
 
 import 'hammerjs';
 import { ModalSetupComponent } from './components/modal-setup/modal-setup.component';
+import { AdminComponent } from './containers/admin/admin.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ModalSetupComponent } from './components/modal-setup/modal-setup.compon
     ContatoComponent,
     QmsomosComponent,
     ProdutosComponent,
-    ModalSetupComponent
+    ModalSetupComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

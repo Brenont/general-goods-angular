@@ -3,66 +3,21 @@
 
 <!-- CARROSSEL -->
 
-<ngx-hm-carousel [(ngModel)]="index" (ngModelChange)="indexChanged($event)" [autoplay-speed]="3000" [autoplay]="true"
-  [infinite]="" [between-delay]="2000" class="carousel c-accent">
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" 
+[config]="slideConfig" 
+(init)="slickInit($event)"
+(breakpoint)="breakpoint($event)"
+(afterChange)="afterChange($event)"
+(beforeChange)="beforeChange($event)">
+<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+<!-- Item Carrossel -->
+  <img src="{{ slide.img }}" alt="" width="100%">
 
-  <section ngx-hm-carousel-container class="content">
-    <article class="item cursor-pointer" ngx-hm-carousel-item>
-      <div class="img">
-        <img class="first" src="../../../assets/img/eco1.jpg" alt="">
-      </div>
-      <div class="img">
-        <img class="first2" src="../../../assets/img/eco-mob1.jpg" alt="">
-      </div>
-      <div class="txtcarousel">
-        <h2>{{ lang.txtcarousel1 }}</h2>
-        <h1>{{ lang.txtcarousel2 }}</h1>
-        <h2>{{ lang.txtcarousel3 }}</h2>
-        <h1>{{ lang.txtcarousel4 }}</h1>
-        <h2>{{ lang.txtcarousel5 }}</h2>
-        <h1>{{ lang.txtcarousel6 }}</h1>
-        <h2>{{ lang.txtcarousel7 }}</h2> <br>
-        <h4>{{ lang.txtcarousel8 }}</h4>
-      </div>
+</div>
+</ngx-slick-carousel>
 
-    </article>
-    <article class="item cursor-pointer" ngx-hm-carousel-item>
-      <div class="img">
-        <img class="first3" src="../../../assets/img/isopor1.jpg" alt="">
-      </div>
-      <div class="img">
-        <img class="first4" src="../../../assets/img/isopor1-mob.jpg" alt="">
-      </div>
-      <div class="txtcarousel2">
-          <h1>{{ lang.slogan1 }}</h1> <br>
-          <h1>{{ lang.slogan2 }}</h1>
-          <h1>{{ lang.slogan3 }}</h1>
-          <h1>{{ lang.slogan4 }}</h1>
-        </div>
-
-    </article>
-  </section>
-
-  <ng-template #carouselPrev>
-    <div class="click-area">
-      <i class="material-icons">&lt;</i>
-    </div>
-  </ng-template>
-  <ng-template #carouselNext>
-    <div class="click-area">
-      <i class="material-icons">&gt;</i>
-    </div>
-  </ng-template>
-
-  <ng-template #carouselDot let-model>
-    <div class="ball bg-accent" [class.visible]="model.index === model.currentIndex"></div>
-  </ng-template>
-
-  <ng-template #carouselProgress let-progress>
-    <div class="progress"></div>
-  </ng-template>
-
-</ngx-hm-carousel>
+<button (click)="slickModal.slickGoTo(1)">slickGoto 2</button>
 
 <!-- CARDES -->
 
@@ -72,19 +27,19 @@
     <img class="img-circle" src="../../../assets/img/pacote.jpg" alt="">
     <h2 class="titlecard">{{ lang.titlecard }}</h2>
     <p class="txtcard">{{ lang.txtcard }}</p>
-    <button class="buttoncard">{{ lang.buttoncard }}</button>
+    <button routerLink='/produtos' class="buttoncard">{{ lang.buttoncard }}</button>
   </div>
   <div class="circle">
     <img class="img-circle" src="../../../assets/img/factory.svg" alt="">
     <h2 class="titlecard">{{ lang.titlecard2 }}</h2>
     <p class="txtcard">{{ lang.txtcard2 }}</p> <br>
-    <button class="buttoncard">{{ lang.buttoncard }}</button>
+    <button routerLink='/quem-somos' class="buttoncard">{{ lang.buttoncard }}</button>
   </div>
   <div class="circle">
     <img class="img-circle" src="../../../assets/img/support.svg" alt="">
     <h2 class="titlecard">{{ lang.titlecard3 }}</h2>
     <p class="txtcard">{{ lang.txtcard3 }}</p> <br> <br> <br>
-    <button class="buttoncard">{{ lang.buttoncard }}</button>
+    <button routerLink='/contato' class="buttoncard">{{ lang.buttoncard }}</button>
   </div>
 </div>
 <app-footer active='footer'></app-footer>

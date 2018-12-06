@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { LANG } from '../../../theme/pt'
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
+
 export class HomeComponent implements OnInit {
 
   public lang = LANG;
@@ -18,18 +22,32 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  index = 0;
-  infinite = true;
-  direction = 'right';
-  directionToggle = true;
-  autoplay = true;
-  avatars = '1234567890'.split('').map((x, i) => {
-    const num = i;
-    // const num = Math.floor(Math.random() * 1000);
-    return {
-      url: `https://picsum.photos/600/400/?${num}`,
-      title: `${num}`
-    };
+  slides = [
+    {img: "../../../assets/img/eco.jpg"},
+    {img: "../../../assets/img/isopor.jpg"},
+    {img: "../../../assets/img/eco.jpg"},
+    {img: "../../../assets/img/isopor.jpg"}
+  ];
+  slideConfig = {
+    "dots": true,
+    "slidesToShow": 1, 
+    "slidesToScroll": 1
+  };
 
+  slickInit(e) {
+    console.log('slick initialized');
+  }
+  
+  breakpoint(e) {
+    console.log('breakpoint');
+  }
+  
+  afterChange(e) {
+    console.log('afterChange');
+  }
+  
+  beforeChange(e) {
+    console.log('beforeChange');
+  }
 }
-  )}
+  

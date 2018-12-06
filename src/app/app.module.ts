@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,9 +16,7 @@ import { QmsomosComponent } from './containers/qmsomos/qmsomos.component';
 import { ProdutosComponent } from './containers/produtos/produtos.component';
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
-import { NgxHmCarouselModule } from 'ngx-hm-carousel';
 
-import 'hammerjs';
 import { ModalSetupComponent } from './components/modal-setup/modal-setup.component';
 import { ProductModalComponent } from './components/product-modal/product-modal.component';
 import { AdminComponent } from './containers/admin/admin.component';
@@ -41,8 +40,8 @@ import { AdminComponent } from './containers/admin/admin.component';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    NgxHmCarouselModule,
     FormsModule,
+    SlickCarouselModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA'
     })

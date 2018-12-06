@@ -33,9 +33,9 @@ import { AdminComponent } from './containers/admin/admin.component';
     QmsomosComponent,
     ProdutosComponent,
     ModalSetupComponent,
-    ProductModalComponent
+    ProductModalComponent,
     ModalSetupComponent,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

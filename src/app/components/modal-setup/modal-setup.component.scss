@@ -1,3 +1,5 @@
+@import '../../../theme/colors.scss';
+
 .container-modal {
   position: absolute;
   height: 100%;
@@ -10,13 +12,30 @@
   .container-child {
     background-color: rgb(245, 245, 245);
     min-height: 150px;
-    min-width: 150px;
+    max-height: 500px;
+    overflow: auto;
+    min-width: 450px;
     border-radius: 2px;
-    box-shadow: #313030 2px 1px 8px 2px;
+    box-shadow: #949494 2px 1px 8px 2px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px 25px;
+
+    &::-webkit-scrollbar {
+      background-color: #f5eeee;
+      width: 6px;
+      height: 0px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: $primary-color;
+    }
+
+    .content{
+      width: 100%;
+      height: 100%;
+    }
   }
 
 }

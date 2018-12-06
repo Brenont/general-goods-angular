@@ -1,0 +1,43 @@
+<app-modal-setup>
+  <section class="container-general" *ngFor="let product of list; let i=index">
+
+    <div class="name-container">
+      <p class="name">{{product.name}}</p>
+      <hr>
+    </div>
+
+    <div class="content-product">
+      <div class="image-container">
+        <img class="product-image" src="{{product.img}}" alt="">
+      </div>
+
+      <div class="features-container">
+        <div *ngIf="product.nucleoOption" class="nucleo-check">
+          <input type="checkbox" name="" id="nucleo">
+          <label for="nucleo">Núcleo</label>
+        </div>
+
+        <div *ngIf="product.sizes" class="sizes">
+          <label for="sizes">Tamanho (l):</label>
+          <select name="" id="sizes" class="input-style">
+            <option *ngFor="let size of product.sizes" value="">{{size}}</option>
+          </select>
+        </div>
+
+        <div class="quantidade-container">
+          <label for="qntd">Quantidade:</label>
+          <input type="number" id="qntd" value="1" class="input-style">
+        </div>
+
+        <div *ngIf="product.customizes" class="options-container">
+          <p class="tittle-customizes">Itens personalizaveis:</p>
+          <label *ngFor="let customize of product.customizes" class="container" for="{{customize}}">{{customize}}
+            <input type="checkbox" id="{{customize}}">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</app-modal-setup>

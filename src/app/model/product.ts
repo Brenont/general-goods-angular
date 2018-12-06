@@ -5,4 +5,6 @@ export class Produtos {
     sizes: number[];
     extras: string[];
     img: string;
+    customizes: string[];
+    nucleoOption: boolean;
 };

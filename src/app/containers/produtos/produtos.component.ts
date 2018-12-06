@@ -22,6 +22,8 @@ export class ProdutosComponent implements OnInit {
         sizes: null,
         extras: null,
         img: "../../../assets/img/caixa.png",
+        customizes: null,
+        nucleoOption: true,
       },
 
       {
@@ -31,6 +33,8 @@ export class ProdutosComponent implements OnInit {
         sizes: [12, 37, 50, 103, 130],
         extras: null,
         img: "../../../assets/img/caixanucleo.png",
+        customizes: null,
+        nucleoOption: true,
       },
 
       {
@@ -53,6 +57,13 @@ export class ProdutosComponent implements OnInit {
           "*Itens opcionais, personalizadas de acordo com necessidade do cliente.",
         ],
         img: "../../../assets/img/caixatermica.png",
+        customizes: [
+          "Travas de aço inox",
+          "Pedais de borracha antiderrapante",
+          "Dreno",
+          "Travas de borracha",
+          "Rodizios com travas e rodas de borracha antiderrapantes"],
+          nucleoOption: null,
       },
 
       {
@@ -68,6 +79,8 @@ export class ProdutosComponent implements OnInit {
         sizes: null,
         extras: null,
         img: "../../../assets/img/palete.png",
+        customizes: null,
+        nucleoOption: null,
 
       },
 
@@ -82,6 +95,8 @@ export class ProdutosComponent implements OnInit {
         sizes: null,
         extras: null,
         img: "../../../assets/img/gelo.png",
+        customizes: null,
+        nucleoOption: null,
       }
     ]
   }

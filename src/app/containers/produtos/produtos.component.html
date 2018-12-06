@@ -1,10 +1,6 @@
 <app-header active="produtos"></app-header>
 
-<app-modal-setup>
-  <section *ngFor="let product of productsList; let i=index">
-
-  </section>
-</app-modal-setup>
+<app-product-modal [list]="productsList"></app-product-modal>
 
 <section class="container-produtos">
   <div class="div-ttl">

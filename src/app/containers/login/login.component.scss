@@ -1,0 +1,26 @@
+@import '../../../theme/colors.scss';
+
+.form-login{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.inputs-login{
+    margin-bottom: 14px;
+    padding:6px;
+    background-color: transparent;
+    margin: 6px;
+    padding-right: 34px;
+}
+.login{
+    height: 30px;
+}
+.button-login{
+    padding: 6px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 8px;
+}

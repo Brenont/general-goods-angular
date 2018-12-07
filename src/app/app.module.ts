@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { ModalSetupComponent } from './components/modal-setup/modal-setup.component';
 import { ProductModalComponent } from './components/product-modal/product-modal.component';
 import { AdminComponent } from './containers/admin/admin.component';
+import { LoginComponent } from './containers/login/login.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { AdminComponent } from './containers/admin/admin.component';
     ProductModalComponent,
     ModalSetupComponent,
     AdminComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { QmsomosComponent } from './containers/qmsomos/qmsomos.component';
 import { ContatoComponent } from './containers/contato/contato.component';
 import { ModalSetupComponent } from './components/modal-setup/modal-setup.component';
 import { AdminComponent } from './containers/admin/admin.component';
+import { LoginComponent } from './containers/login/login.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'contato', component: ContatoComponent},
   {path: 'dev-b', component: ModalSetupComponent},
   {path: 'admin', component: AdminComponent},
+  {path: 'login', component: LoginComponent},
 ];
 
 @NgModule({

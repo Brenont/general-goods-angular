@@ -46,6 +46,35 @@
   color: #fff;
 }
 
+.textOne, .textTwo {
+  position: absolute;
+  font-family: comfortaa;
+  display: flex;
+  flex-direction: column;
+}
+
+.textOne {
+  text-align: end;
+  width: 100vw;
+  top: 20%;
+  margin-left: -2%;
+}
+
+.textOne h1 {
+  color: #083e21;
+}
+
+.textOne h2 {
+  color: #000;
+}
+
+.textTwo {
+  color: #fff;
+  top: 33%;
+  margin-left: 2%;
+  font-size: 20px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.53);
+}
 
 @media (max-width: 768px) {
   .cards {

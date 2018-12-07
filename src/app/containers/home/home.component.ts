@@ -23,15 +23,20 @@ export class HomeComponent implements OnInit {
   }
 
   slides = [
-    {img: "../../../assets/img/eco.jpg"},
-    {img: "../../../assets/img/isopor.jpg"},
-    {img: "../../../assets/img/eco.jpg"},
-    {img: "../../../assets/img/isopor.jpg"}
+    {img: "../../../assets/img/eco.jpg", textOne: true, textTwo: false},
+    {img: "../../../assets/img/isopor.jpg",  textOne: false, textTwo: true},
+    {img: "../../../assets/img/eco.jpg", textOne: true, textTwo: false},
+    {img: "../../../assets/img/isopor.jpg", textOne: false, textTwo: true}
   ];
+  
   slideConfig = {
-    "dots": true,
-    "slidesToShow": 1, 
-    "slidesToScroll": 1
+    arrows: true,
+    dots: true,
+    autoplay: true,
+    infinite: true,
+    slidesToShow: 1, 
+    slidesToScroll: 1,
+    initialSlide: 0
   };
 
   slickInit(e) {

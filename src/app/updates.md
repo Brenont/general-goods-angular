@@ -22,3 +22,21 @@
 #Screens
   - Admin (crud de produtos, seção de historico de compras(para futuro) )
   - Carrinho
+  - Login
+
+
+##Á FAZER
+  - carrinho *Tela*
+  - script Carrinhos
+  - Service getProdutos (Breno)
+
+
+##EM PRODUÇÃO
+  - Admin Screen _(Igor)_
+  - Login _(Pablo)_
+  - Carrossel _(Carol)_
+  - Modal Produto _(Breno)_
+
+##FEITO
+  - Passar pages to Angular
+  -

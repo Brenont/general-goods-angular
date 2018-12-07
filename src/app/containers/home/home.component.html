@@ -12,12 +12,26 @@
 (beforeChange)="beforeChange($event)">
 <div ngxSlickItem *ngFor="let slide of slides" class="slide">
 <!-- Item Carrossel -->
-  <img src="{{ slide.img }}" alt="" width="100%">
-
+<div class="textOne" *ngIf="slide.textOne">
+  <h2>{{lang.txtcarousel1}}</h2>
+  <h1>{{lang.txtcarousel2}}</h1>
+  <h2>{{lang.txtcarousel3}}</h2>
+  <h1>{{lang.txtcarousel4}}</h1>
+  <h2>{{lang.txtcarousel5}}</h2>
+  <h1>{{lang.txtcarousel6}}</h1>
+  <h2>{{lang.txtcarousel7}}</h2> <br>
+  <h4>{{lang.txtcarousel8}}</h4>
+</div>
+<div class="textTwo" *ngIf="slide.textTwo">
+  <h1>{{lang.slogan1}}</h1>
+  <br>
+  <h1>{{lang.slogan2}}</h1>
+  <h1>{{lang.slogan3}}</h1>
+  <h1>{{lang.slogan4}}</h1>
+</div>
+<img src="{{ slide.img }}" alt="" width="100%">
 </div>
 </ngx-slick-carousel>
-
-<button (click)="slickModal.slickGoTo(1)">slickGoto 2</button>
 
 <!-- CARDES -->
 

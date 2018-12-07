@@ -37,6 +37,7 @@
 .container-list {
   display: flex;
   width: 75%;
+  flex-direction: column;
 }
 
 .button {
@@ -62,6 +63,31 @@
   outline: none;
 }
 
-.container{
-    
+.btao:hover {
+  border-radius: 0px;
+  transition: 2s;
+}
+
+.container {
+  display: flex;
+    width: 400px;
+    height: 115px;
+    margin: 30px;
+    border: solid 1px;
+    box-shadow: grey 1px 1px 2px 1px;
+    align-items: center;
+}
+
+.Product-One {
+  display: flex;
+}
+
+.title-p {
+  font-size: 23px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+#caixatermica {
+  padding-left: 10px;
 }

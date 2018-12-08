@@ -50,5 +50,9 @@ export const LANG = {
     titlecard3 : "fale conosco",
     txtcard3 : "Entre em contato conosco pelo nosso formulário, email ou telefone e tire suas dúvidas ou faça seu orçamento.",
 
-    
+    //ADMIN
+    add : "Adicionar",
+    produtos : "Produtos",
+    Painel : "Painel De ",   
+    adm : "Administração"
 }

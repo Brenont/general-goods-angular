@@ -4,17 +4,17 @@
   <section class="body">
     <div class="menu">
       <p class="title">
-        Painel De <br> Administração
+        {{ lang.Painel }} <br> {{ lang.adm }}
       </p>
       <div class="line"></div>
       <p class="Sub-title">
-        Produtos
+        {{ lang.Produtos }}
       </p>
 
     </div>
     <div class="container-list">
       <div class="button">
-        <button class="btao">Adicionar</button>
+        <button class="btao">{{ lang.add }}</button>
       </div>
       <div class="container" *ngFor="let product of produtos">
         <div class="Product-One">

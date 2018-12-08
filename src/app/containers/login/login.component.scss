@@ -1,26 +1,87 @@
 @import '../../../theme/colors.scss';
+@import '../../../styles.scss';
 
-.form-login{
-    justify-content: center;
+*:focus {
+  outline: none;
+}
+
+.sct-login {
+  height: 100vh;
+  width: 100vw;
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 45%, #514d85 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(45%, #f6f6f6), color-stop(100%, #514d85));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 45%, #514d85 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #f6f6f6 45%, #514d85 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #f6f6f6 45%, #514d85 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 45%, #514d85 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#514d85', GradientType=0);
+
+  .back-container {
+    position: fixed;
+    top: 50px;
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-.inputs-login{
-    margin-bottom: 14px;
-    padding:6px;
-    background-color: transparent;
-    margin: 6px;
-    padding-right: 34px;
-}
-.login{
-    height: 30px;
-}
-.button-login{
-    padding: 6px;
-    padding-left: 80px;
-    padding-right: 80px;
-    background-color: $secondary-color;
-    border: none;
-    border-radius: 8px;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 100px;
+
+    .back-text {
+      cursor: pointer;
+      font-size: 18px;
+      color: #7f8c8d;
+      border-bottom: #7f8c8d 1px solid;
+
+      &:hover{
+      color: $primary-color;
+      border-bottom: $primary-color 1px solid;          
+      }
+    }
+  }
+
+  .login {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-login {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 260px;
+
+      .icon-login {
+        margin-bottom: 10px;
+      }
+
+      .inputs-login {
+        width: 240px;
+        height: 25px;
+        margin-bottom: 14px;
+        background-color: transparent;
+        padding: 6px;
+        border: 3px solid $primary-color;
+        border-radius: 7px;
+        color: #7f8c8d;
+
+        &::placeholder {
+          color: #7f8c8d;
+        }
+      }
+
+      .button-login {
+        cursor: pointer;
+        padding: 6px;
+        background-color: $secondary-color;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        height: 38px;
+        width: 100%;
+        // margin-top: 5px;
+      }
+    }
+  }
 }

@@ -18,6 +18,9 @@
 @media(min-width:769px) {
   header {
     height: 78px;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
 
     .buy-container {
       position: fixed;

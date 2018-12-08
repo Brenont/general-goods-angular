@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url : "https://viacep.com.br/ws/23028060/json/",
+  url : "http://api-pacientes.herokuapp.com/pacientes",
 };
 
 /*

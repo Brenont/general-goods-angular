@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { Produto } from '../model/product';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-// import { url } from 'inspector';
 
 const produtos = [
   {
@@ -105,10 +104,8 @@ export class ProdutoService {
   constructor(private http: HttpClient) { }
 
 
-  // getProdutos(): Observable<Produto[]> {
-    getProdutos() {
-    // return this.http.get(this.url);
-    return false;
+  getProdutos(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(this.url);
   }
 
   PostProduto(produtos) {

@@ -28,7 +28,7 @@
       top: 78px;
       right: 5px;
       width: 93px;
-      background-color: #a9160e;
+      background-color:#F8F9FA;
       padding: 10px;
       display: flex;
       justify-content: center;
@@ -38,6 +38,8 @@
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       color: $primary-color;
+      border: $primary-color 2px solid;
+      border-top: transparent;
 
       img{
         height: auto;

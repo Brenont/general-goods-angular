@@ -1,36 +1,37 @@
 <app-header active="admin"></app-header>
 <section class="container-toall">
 
-<section class="body">
-  <div class="menu">
-    <p class="title">
-      Painel De <br> Administração
-    </p>
-    <div class="line"></div>
-    <p class="Sub-title">
-      Produtos
-    </p>
-
-  </div>
-  <div class="container-list">
-    <div class="button">
-      <button class="btao">Adicionar</button>
-    </div>
-    <div class="container">
-      <div class="Product-One">
-        <img id="caixatermica" src="./../../../assets/img/caixatermica.png" alt="caixatermica.png" width="100px" height="100px">
-        <div class="barra"></div>
-        <p class="title-p">Caixa termica :</p>
-        <div class="icones">
-          <img class="edit" src="./../../../assets/img/edit-document.png" alt="">
-          <img class="remove" src="./../../../assets/img/remove.png" alt="remove.png">
-        </div>
-
-        </div>
+  <section class="body">
+    <div class="menu">
+      <p class="title">
+        Painel De <br> Administração
+      </p>
+      <div class="line"></div>
+      <p class="Sub-title">
+        Produtos
+      </p>
 
     </div>
-  </div>
-</section>
+    <div class="container-list">
+      <div class="button">
+        <button class="btao">Adicionar</button>
+      </div>
+      <div class="container" *ngFor="let product of produtos">
+        <div class="Product-One">
+          <img id="caixatermica" src="{{product.img}}" alt="caixatermica.png" width="100px"
+            height="100px">
+          <div class="barra"></div>
+          <p class="title-p">{{product.name}}</p>
+          <div class="icones">
+            <img class="edit" src="./../../../assets/img/edit-document.png" alt="">
+            <img class="remove" src="./../../../assets/img/remove.png" alt="remove.png">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 </section>
 

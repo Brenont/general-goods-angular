@@ -21,6 +21,8 @@ import { ModalSetupComponent } from './components/modal-setup/modal-setup.compon
 import { ProductModalComponent } from './components/product-modal/product-modal.component';
 import { AdminComponent } from './containers/admin/admin.component';
 import { LoginComponent } from './containers/login/login.component';
+import { InputFormComponent } from './components/input-form/input-form.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -37,10 +39,12 @@ import { LoginComponent } from './containers/login/login.component';
     ModalSetupComponent,
     AdminComponent,
     LoginComponent,
+    InputFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CommonModule,
     FormsModule,
     SlickCarouselModule,
@@ -48,7 +52,7 @@ import { LoginComponent } from './containers/login/login.component';
       apiKey: 'AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA'
     })
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 

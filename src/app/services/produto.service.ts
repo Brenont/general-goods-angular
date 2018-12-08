@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Produtos } from '../model/product';
+import { Produto } from '../model/product';
 import { HttpClient } from 'selenium-webdriver/http';
 // import { url } from 'inspector';
 
@@ -99,7 +99,7 @@ const produtos = [
 })
 export class ProdutoService {
 
-  constructor(private http: HttpClient) { }
+  // constructor(private http: HttpClient) { }
 
   public url = "test-url";
 

@@ -41,3 +41,9 @@ body{
         display: flex;
     }
 }
+
+@media(min-width:768px) {
+  .container-toall {
+    padding-top: 78px;
+  }
+}

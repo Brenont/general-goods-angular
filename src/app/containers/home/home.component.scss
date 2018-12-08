@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 7%;
+  margin-top: 5%;
 }
 
 .circle {
@@ -78,9 +79,23 @@
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.53);
 }
 
+.mobile{
+  display: none;
+}
+
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;
     align-items: center;
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: flow-root;
+  }
+  .textOne {
+    font-size: 17px;
+    margin-left: -1%;
   }
 }

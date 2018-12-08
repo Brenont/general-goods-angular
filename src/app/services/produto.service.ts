@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produto } from '../model/product';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 // import { url } from 'inspector';
 
 const produtos = [
@@ -99,18 +100,20 @@ const produtos = [
 })
 export class ProdutoService {
 
-  // constructor(private http: HttpClient) { }
+  public url = environment.url;
 
-  public url = "test-url";
+  constructor(private http: HttpClient) { }
 
 
-  // getProdutos(): Observable<Produtos[]> {
-  //   return this.http.send(this.url);
-  // }
+  // getProdutos(): Observable<Produto[]> {
+    getProdutos() {
+    // return this.http.get(this.url);
+    return false;
+  }
 
-  // PostProduto(produtos) {
-  //   return this.http.send(produtos);
-  // }
+  PostProduto(produtos) {
+
+  }
 
   DeleteProduto() {
 

@@ -1,4 +1,4 @@
-export class Produtos {
+export class Produto {
     name: string;
     descriptions: string[];
     features: string[];

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Produtos } from 'src/app/model/product';
+import { Produto } from 'src/app/model/product';
 import { ProdutoService } from 'src/app/services/produto.service';
+import { LANG } from '../../../theme/pt';
 
 @Component({
   selector: 'app-admin',
@@ -9,7 +10,9 @@ import { ProdutoService } from 'src/app/services/produto.service';
 })
 export class AdminComponent implements OnInit {
 
-  public produtos: Produtos[];
+  public produtos: Produto[];
+
+  public lang = LANG;
 
   constructor(private prodService: ProdutoService) {
     this.produtos = [

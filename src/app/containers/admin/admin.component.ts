@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from 'src/app/model/product';
+// import { Produto } from 'src/app/model/product';
 import { ProdutoService } from 'src/app/services/produto.service';
 import { LANG } from '../../../theme/pt';
 
@@ -10,7 +10,7 @@ import { LANG } from '../../../theme/pt';
 })
 export class AdminComponent implements OnInit {
 
-  public produtos: Produto[];
+  // public produtos: Produto[];
 
   public lang = LANG;
 
@@ -109,9 +109,9 @@ export class AdminComponent implements OnInit {
 
 
   ngOnInit() {
-    this.prodService.getProdutos().subscribe(dado => {
-      this.produtos = dado;
-    })
+    // this.prodService.getProdutos().subscribe(dado => {
+    //   this.produtos = dado;
+    // })
     
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Produto } from 'src/app/model/product';
+// import { Produto } from 'src/app/model/product';
 
 @Component({
   selector: 'app-product-modal',

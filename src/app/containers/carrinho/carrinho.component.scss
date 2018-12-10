@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .carrinho {
+    font-size: 30px;
+    margin: 25px;
+  }
+
+  table {
+    display: flex;
+    flex-direction: column;
+    min-width: 800px;
+    background-color: gray;
+
+    .titulos {
+      display: flex;
+    }
+
+    #tabela-produto {
+
+      tr {
+        width: 100%;
+        display: flex;
+
+        th:nth-child(1) {
+            flex: 3;
+            background-color: red;
+        }
+        th:nth-child(2) {
+            flex: 1;
+        }
+        th:nth-child(3) {
+            flex: 1;
+        }
+        th:nth-child(4) {
+            flex: 1;
+        }
+      }
+    }
+
+  }
+}

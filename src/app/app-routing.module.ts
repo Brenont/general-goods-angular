@@ -7,6 +7,7 @@ import { ContatoComponent } from './containers/contato/contato.component';
 import { ModalSetupComponent } from './components/modal-setup/modal-setup.component';
 import { AdminComponent } from './containers/admin/admin.component';
 import { LoginComponent } from './containers/login/login.component';
+import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'dev-b', component: ModalSetupComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'carrinho', component: CarrinhoComponent},
 ];
 
 @NgModule({

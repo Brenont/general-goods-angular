@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Produto } from '../model/product';
+// import { Produto } from '../model/product';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
@@ -101,12 +101,13 @@ export class ProdutoService {
 
   public url = environment.url;
 
-  constructor(private http: HttpClient) { }
+  // constructor(private http: HttpClient) { }
+  constructor() { }
 
 
-  getProdutos(): Observable<Produto[]> {
-    return this.http.get<Produto[]>(this.url);
-  }
+  // getProdutos(): Observable<Produto[]> {
+  //   return this.http.get<Produto[]>(this.url);
+  // }
 
   PostProduto(produtos) {
 

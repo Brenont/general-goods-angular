@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(this.active);
+    // console.log(this.active);
     switch (this.active) {
       case 'home':
         this.homeActive = true;

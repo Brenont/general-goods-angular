@@ -24,9 +24,9 @@
     }
 
     hr {
-        width: 50%;
-        height: 1px;
-        background-color: $primary-color;
+      width: 50%;
+      height: 1px;
+      background-color: $primary-color;
     }
   }
 
@@ -99,9 +99,9 @@
 
       .options-container {
 
-        .tittle-customizes{
-            font-size: 18px;
-            padding-bottom: 10px;
+        .tittle-customizes {
+          font-size: 18px;
+          padding-bottom: 10px;
         }
 
         //CHECKBOX STYLE
@@ -173,6 +173,31 @@
           transform: rotate(45deg);
         }
       }
+    }
+  }
+
+  .add-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .add-button{
+      height: 35px;
+      padding: 0px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background-color: $primary-color;
+      border: darken($primary-color, 10%) 2px solid;
+      box-shadow: 1px 1px 4px 0px #383838;
+      border-radius: 5px;
+
+    &:hover{
+      transition: 0.5s;
+      background-color: lighten($primary-color, 8%);
+      box-shadow: 1px 1px 4px 0px darken(#383838, 35%);
+    }
     }
   }
 }

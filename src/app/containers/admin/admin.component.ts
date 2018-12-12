@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-// import { Produto } from 'src/app/model/product';
+import { Produto } from 'src/app/model/product';
 import { ProdutoService } from 'src/app/services/produto.service';
 import { LANG } from '../../../theme/pt';
 import { Produto } from 'src/app/model/product';
 
-// @Component({
-//   selector: 'app-admin',
-//   templateUrl: './admin.component.html',
-//   styleUrls: ['./admin.component.scss']
-// })
-// export class AdminComponent implements OnInit {
+@Component({
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
+})
+export class AdminComponent implements OnInit {
 
-//   //public produtos: Produto[];
+  public produtos: Produto[];
 
-//   public lang = LANG;
+  public lang = LANG;
 
-//   constructor(private prodService: ProdutoService) {
+  constructor(private prodService: ProdutoService) {
 
     this.produtos = [
       {
@@ -110,10 +110,10 @@ import { Produto } from 'src/app/model/product';
 
 
   ngOnInit() {
-    // this.prodService.getProdutos().subscribe(dado => {
-    //   this.produtos = dado;
-    // })
+    this.prodService.getProdutos().subscribe(dado => {
+      this.produtos = dado;
+    })
     
-//   }
+}
 
-// }
+}

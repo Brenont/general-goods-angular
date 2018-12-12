@@ -1,1 +1,19 @@
-@import '../../containers/contato/contato.component.scss';
+// @import '../../containers/contato/contato.component.scss';
+@import '../../../theme/colors-two.scss';
+
+.inputs-formulario {
+  display: flex;
+  padding: 10px 0px 10px 5px;
+  margin: 21px 0px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.input {
+  color: #fff;
+  border: 2px solid #fff;
+
+  &::placeholder {
+    color: $font-white;
+  }
+}

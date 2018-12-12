@@ -16,9 +16,9 @@
     <div class="formulario">
       <h2 class="titulo-formulario">{{ lang.faleConosco }}</h2>
       <form action="../sendemail/enviaremail.php" method="POST">
-        <input type="text" class="inputs-formulario input" id="input-nome" name="nome" placeholder="NOME">
-        <input type="text" class="inputs-formulario input" id="input-telefone" name="telefone" placeholder="TELEFONE">
-        <input type="email" class="inputs-formulario input" id="input-email" name="email" placeholder="EMAIL">
+        <app-input-form placeHolder="NOME" id="input-nome" name="nome" type="text"></app-input-form>
+        <app-input-form  type="text" placeHolder="TELEFONE" id="input-telefone" name="telefone" ></app-input-form>
+        <app-input-form type="email" id="input-email" name="email" placeHolder="EMAIL" ></app-input-form>
         <textarea type="text" class="inputs-formulario input" id="input-mensagem" name="mensagem" placeholder="MENSAGEM"></textarea>
         <input type="submit" class="button-formulario" id="botao-form" value="ENVIAR">
       </form>

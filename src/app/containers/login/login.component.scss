@@ -27,13 +27,8 @@
 
     .back-text {
       cursor: pointer;
-      font-size: 18px;
-      color: #7f8c8d;
-      border-bottom: #7f8c8d 1px solid;
-
-      &:hover{
-      color: $primary-color;
-      border-bottom: $primary-color 1px solid;          
+      width: 45px;
+      height: 45px;        
       }
     }
   }
@@ -84,4 +79,4 @@
       }
     }
   }
-}
+

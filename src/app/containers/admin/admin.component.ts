@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from 'src/app/model/product';
 import { ProdutoService } from 'src/app/services/produto.service';
 import { LANG } from '../../../theme/pt';
-import { Produto } from 'src/app/model/product';
+import {  Produto } from 'src/app/model/product';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin',
@@ -13,9 +15,11 @@ export class AdminComponent implements OnInit {
 
   public produtos: Produto[];
 
+  public url = environment.url;
+
   public lang = LANG;
 
-  constructor(private prodService: ProdutoService) {
+  constructor(private prodService: ProdutoService, private http: HttpClient) {
 
     this.produtos = [
       {
@@ -108,11 +112,14 @@ export class AdminComponent implements OnInit {
   }
 
 
+  getProdutos(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(this.url);
+   }
 
   ngOnInit() {
-    this.prodService.getProdutos().subscribe(dado => {
-      this.produtos = dado;
-    })
+    // this.prodService.getProdutos().subscribe(dado => {
+    //   this.produtos = dado;
+    // })
     
 }
 

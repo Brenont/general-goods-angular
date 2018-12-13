@@ -30,20 +30,21 @@
 
         <div class="tabelaProduto">
 
-          <tr>
-            <td><img class="imagem" src="./../../../assets/img/caixatermica.png" alt="caixatermica.png" width="70px"
+          <tr *ngFor="let product of cartArray; let i = index">
+            <td><img class="imagem" src="{{product.img}}" alt="caixatermica.png" width="70px"
                 height="70px">
             </td>
             <td>
-              <P class="NomeProduto">Caixa Termica</P>
+              <P class="NomeProduto">{{product.name}}</P>
             </td>
 
             <td><select name="" id="seletor">
                 <option value="{{number}}" label="{{number}}" *ngFor="let number of qtdOptions;"> {{number}} </option>
               </select></td>
             <td>
-              <a> <img src="./../../../assets/img/clear-button.png" alt="clear-button.png"></a>
+              <a> <img class="delete-product" src="./../../../assets/img/clear-button.png" alt="clear-button.png" (click)="deleteProduct(i)"></a>
             </td>
+            <td><button class="delete-product" (click)="addToCart(i)">Adicionar</button></td>
           </tr>
 
         </div>

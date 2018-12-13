@@ -119,6 +119,10 @@ tr {
   display: none;
 }
 
+.delete-product{
+  cursor: pointer;
+}
+
 // MOBILE
 
 @media(max-width:769px) {

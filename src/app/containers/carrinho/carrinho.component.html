@@ -28,15 +28,14 @@
 
         </div>
 
-        <tr class="trProduto">
+        <tr class="trProduto" *ngFor="let product of cartArray; let i = index">
           <div class="DivProduto">
             <div class="DivContainer2">
               <td>
-                <img class="imagem" src="./../../../assets/img/caixatermica.png" alt="caixatermica.png" width="70px"
-                  height="70px">
+                <img class="imagem" src="{{product.img}}" alt="caixatermica.png" width="70px" height="70px">
               </td>
               <td>
-                <P class="NomeProduto">Caixa Termica</P>
+                <P class="NomeProduto">{{product.name}}</P>
               </td>
             </div>
             <div class="DivContainer3">
@@ -45,52 +44,15 @@
                   <option value="{{number}}" label="{{number}}" *ngFor="let number of qtdOptions;"> {{number}} </option>
                 </select></td>
               <td>
-                <a> <img src="./../../../assets/img/clear-button.png" alt="clear-button.png"></a>
+                <a> <img class="delete-product" src="./../../../assets/img/clear-button.png" alt="clear-button.png" (click)="deleteProduct(i)"></a>
               </td>
+              <td><button class="delete-product" (click)="addToCart(i)">adicionar</button></td>
             </div>
           </div>
 
-          <div class="DivProduto">
-              <div class="DivContainer2">
-                <td>
-                  <img class="imagem" src="./../../../assets/img/caixatermica.png" alt="caixatermica.png" width="70px"
-                    height="70px">
-                </td>
-                <td>
-                  <P class="NomeProduto">Caixa Termica</P>
-                </td>
-              </div>
-              <div class="DivContainer3">
-                <td>
-                  <select name="" id="seletor">
-                    <option value="{{number}}" label="{{number}}" *ngFor="let number of qtdOptions;"> {{number}} </option>
-                  </select></td>
-                <td>
-                  <a> <img src="./../../../assets/img/clear-button.png" alt="clear-button.png"></a>
-                </td>
-              </div>
-            </div>
         </tr>
-          <tr *ngFor="let product of cartArray; let i = index">
-            <td><img class="imagem" src="{{product.img}}" alt="caixatermica.png" width="70px"
-                height="70px">
-            </td>
-            <td>
-              <P class="NomeProduto">{{product.name}}</P>
-            </td>
-
-            <td><select name="" id="seletor">
-                <option value="{{number}}" label="{{number}}" *ngFor="let number of qtdOptions;"> {{number}} </option>
-              </select></td>
-            <td>
-              <a> <img class="delete-product" src="./../../../assets/img/clear-button.png" alt="clear-button.png" (click)="deleteProduct(i)"></a>
-            </td>
-            <td><button class="delete-product" (click)="addToCart(i)">Adicionar</button></td>
-          </tr>
-
-        </div>
-
       </div>
+
     </div>
 
   </section>

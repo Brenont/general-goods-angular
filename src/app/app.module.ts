@@ -16,10 +16,10 @@ import { QmsomosComponent } from './containers/qmsomos/qmsomos.component';
 import { ProdutosComponent } from './containers/produtos/produtos.component';
 import { AgmCoreModule } from '@agm/core';
 
-import { environment } from '../environments/environment'; 
+// import { environment } from '../environments/environment';
 import { ModalSetupComponent } from './components/modal-setup/modal-setup.component';
 import { ProductModalComponent } from './components/product-modal/product-modal.component';
-// import { AdminComponent } from './containers/admin/admin.component';
+import { AdminComponent } from './containers/admin/admin.component';
 import { LoginComponent } from './containers/login/login.component';
 import { InputFormComponent } from './components/input-form/input-form.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -39,7 +39,7 @@ import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
     ModalSetupComponent,
     ProductModalComponent,
     ModalSetupComponent,
-    // AdminComponent,
+    AdminComponent,
     LoginComponent,
     InputFormComponent,
     CarrinhoComponent,

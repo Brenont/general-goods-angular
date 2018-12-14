@@ -189,6 +189,9 @@
             padding-right: 6px;
             font-size: 42px;
         }
+        #tituloBack{
+            margin-top:-12px;
+        }
         #qlqrcoisa {
             display:-webkit-flex;
             display:-webkit-box;
@@ -201,6 +204,7 @@
         #txtqmsomos {
             width: 83% !important;
             padding: 25px !important;
+            margin-left: 35px;
         }
         #pessoasLampada {
             margin: auto;
@@ -274,6 +278,10 @@
         }
         .titulo{
             font-size: 30px;
+            margin-top: 60px;
+        }
+        #txtqmsomos{
+            margin-left: 11px;
         }
     }
     @media screen and (max-width:375px) {

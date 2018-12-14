@@ -22,23 +22,21 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit() {
     this.createOptions();
     
-    //converting object to string and set on LS
-    localStorage.setItem(this.storageName, JSON.stringify(this.productsArray));
+    //converting object to string and set on LS if wasn't seted
+    if (!localStorage.getItem(this.storageName)) {
+      localStorage.setItem(this.storageName, JSON.stringify(this.productsArray));
+    }
 
   }
 
   addToCart(_index) {
-    var productToAdd = this.cartArray[_index];
-
-    var oldArray = this.cartArray;
-    var oldArray = oldArray.push(productToAdd);
-    console.log(this.cartArray);
+    this.cartArray.push(this.cartArray[_index]);
     this.updateStorage(this.cartArray);
   }
 
   deleteProduct(_index) {
-    var deleted = this.cartArray.splice(_index, -1);
-    this.updateStorage(deleted);
+    this.cartArray.splice(_index, 1);
+    this.updateStorage(this.cartArray);
   }
 
   updateStorage(update){

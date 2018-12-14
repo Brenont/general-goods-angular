@@ -7,7 +7,7 @@
 
 .carrinho {
   display: flex;
-  padding: 30px;
+  padding: 35px;
   background-color: $primary-color;
 }
 
@@ -18,7 +18,7 @@
   padding-left: 15px;
 }
 
-.BrenoVaiMeXingar {
+.DivContainer {
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -27,8 +27,7 @@
 .table {
   display: flex;
   flex-direction: column;
-  width: 800px;
-  height: 230px;
+  width: auto; //800px
   border: solid $primary-color;
 }
 
@@ -44,10 +43,9 @@ th {
 }
 
 tr {
-  width: 100%;
+  width: auto; //100%
   display: flex;
-  min-width: 800px;
-  align-items: center;
+  min-width: 760px; //800px
   justify-content: space-evenly;
 
   th:nth-child(1) {
@@ -85,17 +83,18 @@ tr {
 
 #seletor {
   padding: 15px;
-  border-radius: 10px;
-  border-color: $primary-color;
+    border-radius: 10px;
+    border-color: #15114d;
+    margin-right: 115px;
 }
 
 #seletor:focus {
   outline: none;
 }
 
-tr {
+.trProduto {
   display: flex;
-
+  flex-direction: column;
 
   td:nth-child(1) {
     flex: 1;
@@ -115,63 +114,134 @@ tr {
   }
 }
 
-.sec-container{
-  display: none;
+.DivProduto {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.DivContainer2 {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.DivContainer3 {
+  display: flex;
+    align-items: center;
+    width: 50%;
+    padding-left: 100px;
+}
+.container-toall{
+  padding-top: 65px;
 }
 
 // MOBILE
 
-@media(max-width:769px) {
-  .sec-container{
+@media(max-width:700px) {
+  .container {
+    display: flex;
+    padding-top: 60px;
+    flex-direction: column;
+  }
+
+  .shopCart,
+  th,
+  #titulos {
+    display: none;
+  }
+
+  .table {
     display: flex;
     flex-direction: column;
-    border: solid #15114d 2px;
-    margin: 10px;
-    height: 160px;
+    border: solid #15114d 1.5px;
+    margin: 5px;
+    height: auto;
+    width: auto; //320px
   }
 
-  .carrinho {
+  .tabelaProduto {
+    padding-top: 10px;
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  .trProduto {
     display: flex;
-    padding: 30px;
-    background-color: $primary-color;
+    flex-direction: column;
+
+    td:nth-child(1) {
+      flex: 0;
+      padding-left: 0px;
+    }
+
+    td:nth-child(2) {
+      flex: 0;
+    }
+
+    td:nth-child(3) {
+      flex: 0;
+    }
+
+    td:nth-child(4) {
+      flex: 0;
+    }
   }
 
-  .title {
+  tr {
+    width: 100%;
     display: flex;
-    color: white;
-    font-size: 30px;
-    padding-left: 15px;
+    min-width: 245px;
+    align-items: normal;
+    justify-content: normal;
   }
 
-  .DivImagem{
+  .DivContainer2 {
+    display: flex;
+    font-size: 24px;
+    padding-left: 5px;
+    align-items: center;
+    padding-top: 5px;
+  }
+
+  .DivContainer3 {
     display: flex;
     align-items: center;
-    padding: 10px;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-left: 10px;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    width: 100%;
   }
-  .icons{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 10px;
-    padding-bottom: 10px;
+
+  .NomeProduto {
+    font-size: 25px;
+    padding-left: 20px;
+    width: 147px;
   }
-  #seletor2{
+
+  #seletor {
     width: 83px;
-    height: 32px;
+    height: 30px;
     border-radius: 10px;
     border: solid #15114d 1px;
     background-color: #15114d;
     color: white;
+    padding: 2px;
     font-size: 20px;
-  }  
-  .clear{
-    padding-right: 30px;
-  }
-  .title2{
-    padding-left: 10px;
-    font-size: 21px;
+    margin: 0px;
   }
 
-  .table{
-    display: none;
+  .DivProduto {
+    flex-direction: column;
+    padding-top: 0px;
+    padding-right: 5px;
+  }
+  .container-toall{
+    padding-top: 0px;
   }
 }
+
+
+

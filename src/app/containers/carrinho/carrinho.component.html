@@ -8,13 +8,13 @@
     <div class="carrinho">
 
 
-      <img src="./../../../assets/img/shopping-cart.png" alt="shopping-cart.png" width="35px" height="35px">
+      <img class="shopCart" src="./../../../assets/img/shopping-cart.png" alt="shopping-cart.png" width="35px" height="35px">
       <h1 class="title">Meu Carrinho</h1>
 
 
     </div>
 
-    <div class="BrenoVaiMeXingar">
+    <div class="DivContainer">
 
       <div class="table">
 
@@ -28,43 +28,52 @@
 
         </div>
 
-        <div class="tabelaProduto">
+        <tr class="trProduto">
+          <div class="DivProduto">
+            <div class="DivContainer2">
+              <td>
+                <img class="imagem" src="./../../../assets/img/caixatermica.png" alt="caixatermica.png" width="70px"
+                  height="70px">
+              </td>
+              <td>
+                <P class="NomeProduto">Caixa Termica</P>
+              </td>
+            </div>
+            <div class="DivContainer3">
+              <td>
+                <select name="" id="seletor">
+                  <option value="{{number}}" label="{{number}}" *ngFor="let number of qtdOptions;"> {{number}} </option>
+                </select></td>
+              <td>
+                <a> <img src="./../../../assets/img/clear-button.png" alt="clear-button.png"></a>
+              </td>
+            </div>
+          </div>
 
-          <tr>
-            <td><img class="imagem" src="./../../../assets/img/caixatermica.png" alt="caixatermica.png" width="70px"
-                height="70px">
-            </td>
-            <td>
-              <P class="NomeProduto">Caixa Termica</P>
-            </td>
-
-            <td><select name="" id="seletor">
-                <option value="{{number}}" label="{{number}}" *ngFor="let number of qtdOptions;"> {{number}} </option>
-              </select></td>
-            <td>
-              <a> <img src="./../../../assets/img/clear-button.png" alt="clear-button.png"></a>
-            </td>
-          </tr>
-
-        </div>
+          <div class="DivProduto">
+              <div class="DivContainer2">
+                <td>
+                  <img class="imagem" src="./../../../assets/img/caixatermica.png" alt="caixatermica.png" width="70px"
+                    height="70px">
+                </td>
+                <td>
+                  <P class="NomeProduto">Caixa Termica</P>
+                </td>
+              </div>
+              <div class="DivContainer3">
+                <td>
+                  <select name="" id="seletor">
+                    <option value="{{number}}" label="{{number}}" *ngFor="let number of qtdOptions;"> {{number}} </option>
+                  </select></td>
+                <td>
+                  <a> <img src="./../../../assets/img/clear-button.png" alt="clear-button.png"></a>
+                </td>
+              </div>
+            </div>
+        </tr>
 
       </div>
     </div>
 
-    <section class="sec-container">
-      <div class="DivImagem">
-        <img class="imagem" src="./../../../assets/img/caixatermica.png" alt="caixatermica.png" width="70px" height="70px">
-        <h1 class="title2">Caixa Termica</h1>
-      </div>
-
-      <div class="icons">
-
-          <a> <img class="clear" src="./../../../assets/img/clear-button.png" alt="clear-button.png"></a>
-
-        <select name="" id="seletor2">
-          <option value="{{number}}" label="{{number}}" *ngFor="let number of qtdOptions;"> {{number}} </option>
-        </select>
-
-      </div>
-    </section>
   </section>
+</section>

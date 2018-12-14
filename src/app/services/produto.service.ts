@@ -4,7 +4,7 @@ import { Produto } from '../model/product';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
-const produtos = [
+ export const produtos :Produto[] = [
   {
     name: "Caixa de Isopor",
     descriptions: ["Caixa apropriada para transportar produtos perecíveis à longa distância.",],
@@ -100,6 +100,7 @@ const produtos = [
 export class ProdutoService {
 
   public url = environment.url;
+  public products = produtos;
 
   constructor(private http: HttpClient) { }
   // constructor() { }

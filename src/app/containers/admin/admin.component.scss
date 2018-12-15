@@ -1,9 +1,15 @@
 @import '../../../styles.scss';
 
+@font-face {
+  font-family: comfortaa;
+  src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+}
+
 .body {
   display: flex;
   height: 100vh;
   overflow: auto;
+  font-family: comfortaa;
 }
 
 .menu {

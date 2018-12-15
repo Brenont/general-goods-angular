@@ -1,8 +1,14 @@
 @import '../../../theme/colors-two.scss';
 
+@font-face {
+  font-family: comfortaa;
+  src: url(../../../assets/font/COMFORTAA.LIGHT.TTF);
+}
+
 .container {
   display: flex;
   flex-direction: column;
+  font-family: comfortaa;
 }
 
 .carrinho {

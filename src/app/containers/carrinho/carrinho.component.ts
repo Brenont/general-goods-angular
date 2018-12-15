@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/model/product';
 import { produtos } from 'src/app/services/produto.service';
+import { Subscription } from 'rxjs';
+import { CarrinhoService } from 'src/app/services/carrinho.service';
 @Component({
   selector: 'app-carrinho',
   templateUrl: './carrinho.component.html',
@@ -10,14 +12,18 @@ export class CarrinhoComponent implements OnInit {
 
   public qtdOptions = [];
 
-  public storageName :string = "cart";
+  public storageName: string = "cart";
 
   private productsArray = produtos;
   public cartArray = JSON.parse(localStorage.getItem(this.storageName));
-  
 
+  //EventEmited
+  public productClicked: any;
+  private subscription: Subscription;
 
-  constructor() { }
+  constructor(private carrinhoService: CarrinhoService) {
+    this.subscription = this.carrinhoService.getProduct().subscribe(productAdded => { this.productClicked = productAdded })
+    }
 
   ngOnInit() {
     this.createOptions();
@@ -34,6 +40,11 @@ export class CarrinhoComponent implements OnInit {
     this.updateStorage(this.cartArray);
   }
 
+  // addToCartByObj(pdtObj) {
+  //   this.cartArray.push(pdtObj)
+  //   this.updateStorage(this.cartArray);
+  // }
+  
   deleteProduct(_index) {
     this.cartArray.splice(_index, 1);
     this.updateStorage(this.cartArray);

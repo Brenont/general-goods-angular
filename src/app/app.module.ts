@@ -24,6 +24,7 @@ import { LoginComponent } from './containers/login/login.component';
 import { InputFormComponent } from './components/input-form/input-form.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
+import { CarrinhoService } from './services/carrinho.service';
 
 
 
@@ -55,7 +56,10 @@ import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
       apiKey: 'AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA'
     })
   ],
-  providers: [HttpClient],
+  providers: [
+    HttpClient,
+    CarrinhoService,
+  ],
   bootstrap: [AppComponent]
 })
 

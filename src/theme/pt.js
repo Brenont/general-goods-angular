@@ -51,7 +51,7 @@ export const LANG = {
     txtcard3 : "Entre em contato conosco pelo nosso formulário, email ou telefone e tire suas dúvidas ou faça seu orçamento.",
 
     //ADMIN
-    add : "Adicionar",
+    add : "Adicionar Produto ",
     produtos : "Produtos",
     Painel : "Painel De ",   
     adm : "Administração"

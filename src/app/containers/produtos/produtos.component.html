@@ -26,11 +26,20 @@
         <h2 *ngIf="product.features">Características:</h2>
         <div *ngFor="let feature of product.features">
           <li *ngIf="feature">{{feature}}</li>
+
+          <div *ngIf="product.customizes">
+            <li  ><input id="check" name="check" type="checkbox">
+              <label for="check" *ngFor="let customize of product.customizes">{{customizes}}</label>
+            </li>
+          </div>
+
         </div>
 
         <h2 *ngIf="product.sizes">Tamanhos:</h2>
         <div *ngFor="let size of product.sizes">
-          <li *ngIf="size">{{size}} litros.</li>
+          <li><input id="check" name="check" type="checkbox">
+            <label for="check" *ngIf="size">{{size}} litros.</label>
+          </li>
         </div>
         <br>
 
@@ -38,7 +47,7 @@
           <p *ngIf="extra" class="p-produtos">{{extra}}</p>
         </div>
         <br>
-        <button (click)="sendProduct(i)" class="btn-carrinho" id="carrinho-de-compras">adicionar ao carrinho</button>
+        <button (click)="sendProduct(i)" class="btn-carrinho" id="carrinho-de-compras">Adicionar ao carrinho</button>
       </div>
     </section>
   </div>

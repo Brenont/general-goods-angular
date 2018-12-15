@@ -39,11 +39,6 @@ import { environment } from '../../environments/environment';
       "Feito em polietileno, resistente aos raios UV.",
       "Solado com poliuretano para conservar temperatura por mais tempo.",
       "Material robusto, resistente à impactos.",
-      "Travas de aço inox.*",
-      "Pedais de borracha antiderrapante.*",
-      "Dreno.*",
-      "Travas de borracha.*",
-      "Rodizios com travas e rodas de borracha antiderrapantes.*",
     ],
     sizes: null,
     extras: [

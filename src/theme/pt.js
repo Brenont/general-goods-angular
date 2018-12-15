@@ -12,6 +12,7 @@ export const LANG = {
     productsTitle : "Produtos",
     companyTitle : "Quem Somos",
     contactTitle : "Contato",
+    loginTitle : "login",
 
     //QUEM SOMOS
     title : "GENERAL GOODS",

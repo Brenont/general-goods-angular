@@ -38,14 +38,14 @@ export class HomeComponent implements OnInit {
 
 
   slideConfig = {
-    arrows: true,
     dots: true,
     autoplay: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-
+    prevArrow: false,
+    nextArrow: false
   };
 }
 

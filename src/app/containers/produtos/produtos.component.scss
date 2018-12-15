@@ -25,7 +25,7 @@
 
     .ttl-pag {
       font-family: 'Open Sans';
-      // font-family: menu;
+      font-family: menu;
       width: 100%;
       height: 120px;
       font-size: 53px;
@@ -110,19 +110,19 @@
       flex-direction: column;
 
       h4 {
-        font-family: titlep;
+        font-family: COMFORTAA;
         padding-bottom: 10px;
         margin-top: 15px;
       }
 
       .p-produtos {
-        font-family: titlep;
+        font-family: COMFORTAA;
         font-size: 22px;
       }
 
       li {
         font-size: 22px;
-        font-family: titlep;
+        font-family: COMFORTAA;
       }
     }
   }
@@ -134,24 +134,39 @@
   #isopor,
   #caixanucleo {
     padding: 21px;
+
   }
 
   #gelo {
     padding: 0px 77px;
   }
 }
+          .btn-carrinho{
+            width:141px;
+            background-color:$secondary-color;
+            border: none;
+            color:$font-white;
+            padding: 5px;
+            border-radius: 4px;
+          }
 
 
 // unfortunely(or not) I never'll can undestand this stuffs...
 // h2 {
-//   font-family: menu;
+  //   font-family: menu;
 //   font-size: 27px;
 // }
 // h4 {
 //   font-family: titlep;
 //   font-size: 27px;
 // }
-
+@media screen and (max-width:1024px){
+  #isopor,
+  #caixanucleo{
+    width: 260px;
+    height: 260px;
+  }
+}
   @media screen and (max-width:768px) {
     .container-produtos {
       .div-ttl {
@@ -160,12 +175,12 @@
           height: 90px;
         }
       }
-
+      
       .ttl-pdt {
         width: 88%;
         padding: 16px 0px;
         margin-left: -20px;
-
+        
         .h2-ttl {
           padding-left: 14%;
           color: #fff;
@@ -173,36 +188,41 @@
           padding-top: 10px;
         }
       }
-
+      
       .produto {
         flex-direction: column !important;
         align-items: center;
-
+        
         .cx1 {
           padding-right: 0;
         }
-
+        
         .cx2 {
           // width: 100%;
           width: 70%;
           padding: 33px;
-
+          
         }
       }
-
+      
       h2 {
         font-family: menu;
         font-size: 28px;
       }
+      .btn-carrinho{
+        align-self: center; 
+      }
+
     }
   }
-
+  
   @media (max-width:480px) {
     .container-produtos {
       .div-ttl {
         .ttl-pag {
           font-size: 30px !important;
           height: 90px;
+          margin-top: 70px;
         }
       }
 
@@ -217,7 +237,7 @@
 
         .cx2 {
           h4 {
-            font-size: 20px;
+            font-size: 15px;
           }
 
           h2 {
@@ -226,7 +246,8 @@
           }
 
           li {
-            font-size: 18px;
+            font-size: 16px;
+            margin-bottom: 10px;
           }
 
           h5 {
@@ -241,11 +262,10 @@
 
     }
   }
-  .btn-carrinho{
-    width:141px;
-    background-color:$secondary-color;
-    border: none;
-    color:$font-white;
-    padding: 5px;
-    border-radius: 4px;
+  @media (max-width:375px) {
+    #isopor,
+  #caixanucleo{
+    width: 255px;
+    height: 238px;
+  }
   }

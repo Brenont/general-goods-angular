@@ -79,4 +79,9 @@
       }
     }
   }
-
+  @media (max-width: 768px){
+    .sct-login {
+      .back-container{
+      padding-left: 25px;
+    }}
+  }

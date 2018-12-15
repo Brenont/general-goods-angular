@@ -47,16 +47,17 @@
 .button {
   display: flex;
   width: 25%;
-  height: 140px;
+  height: 50%;
   justify-content: flex-end;
   align-items: flex-end;
+  margin-bottom: 10px;
 }
 
 .btao {
   cursor: pointer;
   width: 130px;
   height: 45px;
-  font-size: 20px;
+  font-size: 19px;
   text-align: center;
   background-color: #26a706;
   border: none;
@@ -113,31 +114,93 @@
   height: 100px;
 }
 
-.edit, .remove{
+.edit,
+.remove {
   display: flex;
-    width: 30px;
-    height: 30px; 
+  width: 30px;
+  height: 30px;
 }
 
-.edit{
+.edit {
   padding-bottom: 10px;
 }
 
-.remove{
+.remove {
   display: flex;
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
-.icones{
+.icones {
   display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  flex: 1;
+  min-width: 40px;
+  align-items: flex-end;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+#bt_menu {
+  display: none;
+}
+
+@media(max-width:768px) {
+  .container-toall {
+    padding-top: 66px;
+  }
+
+  .body{
+    display: flex;
+    height: auto;
+    overflow: auto;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .container-list {
+    width: 100%;
+  }
+
+  .container {
+    margin: 0px 10px 10px 10px;
+    width: auto;
+    height: auto;
+    padding: 0px 15px 0px 0px;
+  }
+
+  .img-produto {
+    padding-left: 0px;
+  }
+
+  .button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    height: 10%;
+  }
+
+  .barra {
+    width: 1px;
+    background-color: black;
+    height: 100px;
+  }
+
+  .icones{
+    display: flex;
     flex-direction: column;
-    padding-left: 50px;
+    padding-left: 0px;
     flex: 1;
     min-width: 40px;
     align-items: flex-end;
+  }
 
-    img{
-      cursor: pointer;
-    }
+  
 }

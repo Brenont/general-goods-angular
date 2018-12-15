@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from 'src/app/services/produto.service';
 import { LANG } from '../../../theme/pt';
-import {  Produto } from 'src/app/model/product';
+import { Produto } from 'src/app/model/product';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';

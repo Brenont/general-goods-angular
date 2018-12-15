@@ -14,12 +14,11 @@ export class ProdutosComponent implements OnInit {
 
   constructor(private carrinhoService: CarrinhoService) { }
 
-  sendProduct(_index): void{
-    this.carrinhoService.sendProduct(this.productsList[_index]);
-    console.log(this.productsList[_index])
+  addToCart(product){
+    this.carrinhoService.addToCart(product);
   }
-
   ngOnInit() {
+    this.carrinhoService.initStorage()
   }
 
 }

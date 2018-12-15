@@ -12,47 +12,26 @@ export class CarrinhoComponent implements OnInit {
 
   public qtdOptions = [];
 
-  public storageName: string = "cart";
-
   private productsArray = produtos;
-  public cartArray = JSON.parse(localStorage.getItem(this.storageName));
 
   //EventEmited
   public productClicked: any;
   private subscription: Subscription;
 
+  public cartArray: Produto[];
+
   constructor(private carrinhoService: CarrinhoService) {
-    this.subscription = this.carrinhoService.getProduct().subscribe(productAdded => { this.productClicked = productAdded })
-    }
+    // this.subscription = this.carrinhoService.getProduct().subscribe(productAdded => { this.productClicked = productAdded })
+    this.cartArray = this.carrinhoService.cartArray;
+  }
+
+  deleteProduct(_index){
+    this.carrinhoService.deleteProduct(_index);
+  }
 
   ngOnInit() {
     this.createOptions();
-    
-    //converting object to string and set on LS if wasn't seted
-    if (!localStorage.getItem(this.storageName)) {
-      localStorage.setItem(this.storageName, JSON.stringify(this.productsArray));
-    }
 
-  }
-
-  addToCart(_index) {
-    this.cartArray.push(this.cartArray[_index]);
-    this.updateStorage(this.cartArray);
-  }
-
-  // addToCartByObj(pdtObj) {
-  //   this.cartArray.push(pdtObj)
-  //   this.updateStorage(this.cartArray);
-  // }
-  
-  deleteProduct(_index) {
-    this.cartArray.splice(_index, 1);
-    this.updateStorage(this.cartArray);
-  }
-
-  updateStorage(update){
-    var updateString = JSON.stringify(update);
-    localStorage.setItem(this.storageName, updateString);
   }
 
   //options of the select of quantify

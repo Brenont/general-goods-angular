@@ -1,0 +1,28 @@
+@import '../../../theme/colors.scss';
+
+.container{
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: $secondary-color;
+    border: solid 2px $primary-color;
+    cursor: pointer;
+    box-shadow: #000 1px 1px 3px;
+    
+    img{
+        width: 30px;
+        height: auto;
+    }
+
+    &:focus{
+        outline: none;
+    }
+}
+
+@media(min-width:768px){
+    .container{
+        display: none;
+    }
+}

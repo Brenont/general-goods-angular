@@ -25,6 +25,7 @@ import { InputFormComponent } from './components/input-form/input-form.component
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
 import { CarrinhoService } from './services/carrinho.service';
+import { CartButtonComponent } from './components/cart-button/cart-button.component';
 
 
 
@@ -44,6 +45,7 @@ import { CarrinhoService } from './services/carrinho.service';
     LoginComponent,
     InputFormComponent,
     CarrinhoComponent,
+    CartButtonComponent,
   ],
   imports: [
     BrowserModule,

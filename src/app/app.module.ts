@@ -26,6 +26,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
 import { CarrinhoService } from './services/carrinho.service';
 import { CartButtonComponent } from './components/cart-button/cart-button.component';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -56,11 +59,13 @@ import { CartButtonComponent } from './components/cart-button/cart-button.compon
     SlickCarouselModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA'
-    })
+    }),
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [
     HttpClient,
     CarrinhoService,
+    AngularFirestore
   ],
   bootstrap: [AppComponent]
 })

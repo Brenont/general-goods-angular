@@ -4,7 +4,15 @@
 
 export const environment = {
   production: false,
-  url : "http://api-pacientes.herokuapp.com/pacientes",
+  firebaseConfig : {
+    apiKey: "AIzaSyB4KOtIb6QKznLUivY3EITy19zlxQJ_Wd0",
+    authDomain: "general-goods-1529331752898.firebaseapp.com",
+    databaseURL: "https://general-goods-1529331752898.firebaseio.com",
+    projectId: "general-goods-1529331752898",
+    storageBucket: "general-goods-1529331752898.appspot.com",
+    messagingSenderId: "939716085443",
+  },
+  
 };
 
 /*

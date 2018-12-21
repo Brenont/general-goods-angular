@@ -17,10 +17,14 @@
     </div>
 
     <div class="container-list">
-      <div class="button">
-        <button class="btao">{{ lang.add }}</button>
+      <div class="button form">
+        <form action="">
+          <input type="text" placeholder="Nome" #name>
+          <!-- <input type="text" placeholder="nome" #name> -->
+          <button class="btao" (click)="add({name: name.value})">{{ lang.add }}</button>
+        </form>
       </div>
-      <div class="container" *ngFor="let product of produtos">
+      <div class="container" *ngFor="let product of produtos | async">
         <div class="Product-One">
           <img class="img-produto" src="{{product.img}}" alt="caixatermica.png" width="100px"
             height="100px">

@@ -27,16 +27,14 @@ export class AdminComponent implements OnInit {
 
   add(product: any) {
     this.produtosCollection.add(product);
-    this.generateId(this.produtosCollection);
+    // this.generateId(this.produtosCollection);
     // this.produtosCollection.doc(this.generateId(this.produtosCollection)).set(product);
   }
 
-  
+  //Dont working
   generateId(collection){
     console.log(Object.keys(collection).length)
-    var num = 0;
-    num = num + 1;
-    return (num + 1).toString();
+    return (Object.keys(collection).length + 1).toString();
   }
   
   delete(product: any){

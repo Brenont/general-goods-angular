@@ -16,7 +16,7 @@ export class AdminComponent implements OnInit {
   public lang = LANG;
 
   private produtos: Observable<any[]>;
-  private produtosCollection: AngularFirestoreCollection<any>;
+  private produtosCollection: AngularFirestoreCollection<Produto[]>;
   
 
   constructor(private prodService: ProdutoService, private db: AngularFirestore) {
@@ -27,7 +27,20 @@ export class AdminComponent implements OnInit {
 
   add(product: any) {
     this.produtosCollection.add(product);
+    this.generateId(this.produtosCollection);
+    // this.produtosCollection.doc(this.generateId(this.produtosCollection)).set(product);
   }
 
+  
+  generateId(collection){
+    console.log(Object.keys(collection).length)
+    var num = 0;
+    num = num + 1;
+    return (num + 1).toString();
+  }
+  
+  delete(product: any){
+    this.produtosCollection.doc<any>(this.generateId(this.produtosCollection)).delete();
+  }
   ngOnInit() {}
 }

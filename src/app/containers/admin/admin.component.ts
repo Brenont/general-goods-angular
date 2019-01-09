@@ -18,7 +18,6 @@ export class AdminComponent implements OnInit {
   private produtos: Observable<any[]>;
   private produtosCollection: AngularFirestoreCollection<Produto[]>;
 
-
   constructor(private prodService: ProdutoService, private db: AngularFirestore) {
     this.produtosCollection = db.collection("produtos");
     this.produtos = this.prodService.produtosDb;
@@ -32,6 +31,10 @@ export class AdminComponent implements OnInit {
   delete(product: any) {
     // this.produtosCollection.doc<any>(this.generateId(this.produtosCollection)).delete();
     this.produtosCollection.doc(product.key).delete()
+  }
+
+  update(product){
+    this.produtosCollection.doc(product.key).update({product})
   }
   
   generateKey() {
@@ -49,45 +52,6 @@ export class AdminComponent implements OnInit {
 
     return uuid;
   }
-
-  
-  //REALTIME DATABASE
-  
-  // public produtos: Observable<any[]>;
-  // public produtosCollection: AngularFireList<Produto[]>;
-  // public produtosRef: AngularFireList<any>;
-
-
-  // constructor(private prodService: ProdutoService, private db: AngularFireDatabase) {
-  //   this.produtosCollection = db.list("produtos");
-  //   this.produtos = db.list('produtos').valueChanges();
-  //   this.produtos.subscribe();
-  //   console.log("hehe", this.produtos)
-
-  //   this.produtosRef = db.list('/');
-  //   // this.produtos = this.produtosRef.snapshotChanges().pipe(map(change =>
-  //   //   change.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-  //   // )
-  //   // );
-  // }
-
-  // add(product: any) {
-  //   this.produtosCollection.push(product);
-  // }
-
-  // edit(key, produto) {
-  //   this.produtosRef.update(key, produto);
-  // }
-
-  // delete(key: any) {
-  //   console.log(key)
-  //   this.produtosCollection.remove(key)
-  // }
-
-
-
-
-
 
   ngOnInit() { }
 }

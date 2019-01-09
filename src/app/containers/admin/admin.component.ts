@@ -25,46 +25,34 @@ export class AdminComponent implements OnInit {
   }
 
   add(product: any) {
-    // this.produtosCollection.add(product);
-
-    this.produtosCollection.doc(this.generateId(this.produtosCollection)).set({
-      product
-    })
-
-    // this.generateId(this.produtosCollection);
-    // this.produtosCollection.doc(this.generateId(this.produtosCollection)).set(product);
+    console.log(product.key)
+    this.produtosCollection.doc(product.key).set(product)
   }
-
-  counter(_x) {
-    var sizeDocRef = this.produtosCollection.doc("sizeOfCollection");
-    return sizeDocRef.update({
-      size: sizeDocRef.get()+ _x
-    })
-
-    // var count: number = 0;
-    // var result = count + _x;
-    // console.log(result)
-    // count++
-  }
-
-  //Dont working
-  generateId(collection) {
-    console.log(Object.keys(collection).length)
-    return (Object.keys(collection).length + 1).toString();
-  }
-
+  
   delete(product: any) {
-    this.produtosCollection.doc<any>(this.generateId(this.produtosCollection)).delete();
+    // this.produtosCollection.doc<any>(this.generateId(this.produtosCollection)).delete();
+    this.produtosCollection.doc(product.key).delete()
+  }
+  
+  generateKey() {
+    var d = new Date().getTime();
+
+    if (window.performance && typeof window.performance.now === "function") {
+      d += performance.now();
+    }
+
+    var uuid = 'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = (d + Math.random() * 16) % 16 | 0;
+      d = Math.floor(d / 16);
+      return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+
+    return uuid;
   }
 
-  testing() {
-    this.produtosCollection.doc("NAWwwAT35niDmU1bdVIS").delete()
-  };
-
-
-
+  
   //REALTIME DATABASE
-
+  
   // public produtos: Observable<any[]>;
   // public produtosCollection: AngularFireList<Produto[]>;
   // public produtosRef: AngularFireList<any>;

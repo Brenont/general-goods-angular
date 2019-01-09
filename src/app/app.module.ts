@@ -26,9 +26,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
 import { CarrinhoService } from './services/carrinho.service';
 import { CartButtonComponent } from './components/cart-button/cart-button.component';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { AngularFireDatabase } from "@angular/fire/database";
 
 
 
@@ -60,12 +61,14 @@ import { environment } from 'src/environments/environment';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBGgHmDeD5_Q7Mh5sUPgaQKOtPE6vElSWA'
     }),
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
   ],
   providers: [
     HttpClient,
     CarrinhoService,
-    AngularFirestore
+    AngularFirestore,
+    AngularFireDatabase
   ],
   bootstrap: [AppComponent]
 })

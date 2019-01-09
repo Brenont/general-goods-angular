@@ -19,9 +19,15 @@
     <div class="container-list">
       <div class="button form">
         <form action="">
-          <input type="text" placeholder="Nome" #name>
+          <input class="input-product" type="text" placeholder="Name" #name>
+          <input class="input-product" type="text" placeholder="Description" #description>
+          <input class="input-product" type="text" placeholder="Features" #features>
+          <input class="input-product" type="text" placeholder="Sizes" #sizes>
+          <input class="input-product" type="text" placeholder="Extras" #extras>
+          <input class="input-product" type="text" placeholder="Customizes" #customizes>
+          <input class="input-product" type="text" placeholder="NucleoOption" #nucleoOption>
           <!-- <input type="text" placeholder="nome" #name> -->
-          <button class="btao" (click)="add({name: name.value})">{{ lang.add }}</button>
+          <button class="btao" (click)="add({name: name.value, key: 1})">{{ lang.add }}</button>
         </form>
       </div>
       <div class="container" *ngFor="let product of produtos | async">
@@ -31,8 +37,8 @@
           <div class="barra"></div>
           <p class="title-p">{{product.name}}</p>
           <div class="icones">
-            <img class="edit" src="./../../../assets/img/edit-document.png" alt="">
-            <img class="remove" src="./../../../assets/img/remove.png" alt="remove.png">
+            <img (click)="edit(produto.key)" class="edit" src="./../../../assets/img/edit-document.png" alt="">
+            <img (click)="delete(product)" class="remove" src="./../../../assets/img/remove.png" alt="remove.png">
           </div>
 
         </div>

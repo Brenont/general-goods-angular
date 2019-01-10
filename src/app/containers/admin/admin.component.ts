@@ -24,7 +24,7 @@ export class AdminComponent implements OnInit {
   }
 
   add(product: any) {
-    console.log(product.key)
+    // console.log(product.key)
     this.produtosCollection.doc(product.key).set(product)
   }
   
@@ -33,8 +33,8 @@ export class AdminComponent implements OnInit {
     this.produtosCollection.doc(product.key).delete()
   }
 
-  update(product){
-    this.produtosCollection.doc(product.key).update({product})
+  update(product, changes){
+    this.produtosCollection.doc(product.key).update(changes)
   }
   
   generateKey() {

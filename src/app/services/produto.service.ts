@@ -97,10 +97,12 @@ import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/fire
 export class ProdutoService {
   
   public products = produtos;
+  private produtosCollection: AngularFirestoreCollection<Produto[]>;
   
-  constructor(private http: HttpClient, private db: AngularFirestore) { }
-  // constructor() { }
-  
+  constructor(private http: HttpClient, private db: AngularFirestore) {
+    this.produtosCollection = db.collection("produtos");
+   }
+     
   public produtosDb = this.db.collection("produtos").valueChanges();
     
     PostProduto(produtos) {

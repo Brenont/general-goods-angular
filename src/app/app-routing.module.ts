@@ -8,6 +8,7 @@ import { ModalSetupComponent } from './components/modal-setup/modal-setup.compon
 import { AdminComponent } from './containers/admin/admin.component';
 import { LoginComponent } from './containers/login/login.component';
 import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
+import { AddProductComponent } from './containers/admin/add-product/add-product.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'contato', component: ContatoComponent},
   {path: 'dev-b', component: ModalSetupComponent},
   {path: 'admin', component: AdminComponent},
+  {path: 'admin/add-product', component: AddProductComponent},
   {path: 'login', component: LoginComponent},
   {path: 'carrinho', component: CarrinhoComponent},
 ];

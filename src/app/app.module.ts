@@ -30,6 +30,8 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabase } from "@angular/fire/database";
+import { AdminMenuComponent } from './components/admin-menu/admin-menu.component';
+import { AddProductComponent } from './containers/admin/add-product/add-product.component';
 
 
 
@@ -50,6 +52,8 @@ import { AngularFireDatabase } from "@angular/fire/database";
     InputFormComponent,
     CarrinhoComponent,
     CartButtonComponent,
+    AdminMenuComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,

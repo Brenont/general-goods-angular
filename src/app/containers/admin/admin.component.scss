@@ -12,35 +12,10 @@
   font-family: comfortaa;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  background-color: #023769;
-  width: 25%;
-  height: 100vh;
-}
 
 .line {
   height: 2px;
   background-color: white;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 23px;
-  color: white;
-  text-align: center;
-}
-
-.Sub-title {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-  font-size: 25px;
-  color: white;
 }
 
 .container-list {

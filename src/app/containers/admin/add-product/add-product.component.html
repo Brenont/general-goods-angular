@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<main class="container">
+
+  <app-admin-menu></app-admin-menu>
+  <form action="">
+    <input class="input-product" type="text" placeholder="Name" #name>
+    <input class="input-product" type="text" placeholder="Description" #description>
+    <input class="input-product" type="text" placeholder="Features" #features>
+    <input class="input-product" type="text" placeholder="Sizes" #sizes>
+    <input class="input-product" type="text" placeholder="Extras" #extras>
+    <input class="input-product" type="text" placeholder="Customizes" #customizes>
+    <input class="input-product" type="text" placeholder="NucleoOption" #nucleoOption>
+    <!-- <input type="text" placeholder="nome" #name> -->
+    <button class="btao" (click)="add({name: name.value, key: generateKey()})">{{ lang.add }}</button>
+    <!-- <button class="btao" (click)="update({name: name.value})">{{ lang.add }}</button> -->
+  </form>
+
+</main>

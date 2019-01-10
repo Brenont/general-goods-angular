@@ -1,0 +1,43 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #023769;
+  width: 20vw;
+  min-width: 300px;
+  max-width: 250px;
+  height: 100%;
+
+  .line {
+    height: 2px;
+    background-color: white;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(216, 216, 216);
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .menu {
+    display: none;
+  }
+}

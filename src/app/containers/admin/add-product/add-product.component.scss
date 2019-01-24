@@ -8,13 +8,43 @@
 
 .container {
   display: flex;
-  // justify-content: center;
-  // align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100%;
+  flex-direction: column;
   // width: 100vw;
   overflow: auto;
   font-family: comfortaa;
   padding-top: 75px;
+
+  nav{
+    background-color: #1C1652;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+
+    ul{
+      list-style-type: none;
+      display: flex;
+
+      li{
+        padding: 20px 30px;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+          color: rgb(219, 219, 219);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
 }
 
 form {

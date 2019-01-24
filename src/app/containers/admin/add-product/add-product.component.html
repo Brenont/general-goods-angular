@@ -2,7 +2,15 @@
 
 <main class="container">
 
-  <app-admin-menu></app-admin-menu>
+  <!-- <app-admin-menu></app-admin-menu> -->
+  <nav>
+    <h2 class="painel-tittle">Painel Admin</h2>
+    <ul>
+      <li routerLink="/admin">Produtos (Editar e Remover)</li>
+      <li routerLink="/admin/add-product">Cadastrar Produtos</li>
+    </ul>
+  </nav>
+
   <form action="">
     <input class="input-product" type="text" placeholder="Name" #name>
     <input class="input-product" type="text" placeholder="Description" #description>

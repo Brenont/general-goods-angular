@@ -45,6 +45,10 @@
       }
     }
   }
+
+  .title-admin{
+    padding: 20px;
+  }
 }
 
 form {
@@ -53,14 +57,22 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // max-width: 500px;
   // width: 100vw;
   // height: 100vh;
-
+  
+  .inputs-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // max-width: 500px;
+    align-items: center;
+    flex-wrap: wrap;
+    
     .input-product {
       padding: 5px;
       margin: 10px;
     }
+  }
   
     .btao {
       cursor: pointer;

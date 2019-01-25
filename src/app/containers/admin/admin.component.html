@@ -25,7 +25,12 @@
           <input class="input-product" type="text" placeholder="Extras" #extras>
           <input class="input-product" type="text" placeholder="Customizes" #customizes>
           <input class="input-product" type="text" placeholder="NucleoOption" #nucleoOption>
-          <button class="btao" (click)="add({name: name.value, key: generateKey()})">{{ lang.add }}</button>
+          <button class="btao" (click)="add({name: name.value, key: generateKey(), descriptions: description.value,
+            features: features.value,
+            sizes: sizes.value,
+            extras: extras.value,
+            customizes: customizes.value,
+            nucleoOption: nucleoOption.value})">{{ lang.add }}</button>
         </form>
         <!-- <app-add-form></app-add-form> -->
       </div>

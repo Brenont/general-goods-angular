@@ -1,2 +1,59 @@
-<!-- <input type="file" (change)="uploadFile($event)" />
-<button (click)="uploadFile()">UPLOAD</button> -->
+<form action="" class="mb-3">
+  <h2 class="mb-3 w100 flex-center" primary>Adicionar Produto</h2>
+  <div class="form-row">
+    <div class="form-group pl-3 pr-3 col-md-6">
+      <label for="name">Nome do Produto</label>
+      <input type="text" class="form-control" id="name" placeholder="digite o nome do produto">
+    </div>
+
+    <div class="form-group pl-3 pr-3 col-md-6">
+      <label for="description">Descriçao</label>
+      <input type="text" class="form-control" id="description" placeholder="digite a descriçao do produto">
+      <small class="form-text text-muted">Neste campo voce deve colocar uma breve descriçao do produto.</small>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group pl-3 pr-3 col-md-6">
+      <label for="features">Caracteristicas</label>
+      <input type="text" class="form-control" id="features" placeholder="digite uma caracteristica do produto">
+      <small class="form-text text-muted">Neste campo voce deve colocar algumas caracteristica do seu produto.</small>
+    </div>
+
+    <div class="form-group pl-3 pr-3 col-md-3">
+      <label for="sizes">Tamanhos</label>
+      <input type="number" class="form-control" id="sizes" placeholder="digite um tamanho">
+      <small class="form-text text-muted">Coloque as opçoes de tamanho do produto que o cliente pode escolher.</small>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-col col-md-6 p-0">
+      <label for="customize-name" class="pl-3">Customizavel</label>
+      <div class="form-group pl-3 pr-3">
+        <label for="customize-name">Nome do costumizavel</label>
+        <input type="text" class="form-control" id="customizes-name" placeholder="digite uma caracteristica do produto">
+        <small class="form-text text-muted">Neste campo voce escolhe um item customizavel, no qual o cliente pode
+          escolher customizar o produto.</small>
+      </div>
+      <div class="form-group pl-3 pr-3">
+        <label for="customize-name">Opçao de costumizaçao</label>
+        <input type="text" class="form-control" id="customizes" placeholder="digite uma caracteristica do produto">
+        <small class="form-text text-muted">Neste campo voce coloca as opçoes de costumizaçao.</small>
+      </div>
+    </div>
+
+    <div class="form-col col-md-6 mb-3">
+      <label class="pl-3">Foto do Produto</label>
+      <div class="form-group pl-3 pr-3">
+        <label id="label-photo" for="photo-input" class="ml-3"></label>
+        <input type="file" (change)="uploadFile($event)" id="photo-input" />
+        <small class="form-text text-muted">Escolha a foto do produto</small>
+      </div>
+    </div>
+  </div>
+  <div class="w100 flex-center">
+    <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)="uploadProduct(); uploadFile()">Adicionar Produto</button>
+  </div>
+
+</form>

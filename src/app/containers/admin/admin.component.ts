@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { UploadImgService } from 'src/app/services/upload-img.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -17,7 +18,7 @@ export class AdminComponent implements OnInit {
 
   private produtos: Observable<any[]>;
 
-  constructor(private prodService: ProdutoService) {
+  constructor(private prodService: ProdutoService, private uploadImgService: UploadImgService) {
     this.produtos = this.prodService.produtosDb;
   }
 
@@ -36,6 +37,10 @@ export class AdminComponent implements OnInit {
 
   generateKey(){
     return this.prodService.generateKey();
+  }
+
+  uploadFile(event){
+    this.uploadImgService.uploadFile(event);
   }
 
   ngOnInit() { }

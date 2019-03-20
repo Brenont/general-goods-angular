@@ -27,6 +27,7 @@ import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
 import { CarrinhoService } from './services/carrinho.service';
 import { CartButtonComponent } from './components/cart-button/cart-button.component';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabase } from "@angular/fire/database";
@@ -67,6 +68,7 @@ import { AddProductComponent } from './containers/admin/add-product/add-product.
     }),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [
     HttpClient,

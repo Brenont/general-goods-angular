@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LANG } from '../../../../theme/pt'
 import { ProdutoService } from 'src/app/services/produto.service';
+import { UploadImgService } from 'src/app/services/upload-img.service';
 
 @Component({
   selector: 'app-add-product',
@@ -11,7 +12,7 @@ export class AddProductComponent implements OnInit {
 
   public lang = LANG;
 
-  constructor(private prodService: ProdutoService) { }
+  constructor(private prodService: ProdutoService, private uploadImgService: UploadImgService) { }
 
   add(product) {
     console.log("click to add")
@@ -20,6 +21,10 @@ export class AddProductComponent implements OnInit {
 
   generateKey(){
     return this.prodService.generateKey();
+  }
+
+  uploadFile(event){
+    this.uploadImgService.uploadFile(event);
   }
 
   ngOnInit() {

@@ -1,5 +1,9 @@
 <form action="" class="mb-3">
-  <h2 class="mb-3 w100 flex-center" primary>Adicionar Produto</h2>
+  <div class="container-title w100 flex-center mb-5">
+    <h2 primary>Adicionar Produto</h2>
+    <div class="bar-title"></div>
+  </div>
+
   <div class="form-row">
     <div class="form-group pl-3 pr-3 col-md-6">
       <label for="name">Nome do Produto</label>
@@ -48,12 +52,12 @@
       <div class="form-group pl-3 pr-3">
         <label id="label-photo" for="photo-input" class="ml-3"></label>
         <input type="file" (change)="uploadFile($event)" id="photo-input" />
-        <small class="form-text text-muted">Escolha a foto do produto</small>
+        <small class="form-text text-muted">Escolha a foto do produto.</small>
       </div>
     </div>
   </div>
   <div class="w100 flex-center">
-    <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)="uploadProduct(); uploadFile()">Adicionar Produto</button>
+    <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)="buildProduct(); uploadFile()">Adicionar Produto</button>
   </div>
 
 </form>

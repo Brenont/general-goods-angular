@@ -12,7 +12,21 @@ export class AddProductComponent implements OnInit {
 
   public lang = LANG;
 
+  public descriptions = [];
+  public sizes = [];
+  public customizes = [];
+  public features = [];
+  public name : string;
+
   constructor(private prodService: ProdutoService, private uploadImgService: UploadImgService) { }
+
+  addDescription(text) {
+    this.descriptions.push(text);
+  }
+
+  buildProduct() {
+
+  }
 
   add(product) {
     console.log("click to add")

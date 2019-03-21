@@ -1,1 +1,47 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../../../styles.scss';
+@import '../../../theme/colors.scss';
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    border:1px;
+    margin-right:10px;
+}
+.nav-link{
+    color: $primary-color;
+    font-size: 20px;
+    padding: 8px;
+    border: 1px solid;
+    margin-bottom: 3px;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+
+}
+.btn{
+    width:134px;
+}
+.menu-home{
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    margin-top: 11px;
+}
+.card-button{
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 30px;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+

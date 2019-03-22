@@ -34,6 +34,8 @@ import { AngularFireDatabase } from "@angular/fire/database";
 import { AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 import { AddProductComponent } from './containers/admin/add-product/add-product.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -68,7 +70,8 @@ import { AddProductComponent } from './containers/admin/add-product/add-product.
     }),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    BrowserAnimationsModule
   ],
   providers: [
     HttpClient,

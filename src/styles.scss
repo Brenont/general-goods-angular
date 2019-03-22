@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'theme/fonts.scss';
 @import 'theme/colors.scss';
+@import './theme/extends.scss';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 
 *{
     margin: 0;
@@ -20,10 +26,29 @@ body{
     width: 4px;
     height: 0px;
   }
-  
+
   &::-webkit-scrollbar-thumb {
     background-color: $primary-color;
     border-radius: 10px;
+  }
+}
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.container-title{
+  flex-direction: column;
+
+  .bar-title {
+    height: 3px;
+    width: 30%;
+    max-width: 100px;
+    background-color: $primary-color;
   }
 }
 

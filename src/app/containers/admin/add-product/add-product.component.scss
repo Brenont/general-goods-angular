@@ -1,1 +1,54 @@
+<<<<<<< HEAD
 @import '~bootstrap/dist/css/bootstrap.min.css';
+=======
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "../../../../styles.scss";
+
+form {
+  // @extend %flex-center;
+  flex-direction: column;
+
+  .form-row {
+    width: 100%;
+
+    .form-group {
+      width: 100%;
+
+      label {
+        cursor: pointer;
+      }
+
+      // .form-control {
+        // max-width: 550px;
+      // }
+
+      #label-photo{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        text-align: center;
+        background-color: $primary-color;
+        background-image: url("../../../../assets/img/cam-icon.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        // color: #fff;
+      }
+
+      #photo-input {
+        opacity: 0;
+        z-index: -1;
+        cursor: none;
+        position: absolute;
+        width: 0;
+
+      }
+    }
+  }
+}
+
+@media(min-width:768px) {
+  form{
+    margin: 2rem;
+  }
+}
+>>>>>>> develop

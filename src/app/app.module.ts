@@ -35,6 +35,7 @@ import { AdminMenuComponent } from './components/admin-menu/admin-menu.component
 import { AddProductComponent } from './containers/admin/add-product/add-product.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from './modules/material.module';
 
 
 
@@ -71,7 +72,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     HttpClient,

@@ -35,6 +35,8 @@ import { AdminMenuComponent } from './components/admin-menu/admin-menu.component
 import { AddProductComponent } from './containers/admin/add-product/add-product.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from './modules/material.module';
+import { ModalFormComponent } from './modals/modal-form/modal-form.component';
 
 
 
@@ -57,6 +59,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     CartButtonComponent,
     AdminMenuComponent,
     AddProductComponent,
+    ModalFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     HttpClient,
@@ -79,7 +83,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AngularFirestore,
     AngularFireDatabase
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalFormComponent]
 })
 
 export class AppModule { }

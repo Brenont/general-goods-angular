@@ -44,6 +44,14 @@ body{
   flex-direction: column;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
 .w100 {
   width: 100%;
 }

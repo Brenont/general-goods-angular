@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { LANG } from '../../../../theme/pt'
 import { ProdutoService } from 'src/app/services/produto.service';
 import { UploadImgService } from 'src/app/services/upload-img.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { ModalFormComponent } from 'src/app/modals/modal-form/modal-form.component';
+// import { DialogData } from './DialogData';
 
 @Component({
   selector: 'app-add-product',
@@ -12,13 +15,15 @@ export class AddProductComponent implements OnInit {
 
   public lang = LANG;
 
-  public descriptions = [];
+  public descriptions = ["Muito show", "tem rodas"];
   public sizes = [];
   public customizes = [];
   public features = [];
   public name : string;
 
-  constructor(private prodService: ProdutoService, private uploadImgService: UploadImgService) { }
+  animal : string;
+
+  constructor(private prodService: ProdutoService, private uploadImgService: UploadImgService, public dialog: MatDialog) { }
 
   addDescription(text) {
     this.descriptions.push(text);
@@ -39,6 +44,17 @@ export class AddProductComponent implements OnInit {
 
   uploadFile(event){
     this.uploadImgService.uploadFile(event);
+  }
+
+  OpenModalDescription(): void {
+    const dialogRef = this.dialog.open(ModalFormComponent, {
+      width: '250px',
+      data: this.descriptions
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.animal = result;
+    });
   }
 
   ngOnInit() {

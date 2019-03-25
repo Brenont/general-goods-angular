@@ -1,0 +1,23 @@
+@import "../../../styles.scss";
+
+.cdk-overlay-pane{
+  min-width: 280px !important;
+}
+
+mat-form-field{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: hidden;
+
+  .items-content{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    p{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+  }
+}

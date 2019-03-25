@@ -36,6 +36,7 @@ import { AddProductComponent } from './containers/admin/add-product/add-product.
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
+import { ModalFormComponent } from './modals/modal-form/modal-form.component';
 
 
 
@@ -58,6 +59,7 @@ import { MaterialModule } from './modules/material.module';
     CartButtonComponent,
     AdminMenuComponent,
     AddProductComponent,
+    ModalFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,8 @@ import { MaterialModule } from './modules/material.module';
     AngularFirestore,
     AngularFireDatabase
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalFormComponent]
 })
 
 export class AppModule { }

@@ -26,6 +26,7 @@ export class UploadImgService {
     task.snapshotChanges().pipe(
         finalize(() => this.photo3 = fileRef.getDownloadURL().subscribe(
           link =>{
+            console.log(link);
             this.photo3 = link.toString()
           }
         )

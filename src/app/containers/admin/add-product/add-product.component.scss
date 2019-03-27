@@ -1,14 +1,14 @@
 // <<<<<<< HEAD
 @import '~bootstrap/dist/css/bootstrap.min.css';
-
 @import "../../../../styles.scss";
 
-form {
+.form {
   // @extend %flex-center;
   flex-direction: column;
 
   .form-row {
     width: 100%;
+  }
 
     .form-group {
       width: 100%;
@@ -43,6 +43,11 @@ form {
       }
     }
   }
+// }
+
+.itens-array{
+  width: 90%;
+  max-width: 100%;
 }
 
 @media(min-width:768px) {
@@ -50,4 +55,3 @@ form {
     margin: 2rem;
   }
 }
-

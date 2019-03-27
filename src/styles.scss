@@ -8,6 +8,9 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
 *{
     margin: 0;
     padding: 0;
@@ -35,6 +38,18 @@ body{
 
 .flex-center {
   @extend %flex-center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-end {
+  align-items: flex-end;
 }
 
 .w100 {

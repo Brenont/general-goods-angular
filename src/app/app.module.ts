@@ -34,6 +34,13 @@ import { AngularFireDatabase } from "@angular/fire/database";
 import { AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 import { AddProductComponent } from './containers/admin/add-product/add-product.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from './modules/material.module';
+import { ModalFormComponent } from './modals/modal-form/modal-form.component';
+import { ModalFeaturesComponent } from './modals/modal-features/modal-features.component';
+import { ModalSizesComponent } from './modals/modal-sizes/modal-sizes.component';
+import { ModalCustomizesComponent } from './modals/modal-customizes/modal-customizes.component';
+
 
 
 @NgModule({
@@ -55,6 +62,10 @@ import { AddProductComponent } from './containers/admin/add-product/add-product.
     CartButtonComponent,
     AdminMenuComponent,
     AddProductComponent,
+    ModalFormComponent,
+    ModalFeaturesComponent,
+    ModalSizesComponent,
+    ModalCustomizesComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +79,9 @@ import { AddProductComponent } from './containers/admin/add-product/add-product.
     }),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     HttpClient,
@@ -76,7 +89,8 @@ import { AddProductComponent } from './containers/admin/add-product/add-product.
     AngularFirestore,
     AngularFireDatabase
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalFormComponent, ModalFeaturesComponent, ModalSizesComponent, ModalCustomizesComponent]
 })
 
 export class AppModule { }

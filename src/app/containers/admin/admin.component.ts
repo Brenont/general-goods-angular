@@ -16,10 +16,11 @@ import { UploadImgService } from 'src/app/services/upload-img.service';
 export class AdminComponent implements OnInit {
   public lang = LANG;
 
-  private produtos: Observable<any[]>;
+  // public produtos: Observable<any[]>;
+  public produtos: Produto[];
 
   constructor(private prodService: ProdutoService, private uploadImgService: UploadImgService) {
-    this.produtos = this.prodService.produtosDb;
+    this.produtos = this.prodService.products;
   }
 
   add(product) {

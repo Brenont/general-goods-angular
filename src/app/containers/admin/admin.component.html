@@ -1,3 +1,6 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,7 +8,7 @@
     <title>admin</title>
 </head>
 
-<body>
+<body> -->
     <section>
     </section>
     <section class="menu-home">
@@ -13,40 +16,35 @@
             <img src="../../../assets/img/logo.png" alt="..." class="rounded-left" style="width:200px;">
             <ul class="nav ">
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Produtos</a>
+                    <a class="nav-link " routerLink="/admin">Produtos</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Usuarios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pedidos</a>
-                </li>
+                </li> -->
             </ul>
         </div> -->
         <app-admin-menu active="admin-menu"></app-admin-menu>
         <div class="card-button">
-            <button type="button" class="btn ">adicionar</button>
-            <div class="card " style="max-width: 500px;">
+            <button type="button" class="btn btn-primary btn-sm" routerLink="/admin/add-product">adicionar</button>
+            <div *ngFor="let product of produtos" class="card mb-3" style="max-width: 450px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="../../../assets/img//eco-mob.jpg " class="card-img" alt="..." style="height:148px;">
+                        <img src="{{product.img}}" class="card-img" alt="..." style="height:148px;" >
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">nome do produto</h5>
+                            <h5 class="card-title">{{ product.name }}</h5>
                             <br>
-                            <p class="card-text">descrição do produto</p>
-
-                        </div>
-
-                        <div class="icons" style="width:100%;">
-                            <button class="bg-transparent border-0" style="width:10px"><img
-                                    src="../../../assets/img/icons8-editar-24.png" alt=""></button>
-                            <button class=" bg-transparent border-0 " style="width:10px"><img
-                                    src="../../../assets/img/clear-button.png" alt=""></button>
-                        </div>
+                            <p class="card-text" *ngIf="product.descriptions">{{ product.descriptions[0] }}</p>
+                            <button class="glyphicon bg-transparent border-0 " style="width:30px">&#x270f;</button>                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+<!-- </body>
+
+</html> -->

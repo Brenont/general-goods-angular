@@ -9,7 +9,7 @@ import { AdminComponent } from './containers/admin/admin.component';
 import { LoginComponent } from './containers/login/login.component';
 import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
 import { AddProductComponent } from './containers/admin/add-product/add-product.component';
-
+import {AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: 'admin/add-product', component: AddProductComponent},
   {path: 'login', component: LoginComponent},
   {path: 'carrinho', component: CarrinhoComponent},
+  {path: 'admin-menu', component:AdminMenuComponent},
 ];
 
 @NgModule({

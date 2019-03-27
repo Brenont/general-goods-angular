@@ -37,6 +37,9 @@ import { AddProductComponent } from './containers/admin/add-product/add-product.
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
 import { ModalFormComponent } from './modals/modal-form/modal-form.component';
+import { ModalFeaturesComponent } from './modals/modal-features/modal-features.component';
+import { ModalSizesComponent } from './modals/modal-sizes/modal-sizes.component';
+import { ModalCustomizesComponent } from './modals/modal-customizes/modal-customizes.component';
 
 
 
@@ -60,6 +63,9 @@ import { ModalFormComponent } from './modals/modal-form/modal-form.component';
     AdminMenuComponent,
     AddProductComponent,
     ModalFormComponent,
+    ModalFeaturesComponent,
+    ModalSizesComponent,
+    ModalCustomizesComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,7 +90,7 @@ import { ModalFormComponent } from './modals/modal-form/modal-form.component';
     AngularFireDatabase
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ModalFormComponent]
+  entryComponents: [ModalFormComponent, ModalFeaturesComponent, ModalSizesComponent, ModalCustomizesComponent]
 })
 
 export class AppModule { }

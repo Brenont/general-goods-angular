@@ -101,7 +101,7 @@ export const produtos: Produto[] = [
 })
 export class ProdutoService {
   public products = produtos;
-  private produtosCollection: AngularFirestoreCollection<Produto[]>;
+  private produtosCollection: AngularFirestoreCollection<[]>;
 
   constructor(private http: HttpClient, private db: AngularFirestore) {
     this.produtosCollection = db.collection("produtos");
@@ -112,6 +112,7 @@ export class ProdutoService {
   addProduct(_product) {
     console.log("acessed service")
     this.produtosCollection.doc(_product.key).set(_product);
+    // this.produtosCollection.doc(_product.key).set(_product);
   }
 
   deleteProduct(product: any) {

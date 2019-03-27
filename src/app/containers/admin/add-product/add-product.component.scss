@@ -1,7 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "../../../../styles.scss";
 
-form {
+.form {
   // @extend %flex-center;
   flex-direction: column;
 
@@ -43,6 +43,11 @@ form {
     }
   }
 // }
+
+.itens-array{
+  width: 90%;
+  max-width: 100%;
+}
 
 @media(min-width:768px) {
   form{

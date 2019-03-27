@@ -1,73 +1,87 @@
 <!-- <input type="file" (change)="uploadFile($event)" />
 <button (click)="uploadFile()">UPLOAD</button> -->
-<form action="" class="mb-3 row">
+<section action="" class="mb-3 row form">
   <section class="row flex-center">
     <div class="container-title w-100 flex-center mb-5">
       <h2 primary>Adicionar Produto</h2>
       <div class="bar-title"></div>
     </div>
 
-    <div class="col-6">
+    <div class="col-md-6">
 
       <div class="form-col flex-center flex-column mr-3 ml-3">
-        <label class="pl-3">Foto do Produto</label>
+        <label>Foto do Produto</label>
         <div class="form-group pl-3 pr-3 flex-center flex-column">
           <label id="label-photo" for="photo-input"></label>
-          <input type="file" (change)="uploadFile($event)" id="photo-input" />
+          <input type="file" id="photo-input" />
           <small class="form-text text-muted">Escolha a foto do produto.</small>
         </div>
       </div>
 
       <div class="form-group pl-3 pr-3 mr-3 ml-3">
         <label for="name">Nome do Produto</label>
-        <input type="text" class="form-control" id="name" placeholder="digite o nome do produto">
+        <input [(ngModel)]="name" type="text" class="form-control" id="name" placeholder="digite o nome do produto">
       </div>
 
       <div class="form-group pl-3 pr-3 mr-3 ml-3">
         <label for="description">Descriçao</label>
-        <p>{{descriptions.join(", ")}}</p>
+        <p class="itens-array">{{descriptions.join(", ")}}</p>
         <!-- <input type="text" class="form-control" id="description" placeholder="digite a descriçao do produto"> -->
-        <button type="button" (click)="OpenModalDescription()" class="btn btn-primary btn-sm mt-3 pr-3 pl-3">Adicionar descriçoes</button>
-        <!-- <small class="form-text text-muted">Neste campo voce deve colocar uma breve descriçao do produto.</small> -->
+        <button type="button" (click)="OpenModalDescription()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar descriçoes</button>
+        <small class="form-text text-muted">Neste campo voce deve colocar uma breve descriçao do produto.</small>
       </div>
 
-      <div class="form-group pl-3 pr-3 mr-3 ml-3">
+      <!-- <div class="form-group pl-3 pr-3 mr-3 ml-3">
         <label for="features">Caracteristicas</label>
         <input type="text" class="form-control" id="features" placeholder="digite uma caracteristica do produto">
+        <p class="itens-array">{{features.join(", ")}}</p>
+        <input type="text" class="form-control" id="description" placeholder="digite a descriçao do produto">
+        <button type="button" (click)="OpenModalFeatures()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar caracteristicas</button>
         <small class="form-text text-muted">Neste campo voce deve colocar algumas caracteristica do seu produto.</small>
-      </div>
+      </div> -->
 
     </div>
 
-    <div class="col-6">
+    <div class="col-md-6">
 
-      <div class="form-group mr-3 ml-3 col-6 p-0">
+        <div class="form-group mr-3 ml-3">
+            <label for="features">Caracteristicas</label>
+            <!-- <input type="text" class="form-control" id="features" placeholder="digite uma caracteristica do produto"> -->
+            <p class="itens-array">{{features.join(", ")}}</p>
+            <!-- <input type="text" class="form-control" id="description" placeholder="digite a descriçao do produto"> -->
+            <button type="button" (click)="OpenModalFeatures()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar caracteristicas</button>
+            <small class="form-text text-muted">Neste campo voce deve colocar algumas caracteristica do seu produto.</small>
+          </div>
+
+      <div class="form-group mr-3 ml-3">
         <label for="sizes">Tamanhos</label>
-        <input type="number" class="form-control" id="sizes" placeholder="digite um tamanho">
+        <p class="itens-array">{{sizes.join(", ")}}</p>
+        <button type="button" (click)="OpenModalSizes()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar Tamanho</button>
+        <!-- <input type="number" class="form-control" id="sizes" placeholder="digite um tamanho"> -->
         <small class="form-text text-muted">Coloque as opçoes de tamanho do produto que o cliente pode escolher.</small>
       </div>
 
-      <div class="form-group p-0">
+      <div class="form-group mr-3 ml-3">
         <label for="customize-name">Customizavel</label>
-        <div class="mr-3 ml-3">
+        <p class="itens-array">{{customizes.join(", ")}}</p>
+        <button type="button" (click)="OpenModalCustomizes()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar Item Customizavel</button>
+        <small class="form-text text-muted">Neste campo voce escolhe um item customizavel, no qual o cliente pode escolher customizar o produto.</small>
+        <!-- <div class="mr-3 ml-3">
           <label for="customize-name">Nome do costumizavel</label>
           <input type="text" class="form-control" id="customizes-name"
             placeholder="digite uma caracteristica do produto">
-          <small class="form-text text-muted">Neste campo voce escolhe um item customizavel, no qual o cliente pode
-            escolher customizar o produto.</small>
         </div>
         <div class="mr-3 ml-3">
           <label for="customize-name">Opçao de costumizaçao</label>
           <input type="text" class="form-control" id="customizes" placeholder="digite uma caracteristica do produto">
           <small class="form-text text-muted">Neste campo voce coloca as opçoes de costumizaçao.</small>
-        </div>
+        </div> -->
 
       </div>
     </div>
 
     <div class="w-100 flex-center">
-      <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)="buildProduct(); uploadFile()">Adicionar
-        Produto</button>
+      <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)=" buildProduct();">Adicionar Produto</button>
     </div>
 
   </section>
@@ -128,4 +142,4 @@
     <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)="buildProduct(); uploadFile()">Adicionar Produto</button>
   </div> -->
 
-</form>
+</section>

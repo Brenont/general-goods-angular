@@ -18,8 +18,10 @@ export class ModalFormComponent implements OnInit {
   }
 
   addDescription() {
-    this.data.push(this.descInput);
-    this.descInput = "";
+    if(this.descInput.trim() != "") {
+      this.data.push(this.descInput);
+      this.descInput = "";
+    }
   }
 
   deleteItem(_index) {

@@ -11,26 +11,33 @@
     margin-right:10px;
 }
 .nav-link{
-    color: $primary-color;
     font-size: 20px;
     padding: 8px;
     border: 1px solid;
     margin-bottom: 3px;
+    color: $font-white;
+    background-color: $primary-color;
 }
 .body{
     display: flex;
     flex-direction: column;
-
+    padding: 10px 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 0px 3px 1px;
+    height: -webkit-fill-available;
 }
 .btn{
     width:134px;
+    color: $font-white;
+    background-color: $primary-color;
 }
 .menu-home{
     display: flex;
     flex-direction: row;
+
 }
 .card {
     margin-top: 11px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 3px 0px;
 }
 .card-button{
     height: 306px;
@@ -43,5 +50,10 @@
     display: flex;
     flex-direction: column;
     font-size: small;
+    text-align: -webkit-center;
 }
-
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}

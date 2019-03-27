@@ -29,7 +29,7 @@ import { CartButtonComponent } from './components/cart-button/cart-button.compon
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/enviroment';
 import { AngularFireDatabase } from "@angular/fire/database";
 import { AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 import { AddProductComponent } from './containers/admin/add-product/add-product.component';

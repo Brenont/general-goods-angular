@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produto } from '../model/product';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/enviroment';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 
 export const produtos: Produto[] = [

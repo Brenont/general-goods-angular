@@ -3,7 +3,7 @@ import { ProdutoService, produtos } from 'src/app/services/produto.service';
 import { LANG } from '../../../theme/pt';
 import { Produto } from 'src/app/model/product';
 import { Observable, generate } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/enviroment';
 import { HttpClient } from '@angular/common/http';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';

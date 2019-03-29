@@ -18,14 +18,14 @@
                 <li class="nav-item">
                     <a class="nav-link " routerLink="/admin">Produtos</a>
                 </li>
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="#">Usuarios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pedidos</a>
                 </li> -->
-            </ul>
-        </div> -->
+            <!-- </ul> -->
+        <!-- </div> -->
         <app-admin-menu active="admin-menu"></app-admin-menu>
         <div class="card-button">
             <button type="button" class="btn btn-primary btn-sm" routerLink="/admin/add-product">adicionar</button>
@@ -36,14 +36,15 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">{{ product.name }}</h5>
-                            <br>
-                            <p class="card-text" *ngIf="product.descriptions">{{ product.descriptions[0] }}</p>
-                            <button class="glyphicon bg-transparent border-0 " style="width:30px">&#x270f;</button>                        </div>
+                          <h5 class="card-title">{{ product.name }}</h5>
+                          <br>
+                          <p class="card-text" *ngIf="product.descriptions">{{ product.descriptions[0] }}</p>
+                          <button class="glyphicon bg-transparent border-0 " style="width:30px">&#x270f;</button>                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </section>
 <!-- </body>
 

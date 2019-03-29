@@ -1,6 +1,11 @@
 // <<<<<<< HEAD
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "../../../../styles.scss";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 
 .form {
   // @extend %flex-center;

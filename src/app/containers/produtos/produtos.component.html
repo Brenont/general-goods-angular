@@ -8,7 +8,7 @@
   <div class="div-ttl">
     <h1 class="ttl-pag">PRODUTOS</h1>
   </div>
-  <div class="container-produto" *ngFor="let product of productsList; let i=index">
+  <div class="container-produto" *ngFor="let product of products | async; let i=index">
     <div class="ttl-pdt">
       <h2 class="h2-ttl">{{product.name}}</h2>
     </div>
@@ -28,7 +28,7 @@
           <li *ngIf="feature">{{feature}}</li>
 
           <div *ngIf="product.customizes">
-            <li  ><input id="check" name="check" type="checkbox">
+            <li>
               <label for="check" *ngFor="let customize of product.customizes">{{customizes}}</label>
             </li>
           </div>

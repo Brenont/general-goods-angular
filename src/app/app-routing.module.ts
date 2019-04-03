@@ -11,6 +11,7 @@ import { CarrinhoComponent } from './containers/carrinho/carrinho.component';
 import { AddProductComponent } from './containers/admin/add-product/add-product.component';
 import {AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 import { AuthGuardService } from './guards/auth-guard.service';
+import { EditProductComponent } from './containers/admin/edit-product/edit-product.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'carrinho', component: CarrinhoComponent},
   {path: 'admin-menu', component:AdminMenuComponent},
+  {path: 'admin/edit-product', component:EditProductComponent},
 ];
 
 @NgModule({

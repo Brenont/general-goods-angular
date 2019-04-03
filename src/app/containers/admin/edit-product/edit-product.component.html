@@ -1,0 +1,71 @@
+<section action="" class="mb-3 row form">
+  <section class="row flex-center">
+    <div class="container-title w-100 flex-center mb-5">
+      <h2 primary>Adicionar Produto</h2>
+      <div class="bar-title"></div>
+    </div>
+
+    <div class="col-md-6">
+
+      <div class="form-col flex-center flex-column mr-3 ml-3">
+        <label>Foto do Produto</label>
+        <div class="form-group pl-3 pr-3 flex-center justify-content-center flex-column">
+          <label class="label-photo border p-3" for="photo-input">
+            <img [src]="produto.img ? produto.img :' ../../../../assets/img/cam-icon.png'" alt="">
+            <input type="file" id="photo-input" (change)="uploadFile($event)" />
+
+          </label>
+          <small class="form-text text-muted">Escolha a foto do produto.</small>
+        </div>
+      </div>
+
+      <div class="form-group pl-3 pr-3 mr-3 ml-3">
+        <label for="name">Nome do Produto</label>
+        <input [(ngModel)]="produto.name" #name type="text" class="form-control" id="name" placeholder="digite o nome do produto">
+      </div>
+
+      <div class="form-group pl-3 pr-3 mr-3 ml-3">
+        <label for="description">Descriçao</label>
+        <p class="itens-array">{{produto.descriptions.join(", ")}}</p>
+        <button type="button" (click)="OpenModalDescription()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar
+          descriçoes</button>
+        <small class="form-text text-muted">Neste campo voce deve colocar uma breve descriçao do produto.</small>
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+      <div class="form-group mr-3 ml-3">
+        <label for="features">Caracteristicas</label>
+        <p class="itens-array">{{produto.features.join(", ")}}</p>
+        <button type="button" (click)="OpenModalFeatures()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar
+          caracteristicas</button>
+        <small class="form-text text-muted">Neste campo voce deve colocar algumas caracteristica do seu produto.</small>
+      </div>
+
+      <div class="form-group mr-3 ml-3">
+        <label for="sizes">Tamanhos</label>
+        <p class="itens-array">{{produto.sizes.join(", ")}}</p>
+        <button type="button" (click)="OpenModalSizes()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar
+          Tamanho</button>
+        <small class="form-text text-muted">Coloque as opçoes de tamanho do produto que o cliente pode escolher.</small>
+      </div>
+
+      <div class="form-group mr-3 ml-3">
+        <label for="customize-name">Customizavel</label>
+        <p class="itens-array">{{produto.customizes.join(", ")}}</p>
+        <button type="button" (click)="OpenModalCustomizes()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar Item
+          Customizavel</button>
+        <small class="form-text text-muted">Neste campo voce escolhe um item customizavel, no qual o cliente pode
+          escolher customizar o produto.</small>
+      </div>
+    </div>
+
+    <div class="w-100 flex-center">
+      <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)=" add(produto,{name:name.value})">Adicionar
+        Produto</button>
+    </div>
+
+  </section>
+</section>

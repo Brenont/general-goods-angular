@@ -2,18 +2,21 @@
 
 <section class="sct-login">
   <div class="back-container">
-  <img class="back-text" routerLink="" src="../../../assets/img/backArrow.png">
+    <img class="back-text" routerLink="" src="../../../assets/img/backArrow.png">
   </div>
   <div class="login">
-      
-    <form class="form-login" action="" method="POST">
-        <img  class="icon-login" src="../../../assets/img/user.png" alt="">
 
-      <input type="email" class="inputs-login" id="input-email" name="email" placeholder="EMAIL">
-      <input type="password" class="inputs-login" id="input-senha" name="senha" placeholder="SENHA">
-      
-      <input type="submit" class="button-login" id="botao-login" value="ENVIAR">
-    </form>
+    <div class="form-login" action="" method="POST">
+      <img class="icon-login" src="../../../assets/img/user.png" alt="">
+
+      <input [(ngModel)]="email" type="email" class="inputs-login" id="input-email" name="email" placeholder="EMAIL">
+      <input [(ngModel)]="password" type="password" class="inputs-login" id="input-senha" name="senha"
+        placeholder="SENHA">
+
+      <!-- <input type="submit" class="button-login" id="botao-login" value="ENVIAR"> -->
+      <!-- <button type="button" class="btn" (click)="loginEmailAndPassword()">Enviar</button> -->
+
+      <button type="button" class="btn col-12 mt-2" (click)="loginEmailAndPassword()">Enviar</button>
+    </div>
   </div>
 </section>
-

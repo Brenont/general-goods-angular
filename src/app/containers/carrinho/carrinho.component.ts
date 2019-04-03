@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/model/product';
-import { produtos } from 'src/app/services/produto.service';
+// import { produtos } from 'src/app/services/produto.service';
 import { Subscription } from 'rxjs';
 import { CarrinhoService } from 'src/app/services/carrinho.service';
 @Component({
@@ -12,7 +12,7 @@ export class CarrinhoComponent implements OnInit {
 
   public qtdOptions = [];
 
-  private productsArray = produtos;
+  // private productsArray = produtos;
 
   //EventEmited
   public productClicked: any;

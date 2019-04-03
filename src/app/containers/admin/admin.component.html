@@ -9,10 +9,10 @@
 </head>
 
 <body> -->
-    <section>
+<!-- <section>
     </section>
-    <section class="menu-home">
-        <!-- <div class="body">
+    <section class="menu-home"> -->
+<!-- <div class="body">
             <img src="../../../assets/img/logo.png" alt="..." class="rounded-left" style="width:200px;">
             <ul class="nav ">
                 <li class="nav-item">
@@ -24,12 +24,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pedidos</a>
                 </li> -->
-            <!-- </ul> -->
-        <!-- </div> -->
-        <app-admin-menu active="admin-menu"></app-admin-menu>
+<!-- </ul> -->
+<!-- </div> -->
+<!-- <app-admin-menu active="admin-menu"></app-admin-menu>
         <div class="card-button">
             <button type="button" class="btn btn-primary btn-sm" routerLink="/admin/add-product">adicionar</button>
-            <div *ngFor="let product of produtos" class="card mb-3" style="max-width: 450px;">
+            <div *ngFor="let product of produtos | async" class="card mb-3" style="max-width: 450px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <img src="{{product.img}}" class="card-img" alt="..." style="height:148px;" >
@@ -43,9 +43,109 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        <!-- </div> -->
-    </section>
+            </div> -->
+<!-- </div> -->
+<!-- </section> -->
 <!-- </body>
 
 </html> -->
+
+
+
+<section class="painel-adm">
+  <div class="lado-esquerdo">
+    <div class="container-logo"> <img src="../..//../assets/img/logo.png" alt=""> </div>
+    <div class="menu-btn">
+      <button type="button" class="btn btn-primary btn-lg m-1" (click)="btnTabProducts()">Produtos</button>
+      <button type="button" class="btn btn-primary btn-lg m-1" (click)="btnTabOrder()">Pedidos</button>
+      <button *ngIf="afAuth.user | async as user" (click)="logout()" type="button"
+        class="btn btn-primary btn-lg m-1">Sair</button>
+    </div>
+  </div>
+  <div class="lado-direito">
+
+    <div class="list-org">
+      <div class="menu-fixed">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" (click)="btnTabProducts()">Produtos</a>
+            <a class="dropdown-item" (click)="btnTabOrder()">Pedidos</a>
+          </div>
+          <div></div>
+        </div>
+
+
+        <div class="input-group m-2">
+          <input type="text" class="form-control" placeholder="Pesquisar..." aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-outline-success m-1" routerLink="/admin/add-product">Adicionar</button>
+
+      </div>
+    </div>
+
+
+
+    <table class="table-products tab-pane fade show active" id="nav-prod" role="tabpanel">
+      <thead>
+        <th>Imagem</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th></th>
+      </thead>
+      <tbody class="mt-4">
+        <!-- <mat-spinner *ngIf="spinner"></mat-spinner> -->
+
+        <tr class="border-bottom" *ngFor="let product of produtos | async">
+          <td><img class="w-25 mb-3 mt-3" src="../../../assets/img/caixanucleo.png" alt=""></td>
+          <td>{{product.name}}</td>
+          <td>{{product.descriptions}}</td>
+          <td>
+            <div class="btn-produtos">
+              <button type="button" class="btn btn-outline-primary" (click)="edit(product);showDialogEdit()">Detalhes
+              </button>
+              <button type="button" class="btn btn-outline-success mt-2 col-12"
+                (click)="edit(product)">Editar</button>
+              <button type="button" class="btn btn-outline-danger col-12 mt-2"
+                (click)="delete(product)">Excluir</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--   
+      <table *ngIf="tabOrder" class="table-products tab-pane fade show active" id="nav-prod" role="tabpanel">
+        <thead>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Comentario</th>
+          <th>Botao</th>
+        </thead>
+        <tbody class="mt-4">
+          <mat-spinner *ngIf="spinner"></mat-spinner>
+  
+          <tr class="border-bottom" *ngFor="let order of orders | async">
+  
+            <td>{{order.name}}</td>
+            <td>{{order.phone}}</td>
+            <td>{{order.text}}</td>
+            <td>
+              <div class="btn-produtos">
+                <button type="button" class="btn btn-outline-danger col-12 mt-2"
+                  (click)="delete(order.key)">Excluir</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table> -->
+
+  </div>
+</section>

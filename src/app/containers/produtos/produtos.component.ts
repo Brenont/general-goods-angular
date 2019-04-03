@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/model/product';
-import { produtos } from 'src/app/services/produto.service';
+// import { produtos } from 'src/app/services/produto.service';
 import { CarrinhoService } from 'src/app/services/carrinho.service';
 
 @Component({
@@ -10,11 +10,14 @@ import { CarrinhoService } from 'src/app/services/carrinho.service';
 })
 export class ProdutosComponent implements OnInit {
 
-  public productsList: Array<Produto> = produtos;
+  // public productsList: Array<Produto> = produtos;
+  public productsList: any;
 
-  constructor(private carrinhoService: CarrinhoService) { }
+  constructor(private carrinhoService: CarrinhoService) { 
 
-  addToCart(product){
+  }
+
+  addToCart(product) {
     this.carrinhoService.addToCart(product);
   }
   ngOnInit() {

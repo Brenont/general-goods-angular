@@ -41,6 +41,8 @@ import { ModalFeaturesComponent } from './modals/modal-features/modal-features.c
 import { ModalSizesComponent } from './modals/modal-sizes/modal-sizes.component';
 import { ModalCustomizesComponent } from './modals/modal-customizes/modal-customizes.component';
 import { AuthGuardService } from './guards/auth-guard.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { ModalShowProductComponent } from './components/modal-show-product/modal-show-product.component';
 
 
 
@@ -67,6 +69,7 @@ import { AuthGuardService } from './guards/auth-guard.service';
     ModalFeaturesComponent,
     ModalSizesComponent,
     ModalCustomizesComponent,
+    ModalShowProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,10 +92,11 @@ import { AuthGuardService } from './guards/auth-guard.service';
     CarrinhoService,
     AngularFirestore,
     AngularFireDatabase,
-    AuthGuardService
+    AuthGuardService,
+    AngularFireAuth
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ModalFormComponent, ModalFeaturesComponent, ModalSizesComponent, ModalCustomizesComponent]
+  entryComponents: [ModalFormComponent, ModalFeaturesComponent, ModalSizesComponent, ModalCustomizesComponent,ModalShowProductComponent]
 })
 
 export class AppModule { }

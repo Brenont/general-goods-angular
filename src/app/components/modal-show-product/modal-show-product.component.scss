@@ -1,0 +1,26 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.modal-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .img-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+
+    img {
+      width: 174px;
+      height: 174px;
+      cursor: pointer;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

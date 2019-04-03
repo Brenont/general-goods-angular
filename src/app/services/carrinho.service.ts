@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 import { Produto } from '../model/product';
-import { produtos } from './produto.service';
+// import { produtos } from './produto.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class CarrinhoService {
   public storageName: string = "cart";
   public cartArray: any[] = JSON.parse(localStorage.getItem(this.storageName)) ?  JSON.parse(localStorage.getItem(this.storageName)) : [] ;
 
-  private productsArray = produtos;
+  // private productsArray = produtos;
   private initArr = [];
 
   addToCart(produto) {

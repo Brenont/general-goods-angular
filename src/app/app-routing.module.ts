@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'quem-somos', component: QmsomosComponent},
   {path: 'contato', component: ContatoComponent},
   {path: 'dev-b', component: ModalSetupComponent},
-  {path: 'admin', component: AdminComponent, canActivate: [AuthGuardService]},
+  {path: 'admin', component: AdminComponent},
   {path: 'admin/add-product', component: AddProductComponent},
   {path: 'login', component: LoginComponent},
   {path: 'carrinho', component: CarrinhoComponent},

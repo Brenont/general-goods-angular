@@ -1,0 +1,50 @@
+<h2 MatDialogTitle>Detalhes do Produto</h2>
+<mat-dialog-content>
+  <section class="modal-add">
+    <div class="row">
+      <div class="col-12 img-product">
+          <img class="border" src="../../../assets/img/caixanucleo.png" alt="">
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input disabled [(ngModel)]="produtosRef.name"  type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nome">
+        </div>
+        <div class="form-group">
+          <label for="application">Descrições</label>
+          <input disabled [(ngModel)]="produtosRef.descriptions" type="text" class="form-control" aria-describedby="emailHelp"
+            placeholder="Descrições">
+        </div>
+        <div class="form-group">
+          <label for="categoria">Características</label>
+          <input disabled [(ngModel)]="produtosRef.features" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Características">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="marca">Customizaveis</label>
+          <input disabled [(ngModel)]="produtosRef.customizes" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Customizaveis">
+        </div>
+        <div class="form-group">
+          <label for="estoque">Tamanhos</label>
+          <input disabled [(ngModel)]="produtosRef.sizes" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Tamanhos">
+        </div>
+        <div class="form-group">
+          <label for="photo">Chave</label>
+          <input disabled disabled [(ngModel)]="produtosRef.key" type="text" class="form-control" aria-describedby="emailHelp"
+            placeholder="Chave">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <input disabled [(ngModel)]="produtoRef.name" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Estoque"> -->
+
+  
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <div class="action-btn w-100 d-flex justify-content-end">
+    <button type="button" class="btn btn-danger" matDialogClose>Fechar</button>
+  </div>
+</mat-dialog-actions>

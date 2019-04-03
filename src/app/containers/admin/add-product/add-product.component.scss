@@ -15,48 +15,57 @@
     width: 100%;
   }
 
-    .form-group {
-      width: 100%;
+  .form-group {
+    width: 100%;
 
-      label {
-        cursor: pointer;
-      }
+    label {
+      cursor: pointer;
+    }
 
-      // .form-control {
-        // max-width: 550px;
-      // }
+    // .form-control {
+    // max-width: 550px;
+    // }
 
-      #label-photo{
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        text-align: center;
-        background-color: $primary-color;
-        background-image: url("../../../../assets/img/cam-icon.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        // color: #fff;
-      }
+    #label-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      text-align: center;
+      background-color: $primary-color;
+      // background-image: url("../../../../assets/img/cam-icon.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      // color: #fff;
+    }
 
-      #photo-input {
-        opacity: 0;
-        z-index: -1;
-        cursor: none;
-        position: absolute;
-        width: 0;
-
+    .label-photo {
+      img {
+        width: 120px;
+        height: 120px;
+        // border-radius: 50%;
       }
     }
+
+    #photo-input {
+      opacity: 0;
+      z-index: -1;
+      cursor: none;
+      position: absolute;
+      width: 0;
+
+    }
   }
+}
+
 // }
 
-.itens-array{
+.itens-array {
   width: 90%;
   max-width: 100%;
 }
 
 @media(min-width:768px) {
-  form{
+  form {
     margin: 2rem;
   }
 }

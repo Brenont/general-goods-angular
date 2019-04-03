@@ -11,9 +11,13 @@
 
       <div class="form-col flex-center flex-column mr-3 ml-3">
         <label>Foto do Produto</label>
-        <div class="form-group pl-3 pr-3 flex-center flex-column">
-          <label id="label-photo" for="photo-input"></label>
-          <input type="file" id="photo-input" />
+        <div class="form-group pl-3 pr-3 flex-center justify-content-center flex-column">
+          <label class="label-photo border p-3" for="photo-input">
+            <img [src]="photoProduct ? photoProduct :' ../../../../assets/img/cam-icon.png'" alt="">
+            <input type="file" id="photo-input"
+              (change)="uploadFile($event)" />
+
+          </label>
           <small class="form-text text-muted">Escolha a foto do produto.</small>
         </div>
       </div>
@@ -27,7 +31,8 @@
         <label for="description">Descriçao</label>
         <p class="itens-array">{{descriptions.join(", ")}}</p>
         <!-- <input type="text" class="form-control" id="description" placeholder="digite a descriçao do produto"> -->
-        <button type="button" (click)="OpenModalDescription()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar descriçoes</button>
+        <button type="button" (click)="OpenModalDescription()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar
+          descriçoes</button>
         <small class="form-text text-muted">Neste campo voce deve colocar uma breve descriçao do produto.</small>
       </div>
 
@@ -44,19 +49,21 @@
 
     <div class="col-md-6">
 
-        <div class="form-group mr-3 ml-3">
-            <label for="features">Caracteristicas</label>
-            <!-- <input type="text" class="form-control" id="features" placeholder="digite uma caracteristica do produto"> -->
-            <p class="itens-array">{{features.join(", ")}}</p>
-            <!-- <input type="text" class="form-control" id="description" placeholder="digite a descriçao do produto"> -->
-            <button type="button" (click)="OpenModalFeatures()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar caracteristicas</button>
-            <small class="form-text text-muted">Neste campo voce deve colocar algumas caracteristica do seu produto.</small>
-          </div>
+      <div class="form-group mr-3 ml-3">
+        <label for="features">Caracteristicas</label>
+        <!-- <input type="text" class="form-control" id="features" placeholder="digite uma caracteristica do produto"> -->
+        <p class="itens-array">{{features.join(", ")}}</p>
+        <!-- <input type="text" class="form-control" id="description" placeholder="digite a descriçao do produto"> -->
+        <button type="button" (click)="OpenModalFeatures()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar
+          caracteristicas</button>
+        <small class="form-text text-muted">Neste campo voce deve colocar algumas caracteristica do seu produto.</small>
+      </div>
 
       <div class="form-group mr-3 ml-3">
         <label for="sizes">Tamanhos</label>
         <p class="itens-array">{{sizes.join(", ")}}</p>
-        <button type="button" (click)="OpenModalSizes()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar Tamanho</button>
+        <button type="button" (click)="OpenModalSizes()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar
+          Tamanho</button>
         <!-- <input type="number" class="form-control" id="sizes" placeholder="digite um tamanho"> -->
         <small class="form-text text-muted">Coloque as opçoes de tamanho do produto que o cliente pode escolher.</small>
       </div>
@@ -64,8 +71,10 @@
       <div class="form-group mr-3 ml-3">
         <label for="customize-name">Customizavel</label>
         <p class="itens-array">{{customizes.join(", ")}}</p>
-        <button type="button" (click)="OpenModalCustomizes()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar Item Customizavel</button>
-        <small class="form-text text-muted">Neste campo voce escolhe um item customizavel, no qual o cliente pode escolher customizar o produto.</small>
+        <button type="button" (click)="OpenModalCustomizes()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar Item
+          Customizavel</button>
+        <small class="form-text text-muted">Neste campo voce escolhe um item customizavel, no qual o cliente pode
+          escolher customizar o produto.</small>
         <!-- <div class="mr-3 ml-3">
           <label for="customize-name">Nome do costumizavel</label>
           <input type="text" class="form-control" id="customizes-name"
@@ -81,7 +90,8 @@
     </div>
 
     <div class="w-100 flex-center">
-      <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)=" buildProduct();">Adicionar Produto</button>
+      <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)=" buildProduct();">Adicionar
+        Produto</button>
     </div>
 
   </section>

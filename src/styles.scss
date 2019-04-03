@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'theme/fonts.scss';
 @import 'theme/colors.scss';
+@import './theme/extends.scss';
+
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 
 *{
     margin: 0;
@@ -20,10 +25,41 @@ body{
     width: 4px;
     height: 0px;
   }
-  
+
   &::-webkit-scrollbar-thumb {
     background-color: $primary-color;
     border-radius: 10px;
+  }
+}
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.container-title{
+  flex-direction: column;
+
+  .bar-title {
+    height: 3px;
+    width: 30%;
+    max-width: 100px;
+    background-color: $primary-color;
   }
 }
 

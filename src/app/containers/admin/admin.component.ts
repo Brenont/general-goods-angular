@@ -3,10 +3,11 @@ import { ProdutoService, produtos } from 'src/app/services/produto.service';
 import { LANG } from '../../../theme/pt';
 import { Produto } from 'src/app/model/product';
 import { Observable, generate } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/enviroment';
 import { HttpClient } from '@angular/common/http';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { UploadImgService } from 'src/app/services/upload-img.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -15,10 +16,11 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 export class AdminComponent implements OnInit {
   public lang = LANG;
 
-  private produtos: Observable<any[]>;
+  // public produtos: Observable<any[]>;
+  public produtos: Produto[];
 
-  constructor(private prodService: ProdutoService) {
-    this.produtos = this.prodService.produtosDb;
+  constructor(private prodService: ProdutoService, private uploadImgService: UploadImgService) {
+    this.produtos = this.prodService.products;
   }
 
   add(product) {
@@ -36,6 +38,10 @@ export class AdminComponent implements OnInit {
 
   generateKey(){
     return this.prodService.generateKey();
+  }
+
+  uploadFile(event){
+    this.uploadImgService.uploadFile(event);
   }
 
   ngOnInit() { }

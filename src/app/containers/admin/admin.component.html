@@ -1,56 +1,51 @@
-<app-header active="admin"></app-header>
-<section class="container-toall">
+<!-- <!DOCTYPE html>
+<html lang="en">
 
-  <section class="body">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>admin</title>
+</head>
 
-    <!-- <input type="checkbox" id="bt_menu">
-    <label for="bt_menu">&#9776;</label> -->
+<body> -->
+    <section>
+    </section>
+    <section class="menu-home">
+        <!-- <div class="body">
+            <img src="../../../assets/img/logo.png" alt="..." class="rounded-left" style="width:200px;">
+            <ul class="nav ">
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/admin">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pedidos</a>
+                </li> -->
+            <!-- </ul> -->
+        <!-- </div> -->
+        <app-admin-menu active="admin-menu"></app-admin-menu>
+        <div class="card-button">
+            <button type="button" class="btn btn-primary btn-sm" routerLink="/admin/add-product">adicionar</button>
+            <div *ngFor="let product of produtos" class="card mb-3" style="max-width: 450px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{product.img}}" class="card-img" alt="..." style="height:148px;" >
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ product.name }}</h5>
+                          <br>
+                          <p class="card-text" *ngIf="product.descriptions">{{ product.descriptions[0] }}</p>
+                          <button class="glyphicon bg-transparent border-0 " style="width:30px">&#x270f;</button>                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    </section>
+<!-- </body>
 
-    <!-- <div class="menu">
-      <p class="title">{{ lang.Painel }} <br> {{ lang.adm }}</p>
-      <div class="line"></div>
-      <p class="Sub-title">Produtos</p>
-      <p class="Sub-title" routerLink="/admin-add">Adicionar</p>
-      <p class="Sub-title">Produtos</p> -->
-    <!-- </div> -->
-    <app-admin-menu></app-admin-menu>
-
-    <div class="container-list">
-      <div class="button form">
-        <form action="">
-          <input class="input-product" type="text" placeholder="Name" #name>
-          <input class="input-product" type="text" placeholder="Description" #description>
-          <input class="input-product" type="text" placeholder="Features" #features>
-          <input class="input-product" type="text" placeholder="Sizes" #sizes>
-          <input class="input-product" type="text" placeholder="Extras" #extras>
-          <input class="input-product" type="text" placeholder="Customizes" #customizes>
-          <input class="input-product" type="text" placeholder="NucleoOption" #nucleoOption>
-          <button class="btao" (click)="add({name: name.value, key: generateKey(), descriptions: description.value,
-            features: features.value,
-            sizes: sizes.value,
-            extras: extras.value,
-            customizes: customizes.value,
-            nucleoOption: nucleoOption.value})">{{ lang.add }}</button>
-        </form>
-        <!-- <app-add-form></app-add-form> -->
-      </div>
-      <div class="container" *ngFor="let product of produtos | async">
-        <div class="Product-One">
-          <img class="img-produto" src="{{product.img}}" alt="caixatermica.png" width="100px"
-            height="100px">
-          <div class="barra"></div>
-          <p class="title-p">{{product.name}}</p>
-          <div class="icones">
-            <img (click)="update(product,{name: name.value})" class="edit" src="./../../../assets/img/edit-document.png" alt="">
-            <img (click)="delete(product)" class="remove" src="./../../../assets/img/remove.png" alt="remove.png">
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-</section>
-
-<app-footer></app-footer>
+</html> -->

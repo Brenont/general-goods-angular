@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produto } from '../model/product';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/enviroment';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 
 export const produtos: Produto[] = [
@@ -101,7 +101,7 @@ export const produtos: Produto[] = [
 })
 export class ProdutoService {
   public products = produtos;
-  private produtosCollection: AngularFirestoreCollection<Produto[]>;
+  private produtosCollection: AngularFirestoreCollection<[]>;
 
   constructor(private http: HttpClient, private db: AngularFirestore) {
     this.produtosCollection = db.collection("produtos");
@@ -112,6 +112,7 @@ export class ProdutoService {
   addProduct(_product) {
     console.log("acessed service")
     this.produtosCollection.doc(_product.key).set(_product);
+    // this.produtosCollection.doc(_product.key).set(_product);
   }
 
   deleteProduct(product: any) {

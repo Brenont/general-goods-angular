@@ -26,7 +26,7 @@
 
       <div class="form-group pl-3 pr-3 mr-3 ml-3">
         <label for="description">Descriçao</label>
-        <p class="itens-array">{{produto.descriptions.join(", ")}}</p>
+        <p #descriptions class="itens-array">{{produto.descriptions.join(", ")}}</p>
         <button type="button" (click)="OpenModalDescription()" class="btn btn-primary btn-sm pr-3 pl-3">Adicionar
           descriçoes</button>
         <small class="form-text text-muted">Neste campo voce deve colocar uma breve descriçao do produto.</small>
@@ -63,7 +63,7 @@
     </div>
 
     <div class="w-100 flex-center">
-      <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)=" add(produto,{name:name.value})">Adicionar
+      <button type="button" class="btn btn-secondary btn-lg pr-3 pl-3" (click)=" add(produto)">Adicionar
         Produto</button>
     </div>
 

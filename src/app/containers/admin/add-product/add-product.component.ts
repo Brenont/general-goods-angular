@@ -28,7 +28,7 @@ export class AddProductComponent implements OnInit {
   public nameInput: string;
   public uploadPercent: Observable<number>;
   public downloadURL: Observable<string>;
-  public photoProduct:any;
+  public photoProduct:any = '';
   // animal: string;
 
   constructor(

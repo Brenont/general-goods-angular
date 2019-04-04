@@ -10,21 +10,48 @@ import { ProdutoService } from "src/app/services/produto.service";
 })
 export class ModalFormComponent implements OnInit {
 
-  public descInput : string;
-  public produto: any;
+  // public descInput: string;
+  // public produto: any;
 
-  constructor( public dialogRef: MatDialogRef<ModalFormComponent>, @Inject(MAT_DIALOG_DATA) public data,
-  private produtoService: ProdutoService
-  ) { 
-    this.produto = this.produtoService.productsRef
-   }
+  // constructor(
+  //   public dialogRef: MatDialogRef<ModalFormComponent>,
+  //   @Inject(MAT_DIALOG_DATA) public data,
+  //   private produtoService: ProdutoService
+  // ) {
+  //   this.produto = this.produtoService.productsRef
+  // }
+
+  // onNoClick(): void {
+  //   this.dialogRef.close();
+  // }
+
+  // ngOnInit() {
+  // }
+
+  // addDescription() {
+  //   console.log(this.produto.descriptions, 'opa')
+
+  //   if (this.descInput.trim() != "") {
+  //     this.produto.descriptions.push(this.descInput);
+  //     this.descInput = "";
+  //   }
+  // }
+
+  // deleteItem(_index) {
+  //   this.produto.descriptions.splice(_index, 1);
+  // }
+
+  // editItem(_index) {
+  //   this.descInput = this.data[_index];
+  // }
+
+
+  public descInput : string;
+
+  constructor( public dialogRef: MatDialogRef<ModalFormComponent>, @Inject(MAT_DIALOG_DATA) public data) {  }
 
   onNoClick(): void {
     this.dialogRef.close();
-  }
-
-  ngOnInit() {
-    console.log(this.produto.descriptions,'opa')
   }
 
   addDescription() {
@@ -35,12 +62,13 @@ export class ModalFormComponent implements OnInit {
   }
 
   deleteItem(_index) {
-    this.produto.descriptions.splice(_index, 1);
+    this.data.splice(_index, 1);
   }
 
   editItem(_index) {
     this.descInput = this.data[_index];
   }
 
+  ngOnInit() {}
 
 }

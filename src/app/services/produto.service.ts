@@ -125,6 +125,8 @@ export class ProdutoService {
   update(product, changes) {
     console.log(changes);
     this.produtosCollection.doc(product.key).update(changes);
+    console.log("prod",product);
+
   }
 
   edit(produto) {

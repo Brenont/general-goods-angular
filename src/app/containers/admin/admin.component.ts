@@ -33,7 +33,17 @@ export class AdminComponent implements OnInit {
     private dialog: MatDialog) {
     this.produtos = this.produtoService.products;
     // this.produtoRef = this.produtoService.products;
-    
+
+  }
+
+  ngOnInit() {
+    this.afAuth.idToken.subscribe(login => {
+      // console.log('1', login)
+      // this.login = login
+      if (login == null) {
+        this.router.navigate(['/login'])
+      }
+    });
   }
 
   add(product) {
@@ -70,13 +80,5 @@ export class AdminComponent implements OnInit {
   }
 
 
-  ngOnInit() {
-    this.afAuth.idToken.subscribe(login => {
-      console.log('1', login)
-      // this.login = login
-      if (login == null) {
-        this.router.navigate(['/login'])
-      }
-    });
-  }
+
 }

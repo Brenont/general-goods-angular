@@ -34,7 +34,7 @@ import { AngularFireDatabase } from "@angular/fire/database";
 import { AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 import { AddProductComponent } from './containers/admin/add-product/add-product.component';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
 import { ModalFormComponent } from './modals/modal-form/modal-form.component';
 import { ModalFeaturesComponent } from './modals/modal-features/modal-features.component';
@@ -44,6 +44,7 @@ import { AuthGuardService } from './guards/auth-guard.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { ModalShowProductComponent } from './components/modal-show-product/modal-show-product.component';
 import { EditProductComponent } from './containers/admin/edit-product/edit-product.component';
+import { ModalFormEditComponent } from './modals/modal-form-edit/modal-form-edit.component';
 
 
 
@@ -72,6 +73,7 @@ import { EditProductComponent } from './containers/admin/edit-product/edit-produ
     ModalCustomizesComponent,
     ModalShowProductComponent,
     EditProductComponent,
+    ModalFormEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,7 +100,16 @@ import { EditProductComponent } from './containers/admin/edit-product/edit-produ
     AngularFireAuth
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ModalFormComponent, ModalFeaturesComponent, ModalSizesComponent, ModalCustomizesComponent,ModalShowProductComponent,EditProductComponent]
+  entryComponents: [
+    ModalFormComponent,
+    ModalFeaturesComponent,
+    ModalSizesComponent,
+    ModalCustomizesComponent,
+    ModalShowProductComponent,
+    EditProductComponent,
+    ModalFormEditComponent
+  ]
+
 })
 
 export class AppModule { }

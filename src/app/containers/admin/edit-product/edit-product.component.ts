@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from 'src/app/services/produto.service';
 import { ModalFormComponent } from 'src/app/modals/modal-form/modal-form.component';
 import { MatDialog } from '@angular/material';
+import { ModalFormEditComponent } from 'src/app/modals/modal-form-edit/modal-form-edit.component';
 
 @Component({
   selector: 'app-edit-product',
@@ -23,17 +24,26 @@ export class EditProductComponent implements OnInit {
   ngOnInit() {
   }
 
-  add(product, change) {
-    console.log("click to add");
-    this.produtoService.update(product,change);
+  add(product) {
+    var productt = {
+      descriptions: this.produto.descriptions,
+    }
+    this.produtoService.update(product, productt);
   }
 
   addDescription(text) {
     this.descriptions.push(text);
   }
-  
+  // buildProduct() {
+  //   var product = {
+  //     descriptions: this.descriptions,
+
+  //   }
+  //   this.produtoService.addProduct(product);
+  // }
+
   OpenModalDescription(): void {
-    const dialogRef = this.dialog.open(ModalFormComponent, {
+    const dialogRef = this.dialog.open(ModalFormEditComponent, {
       minWidth: "280px",
       maxWidth: "500px",
       width: "auto",

@@ -45,6 +45,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { ModalShowProductComponent } from './components/modal-show-product/modal-show-product.component';
 import { EditProductComponent } from './containers/admin/edit-product/edit-product.component';
 import { ModalFormEditComponent } from './modals/modal-form-edit/modal-form-edit.component';
+import { ModalFeaturesEditComponent } from './modals/modal-features-edit/modal-features-edit.component';
 
 
 
@@ -74,6 +75,7 @@ import { ModalFormEditComponent } from './modals/modal-form-edit/modal-form-edit
     ModalShowProductComponent,
     EditProductComponent,
     ModalFormEditComponent,
+    ModalFeaturesEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -107,7 +109,8 @@ import { ModalFormEditComponent } from './modals/modal-form-edit/modal-form-edit
     ModalCustomizesComponent,
     ModalShowProductComponent,
     EditProductComponent,
-    ModalFormEditComponent
+    ModalFormEditComponent,
+    ModalFeaturesEditComponent
   ]
 
 })

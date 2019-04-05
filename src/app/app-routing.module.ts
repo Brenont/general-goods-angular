@@ -12,19 +12,20 @@ import { AddProductComponent } from './containers/admin/add-product/add-product.
 import {AdminMenuComponent } from './components/admin-menu/admin-menu.component';
 import { AuthGuardService } from './guards/auth-guard.service';
 import { EditProductComponent } from './containers/admin/edit-product/edit-product.component';
+import { BudgetComponent } from './containers/budget/budget.component';
 
-const routes: Routes = [
+const routes: Routes = [  
   {path: '', component: HomeComponent},
   {path: 'produtos', component: ProdutosComponent},
   {path: 'quem-somos', component: QmsomosComponent},
   {path: 'contato', component: ContatoComponent},
-  {path: 'dev-b', component: ModalSetupComponent},
+  {path: 'dev-b', component: BudgetComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'admin/add-product', component: AddProductComponent},
   {path: 'login', component: LoginComponent},
   {path: 'carrinho', component: CarrinhoComponent},
-  {path: 'admin-menu', component:AdminMenuComponent},
-  {path: 'admin/edit-product', component:EditProductComponent},
+  {path: 'admin-menu', component: AdminMenuComponent},
+  {path: 'admin/edit-product', component: EditProductComponent},
 ];
 
 @NgModule({

@@ -1,0 +1,55 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.card {
+  min-width: 150px;
+  max-width: 150px;
+  height: 250px;
+}
+
+.container-toall {
+  padding-top: 120px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+}
+
+.card-deck {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 80vh;
+
+}
+
+.nossahistoria {
+  padding-top: 100px;
+  display: flex;
+  background: #2b632ae8;
+  align-items: center;
+
+  h1 {
+    color: white;
+    margin: 10px 20px;
+  }
+}
+
+@media(max-width:768px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 0px) {
+  .card-deck[_ngcontent-c3] {
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}

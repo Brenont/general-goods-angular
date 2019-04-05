@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="col-md-12 col-sm-12 col-12 container-toall" id="conteudo">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card-deck d-flex flex-wrap justify-content-center">
+        <div class="card col-2 mt-2" *ngFor="let produto of productCart">
+          <div class="d-flex justify-content-center align-items-center mt-2"> <img class="card-img-top w-75"
+              [src]="produto.img ? produto.img : '../../../../assets/media/default-image.jpg'" alt="Card image cap">
+          </div>
+          <div class="card-body text-center col-12 text-truncate">
+            <p class="card-text">{{produto.name}}</p>
+            <button type="button" class="btn btn-danger" (click)="deleteProduct(index)">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <form>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Digite seu Nome</label>
+          <input #name class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Digite seu Celular</label>
+          <input #phone class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Deixe seu Comentario</label>
+          <textarea #text class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+
+        <div class="d-flex w-100 justify-content-end mb-2">
+          <button type="submit" class="btn btn-primary"
+            (click)="add({name:name.value,phone:phone.value,text:text.value})"><a href="#">Fazer
+            Orçamento</a></button>
+        </div>  
+      </form>
+
+    </div>
+  </div>
+</div>

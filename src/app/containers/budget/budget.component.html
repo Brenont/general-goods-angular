@@ -15,29 +15,29 @@
       </div>
     </div>
     <div class="col-md-6">
-      <form>
+      <div>
 
         <div class="form-group">
           <label for="exampleInputEmail1">Digite seu Nome</label>
-          <input #name class="form-control">
+          <input [(ngModel)]="name" class="form-control">
         </div>
 
         <div class="form-group">
           <label for="exampleInputPassword1">Digite seu Celular</label>
-          <input #phone class="form-control">
+          <input [(ngModel)]="phone" class="form-control">
         </div>
 
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Deixe seu Comentario</label>
-          <textarea #text class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+          <textarea [(ngModel)]="text" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
         </div>
 
         <div class="d-flex w-100 justify-content-end mb-2">
           <button type="submit" class="btn btn-primary"
-            (click)="add({name:name.value,phone:phone.value,text:text.value})"><a href="#">Fazer
-            Orçamento</a></button>
+            (click)="AddOrder()">Fazer
+            Orçamento</button>
         </div>  
-      </form>
+      </div>
 
     </div>
   </div>

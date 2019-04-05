@@ -8,39 +8,39 @@ import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/fire
 @Injectable({
   providedIn: 'root'
 })
-export class ProdutoService {
-  // public products = produtos;
-  private produtosCollection: AngularFirestoreCollection<[]>;
-  public products = this.db.collection("produtos").valueChanges();
-  public productsRef: any;
+export class OrderService {
+
+  private ordersCollection: AngularFirestoreCollection<[]>;
+  public orders = this.db.collection("Pedidos").valueChanges();
+  public ordersRef: any;
 
   constructor(private http: HttpClient, private db: AngularFirestore) {
-    this.produtosCollection = db.collection("produtos");
+    this.ordersCollection = db.collection("Pedidos");
 
-    this.products.subscribe(console.log)
+    this.orders.subscribe(console.log)
   }
 
 
-  addProduct(_product) {
+  addOrder(_order) {
     console.log("acessed service")
-    this.produtosCollection.doc(_product.key).set(_product);
-    // this.produtosCollection.doc(_product.key).set(_product);
+    this.ordersCollection.doc(_order.key).set(_order);
+    // this.ordersCollection.doc(_product.key).set(_product);
   }
 
   deleteProduct(product: any) {
-    this.produtosCollection.doc(product.key).delete();
+    this.ordersCollection.doc(product.key).delete();
   }
 
-  update(product, changes) {
+  update(order, changes) {
     console.log(changes);
-    this.produtosCollection.doc(product.key).update(changes);
-    console.log("prod",product);
+    this.ordersCollection.doc(order.key).update(changes);
+    console.log("prod",order);
 
   }
 
-  edit(produto) {
-    this.productsRef = Object(produto)
-    console.log(this.productsRef)
+  edit(order) {
+    this.ordersRef = Object(order)
+    console.log(this.ordersRef)
   }
 
   generateKey() {
@@ -57,5 +57,5 @@ export class ProdutoService {
     });
 
     return uuid;
-  }
+  }  
 }

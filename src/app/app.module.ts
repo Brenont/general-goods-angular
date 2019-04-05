@@ -48,6 +48,7 @@ import { ModalFormEditComponent } from './modals/modal-form-edit/modal-form-edit
 import { ModalFeaturesEditComponent } from './modals/modal-features-edit/modal-features-edit.component';
 import { ModalSizesEditComponent } from './modals/modal-sizes-edit/modal-sizes-edit.component';
 import { BudgetComponent } from './containers/budget/budget.component';
+import { OrderService } from './services/order.service';
 
 
 
@@ -100,6 +101,7 @@ import { BudgetComponent } from './containers/budget/budget.component';
   providers: [
     HttpClient,
     CarrinhoService,
+    OrderService,
     AngularFirestore,
     AngularFireDatabase,
     AuthGuardService,

@@ -13,6 +13,7 @@ import { auth } from 'firebase/app';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { ModalShowProductComponent } from 'src/app/components/modal-show-product/modal-show-product.component';
+import { OrderService } from 'src/app/services/order.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -23,15 +24,20 @@ export class AdminComponent implements OnInit {
 
   // public produtos: Observable<any[]>;
   public produtos: any;
+  public orders: any;
   public produtoRef: any;
-
+  public tabProducts: boolean = false;
+  public tabOrders: boolean = true;
+  
   constructor(
     private produtoService: ProdutoService,
+    private orderService: OrderService,
     private uploadImgService: UploadImgService,
     private router: Router,
     private afAuth: AngularFireAuth,
     private dialog: MatDialog) {
     this.produtos = this.produtoService.products;
+    this.orders = this.orderService.orders;
     // this.produtoRef = this.produtoService.products;
 
   }
@@ -44,6 +50,16 @@ export class AdminComponent implements OnInit {
         this.router.navigate(['/login'])
       }
     });
+  }
+
+  btnTabProducts() {
+    this.tabOrders = false;
+    this.tabProducts = true;
+  }
+
+  btnTabOrders() {
+    this.tabProducts = false;
+    this.tabOrders = true;
   }
 
   add(product) {

@@ -11,11 +11,12 @@ import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/fire
 export class ProdutoService {
   // public products = produtos;
   private produtosCollection: AngularFirestoreCollection<[]>;
-  public products = this.db.collection("produtos").valueChanges();
+  public products: Observable<any[]>;
   public productsRef: any;
 
   constructor(private http: HttpClient, private db: AngularFirestore) {
     this.produtosCollection = db.collection("produtos");
+    this.products = this.db.collection("produtos").valueChanges();
 
     this.products.subscribe(console.log)
   }
@@ -34,7 +35,7 @@ export class ProdutoService {
   update(product, changes) {
     console.log(changes);
     this.produtosCollection.doc(product.key).update(changes);
-    console.log("prod",product);
+    console.log("prod", product);
 
   }
 

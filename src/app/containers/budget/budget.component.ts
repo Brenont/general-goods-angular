@@ -14,6 +14,8 @@ export class BudgetComponent implements OnInit {
   public name = '';
   public phone = '';
   public text = '';
+  public date = new Date();
+  // public products = this.productCart;
 
   constructor(
     private carrinhoService: CarrinhoService,
@@ -31,6 +33,8 @@ export class BudgetComponent implements OnInit {
       name: this.name,
       phone: this.phone,
       text: this.text,
+      date: this.date,
+      products: this.productCart,
       key: this.generateKey(),
 
     }

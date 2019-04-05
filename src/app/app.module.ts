@@ -46,6 +46,7 @@ import { ModalShowProductComponent } from './components/modal-show-product/modal
 import { EditProductComponent } from './containers/admin/edit-product/edit-product.component';
 import { ModalFormEditComponent } from './modals/modal-form-edit/modal-form-edit.component';
 import { ModalFeaturesEditComponent } from './modals/modal-features-edit/modal-features-edit.component';
+import { ModalSizesEditComponent } from './modals/modal-sizes-edit/modal-sizes-edit.component';
 
 
 
@@ -76,6 +77,7 @@ import { ModalFeaturesEditComponent } from './modals/modal-features-edit/modal-f
     EditProductComponent,
     ModalFormEditComponent,
     ModalFeaturesEditComponent,
+    ModalSizesEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -110,7 +112,8 @@ import { ModalFeaturesEditComponent } from './modals/modal-features-edit/modal-f
     ModalShowProductComponent,
     EditProductComponent,
     ModalFormEditComponent,
-    ModalFeaturesEditComponent
+    ModalFeaturesEditComponent,
+    ModalSizesEditComponent
   ]
 
 })

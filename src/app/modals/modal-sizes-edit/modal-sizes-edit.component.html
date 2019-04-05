@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Tamanhos</h1>
+<div class="bar-title"></div>
+<div mat-dialog-content>
+  <p>Digite os tamanhos do produto.</p>
+    <div *ngFor="let prod of produto.sizes; let i = index" class="items-content flex-center space-between">
+      <p class="item-txt">{{prod}}</p>
+      <div>
+        <button class="btn btn-danger btn-sm flex-center" (click)="deleteItem(i)"><img src="../../../assets/img/trash-icon.png" alt=""></button>
+
+      </div>
+    </div>
+    <div class="flex-center mt-3">
+      <input type="number" class="form-control w-100" [(ngModel)]="descInput">
+      <button class=" btn-additem btn btn-success btn-sm" (click)="addDescription(addDescription)"><img src="../../../assets/img/add-icon.png" alt=""></button>
+    </div>
+    <small class="form-text text-muted">Escreva uma nova caracteristica.</small>
+</div>
+<div mat-dialog-actions>
+  <button class="btn btn-danger" mat-button (click)="onNoClick()">Cancelar</button>
+  <button class="btn btn-success" mat-button [mat-dialog-close]="data" cdkFocusInitial>Salvar</button>
+</div>
